@@ -18,14 +18,19 @@ The Hackaton will start at March 5, 2021 at 12 noon. It will be a 48 hours Hacka
 1. Create an organization at github and name that organization as the name of your team.
 1. Add all participants of your team to that organization. 
 1. Fork [this](https://github.com/Computer-Science-and-Engineering-GNDEC/Hackathon-1.0) repository as an organization[which you created as a name of your team].
-1. To register your team, you need to add a branch to [forked](https://github.com/Computer-Science-and-Engineering-GNDEC/Hackathon-1.0) repository.
-1. Name the branch as the name of your team. 
-1. Add about.md file to that branch.
+1. You need to add a directory and name it as your team, to your team's repository, that was forked from base repository.
+1. Add about.md file to that directory.
 1. Write a short description about your team in about.md file.
-1. Add a team.md file to branch.
+1. Add a team.md file to directory.
 1. Mention the Name, email id, Branch, College Rollno., Area of Interest, Link of Git repository, of all participants in team.md
 1. Mention the Name, Designation, email id and Link to Git repository of mentor in team.md file.
-1. Send PR to merge the branch in 
+1. Send PR to merge the branch in base repository.
+
+## Prize
+
+1. First Prize: 20000 INR
+2. Second Prize: 15000 INR
+3. Third Proize: 10000 INR
 
 
 More information will be displayed soon.
