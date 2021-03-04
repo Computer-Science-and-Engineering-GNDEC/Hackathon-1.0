@@ -12,9 +12,9 @@ Link of Github repo: [https://github.com/ani339677/Hackathon-1.0](https://github
 
 ## Member
 
-Name: Anirudh Verma
+Name: Arvinder Singh Kandola
 
-email: ani.339677@gmail.com  
+email: askandola7@gmail.com  
 Branch: Computer Science and Engineering  
 CRN: 2015018  
 
