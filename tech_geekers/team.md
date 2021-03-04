@@ -9,8 +9,8 @@
 # 2. Divya Juhi Singh
 - E-mail : divyajuhi2001@gmail.com
 - Branch : Information Technology
-- CRN/URN : /
-- Area of Interest :
+- CRN/URN : 1921144 / 1904837
+- Area of Interest : Artificial Intelligence
 - Link of Git Repository : https://github.com/Divya-Juhi-Singh
 
 # 3. Dalip Kumar
