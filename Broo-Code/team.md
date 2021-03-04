@@ -26,7 +26,7 @@ CSE
 
 1815085
 
-Python, data science, c++, Front end
+Python, data science, c++, Front end development
 
 https://www.github.com/udit2548
 
@@ -46,3 +46,20 @@ Python, c++, data science
 
 https://www.github.com/sharmashivam90231
 
+##
+
+## Team Member 4:
+
+Mahin Mittal
+
+mahinmittal2018@gmail.com
+
+CSE
+
+1815115
+
+Python, c++, web development
+
+https://www.github.com/mahin651
+
+##
