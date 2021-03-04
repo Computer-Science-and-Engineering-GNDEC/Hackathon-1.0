@@ -6,7 +6,7 @@
 - Area of Interest : 
 - Link of Git Repository :
 
-# 2. Divya juhi Singh
+# 2. Divya Juhi Singh
 - E-mail : divyajuhi2001@gmail.com
 - Branch : Information Technology
 - CRN/URN : /
