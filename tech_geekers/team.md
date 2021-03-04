@@ -23,6 +23,6 @@
 # 4. Vanshika Choudary
 - E-mail : vanshikac360@gmail.com
 - Branch : Information Technology
-- CRN/URN : 1921/1905412
+- CRN/URN : 1921112/1905412
 - Area of Interest : 
 - Link of Git Repository :https://github.com/1921112
