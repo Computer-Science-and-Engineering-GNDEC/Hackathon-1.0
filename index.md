@@ -11,6 +11,8 @@ The Hackaton will start at March 5, 2021 at 12 noon. It will be a 48 hours Hacka
 1. There must be one team leader in a team. 
 1. One mentor in a team is allowed in addition to team members.
 1. One mentor will belong to one team only.
+1. Student may use Computer Centre facility of the college.
+1. Stundet may get their refreshments from computer centre from 2PM to 3PM.
 
 
 ## How to register Team?
