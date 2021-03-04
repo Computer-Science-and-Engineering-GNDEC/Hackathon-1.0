@@ -12,7 +12,7 @@ Area of Interest : Image Processing
 Link of Git Repository : https://github.com/code-stacker
 
 
-# Member
+# Member 1
 Name : Jaspreet Singh
 
 e-mail : ws.com540@gmail.com
