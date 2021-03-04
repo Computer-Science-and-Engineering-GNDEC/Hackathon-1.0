@@ -1,7 +1,7 @@
 
 # Team members:
 
-|**S.No.** |**Name of the Team member **| **U.Roll No.** | __Branch__ |
+|**S.No.** | **Name of the Team member** | **U.Roll No.** | **Branch** |
 |-------|------------|--------------|----------|
 | 1 | Priyanka Jhamb | 1905379 |  CSE |
 | 2 | Prabhjot Kaur | 1905376 | IT |
