@@ -11,18 +11,18 @@
 - Branch : Information Technology
 - CRN/URN : /
 - Area of Interest :
-- Link of Git Repository : 
+- Link of Git Repository : https://github.com/Divya-Juhi-Singh
 
 # 3. Dalip Kumar
 - E-mail : dalipdivakar@gmail.com
 - Branch : Information Technology
 - CRN/URN : 1921021/1905319
 - Area of Interest : 
-- Link of Git Repository :
+- Link of Git Repository :https://github.com/dalip03
 
 # 4. Vanshika Choudary
 - E-mail : vanshikac360@gmail.com
 - Branch : Information Technology
 - CRN/URN : 1921/1905412
 - Area of Interest : 
-- Link of Git Repository :
+- Link of Git Repository :https://github.com/1921112
