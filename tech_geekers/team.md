@@ -4,7 +4,7 @@
 - Branch : Information Technology
 - CRN/URN : 1921023/1905322
 - Area of Interest : 
-- Link of Git Repository :
+- Link of Git Repository :https://github.com/Mr-codehunter
 
 # 2. Divya Juhi Singh
 - E-mail : divyajuhi2001@gmail.com
