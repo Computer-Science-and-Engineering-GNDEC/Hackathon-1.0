@@ -1,1 +1,1 @@
-All the members of the teaam is passionate about coding 
+All the members of the team is passionate about coding 
