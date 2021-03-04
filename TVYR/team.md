@@ -2,7 +2,7 @@ Team leader name :- Vishal Dutta
   Email id :- vishudutta0303@gmail.com
   Branch :- Computer Science and Engineering
   College Rollno :- 1915085
-  Area of Interest :- Web Development , Data Analytics and Data Science in Python Programming \n
+  Area of Interest :- Web Development , Data Analytics and Data Science in Python Programming  
 Team Member1 name :- Tushar Garg
   Email id :- gargtushar175@gmail.com
   Branch :- Computer Science and Engineering
