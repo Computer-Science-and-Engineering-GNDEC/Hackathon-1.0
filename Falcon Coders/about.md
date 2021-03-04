@@ -1,4 +1,4 @@
-# Our team name is _**Falcon Coders**_
+# Our team name is **Falcon Coders**
 
 ## There are **4 team members** in our team.
 1. Priyanka Jhamb
