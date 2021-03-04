@@ -1,2 +1,2 @@
 # About our Team
-We are here to learn new skills and enhance our previous knowledage
+We are here to learn new skills and enhance our knowledage
