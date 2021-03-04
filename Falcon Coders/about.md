@@ -7,4 +7,5 @@ There are **4 team members** in our team.
 4. Vanjam Chirudeep
 
 
-**We are passionate towards coding and interested towards web development. Motivated to improve skills**
+**We are passionate towards coding and interested towards web development.
+Really motivated to improve skills.**
