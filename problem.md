@@ -51,6 +51,7 @@ Expected technologies:
 *Software to manage accounts / work of service startup (to be unicorn)*
 
 Background material:
+
 (https://docs.erpnext.com/docs/user/manual/en/selling/articles/erpnext-for-services-organization)
 (https://docs.erpnext.com/docs/user/videos/learn/services)
 
