@@ -33,9 +33,9 @@ The Hackaton will start at March 5, 2021 at 12 noon. It will be a 48 hours Hacka
 
 ## Prize
 
-1. First Prize: 20000 INR
-2. Second Prize: 15000 INR
-3. Third Proize: 10000 INR
+1. First Prize: 20000/- INR
+2. Second Prize: 15000/- INR
+3. Third Proize: 10000/- INR
 
 ## [Instructions](https://computer-science-and-engineering-gndec.github.io/Hackathon-1.0/Instructions.html) for hackathon 
 
