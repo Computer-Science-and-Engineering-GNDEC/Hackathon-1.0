@@ -1,106 +1,182 @@
 <html lang="en">
   <head>
     <title>Guru Nanak Dev Engineering College,Ludhiana</title>
-  </head>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+      integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Font Awesome  -->
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+
+    <!-- Bootstrap Scripts -->
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"
+      integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF"
+      crossorigin="anonymous"
+    ></script>
+</head>
 <body>
-          	 <a href="index.html"><img src="logo.png"></a>
-            <ul>
-            <li>
-              <a href="/?q=node/2">About us</a>
-                <ul>
-                    <li><a href="/?q=node/6" title="Administration">Administration</a></li>
-                    <li><a href="/?q=node/9" title="Mission">Mission</a></li>
-                    <li ><a href="/?q=node/7" title="Vision">Vision</a></li>
-                    <li><a href="/?q=node/8" title="Goals">Goals</a></li>
-                    <li><a href="/?q=node/10" title="History">History</a></li>
-                    <li><a href="/?q=node/58" title="Campus">Campus</a></li>
-                    <li><a href="/?q=node/344" title="Balance Sheets">Balance Sheets</a></li>
-                    <li><a href="/?q=node/43" title="Manadatory Disclosure">Manadatory Disclosure</a></li>
-                    <li><a href="https://gndec.ac.in/sites/default/files/gar.pdf" title="">Green Audit Report</a></li>
-                    <li><a href="https://gndec.ac.in/sites/default/files/annual reports.pdf" title="">Annual Reports</a></li>
-                    <a href="https://gndec.ac.in/sites/default/files/cope7_1.pdf" title="P E for students">Code of Professional Ethics</a></li>
-                </ul>
-            </li>
-            <li>
-                <a href="https://gndec.ac.in/">Governance</a>
-                  <ul> 
-                      <li> <a href="https://gndec.ac.in/" title="">Statutory</a></li>
-                        <ul>
-                          <li><a href="https://gndec.ac.in/?q=node/453" title="">Academic Council</a></li>
-                          <li><a href="https://gndec.ac.in/?q=node/476" title="">Finance Committee</a></li>
-                           <li><a href="https://gndec.ac.in/?q=node/477" title="">BOS</a></li>
-                        </ul>
-                        <li><a href="https://gndec.ac.in/?q=node/478" title="">Non Statutory</a></li>
-                  </ul>
-              </li>
-              <li>
-                <a href="/?q=node/36">Admission</a>
-                <ul>
-                <li class="leaf first"><a href="/?q=node/47" title="Courses Offered">Courses Offered</a></li>
-                 <li><a href="/?q=node/48" title="Admission Criteria">Enquiry cum Registration</a></li>
-                 <li><a href="/?q=information%20brochure" title="Information Brochure">Information Brochure</a></li>
-                <li><a href="/?q=node/51" title="Frequently Asked Questions">Frequently Asked Questions</a></li>
-                </ul>  
+    <a href="#"><img class="img" src="logo.png"></a>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">GNDEC</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDarkDropdown" aria-controls="navbarNavDarkDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
+          <ul class="navbar-nav">
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                About Us
+              </a>
+              <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
+                <li><a class="dropdown-item" href="/?q=node/6" title="Administration">Administration</a></li>
+              <li><a class="dropdown-item" href="/?q=node/9" title="Mission">Mission</a></li>
+              <li ><a class="dropdown-item" href="/?q=node/7" title="Vision">Vision</a></li>
+              <li><a class="dropdown-item" href="/?q=node/8" title="Goals">Goals</a></li>
+              <li><a class="dropdown-item" href="/?q=node/10" title="History">History</a></li>
+              <li><a class="dropdown-item" href="/?q=node/58" title="Campus">Campus</a></li>
+              <li><a class="dropdown-item" href="/?q=node/344" title="Balance Sheets">Balance Sheets</a></li>
+              <li><a class="dropdown-item" href="/?q=node/43" title="Manadatory Disclosure">Manadatory Disclosure</a></li>
+              <li><a class="dropdown-item" href="https://gndec.ac.in/sites/default/files/gar.pdf" title="">Green Audit Report</a></li>
+              <li><a class="dropdown-item" href="https://gndec.ac.in/sites/default/files/annual reports.pdf" title="">Annual Reports</a></li>
+              <li><a class="dropdown-item" href="https://gndec.ac.in/sites/default/files/cope7_1.pdf" title="P E for students">Code of Professional Ethics</a></li>
+              </ul>
             </li>
 
-              <li>
-                <a href="/?q=node/4">Academics</a>
-                 <ul>
-                    <li><a href="/?q=node/371" title="Officers &amp; Staff">Officers &amp; Staff</a></li>
-                    <li><a href="https://gndec.ac.in/?q=node/454" title="">Ph.D under QIP</a></li>
-                    <li><a href="/?q=node/25" title="Post Graduation">Post Graduation</a></li>
-                    <li><a href="/?q=node/23" title="Academic Calender">Academic Calender</a></li>
-                    <li><a href="https://gndec.ac.in/?q=holidays" title="">List of Holidays</a></li>
-                    <li><a href="/?q=node/26" title="Equivalence Certificate">Equivalence Certificate</a></li>
-                    <li"><a href="https://gndec.ac.in/?q=node/398" title="">Conversion of CGPA to Percentage </a></li>
-                 </ul>
-              </li>
-              <li>
-                <a href="https://gndec.ac.in/">Examination</a>
-                 <ul>
-                    <li ><a href="https://gndec.ac.in/?q=node/475" title="">COE Office</a></li>
-                    <li ><a href="https://exam.gndec.ac.in/" title="">Examination Portal for Staff</a></li>
-                    <li><a href="https://academics.gndec.ac.in/" title="">Examination Portal for Students</a></li>
-                    <li ><a href="/?q=results" title="Results">Results</a></li>
-                    <li ><a href="/?q=node/28" title="Roll of Honour">Roll of Honour</a></li>
-                 </ul>
-              </li>
-            <li>
-              <a href="/?q=node/3"> Departments</a>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Governance
+              </a>
+              <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
+                <li> <a class="dropdown-item" href="https://gndec.ac.in/" title="">Statutory</a></li>
                 <ul>
-                 <li>   <a href="https://ce.gndec.ac.in/" title="Civil Engineering">Civil Engineering</a></li>
-                 <li>  <a href="https://ee.gndec.ac.in/" title="Electrical Engineering">Electrical Engineering</a></li>
-                 <li>  <a href="https://me.gndec.ac.in/" title="Mechanical Engineering">Mechanical Engineering</a></li>
-                 <li>  <a href="https://ece.gndec.ac.in/" title="Electronics &amp; Communication Engineering">Electronics &amp; Communication Engineering</a></li>
-                 <li>  <a href="https://cse.gndec.ac.in/" title="Computer Science &amp; Engineering">Computer Science &amp; Engineering</a></li>
-                 <li>  <a href="https://it.gndec.ac.in/" title="Information Technology">Information Technology</a></li>
-                 <li>  <a href="https://pe.gndec.ac.in/" title="Production Engineering">Production Engineering</a></li>
-                 <li>  <a href="https://mba.gndec.ac.in/" title="Master of Buissness Administration">Masters in  Business Administration</a></li>
-                 <li>   <a href="https://mca.gndec.ac.in" title="Master of Computer Application">Masters in Computer Application</a></li>
+                  <li><a class="dropdown-item" href="https://gndec.ac.in/?q=node/453" title="">Academic Council</a></li>
+                  <li><a class="dropdown-item" href="https://gndec.ac.in/?q=node/476" title="">Finance Committee</a></li>
+                   <li><a class="dropdown-item" href="https://gndec.ac.in/?q=node/477" title="">BOS</a></li>
+                </ul>
+                <li><a class="dropdown-item" href="https://gndec.ac.in/?q=node/478" title="">Non Statutory</a></li>
+              </ul>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Admission
+              </a>
+              <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
+                <li class="leaf first"><a class="dropdown-item" href="/?q=node/47" title="Courses Offered">Courses Offered</a></li>
+                 <li><a class="dropdown-item" href="/?q=node/48" title="Admission Criteria">Enquiry cum Registration</a></li>
+                 <li><a class="dropdown-item" href="/?q=information%20brochure" title="Information Brochure">Information Brochure</a></li>
+                <li><a class="dropdown-item" href="/?q=node/51" title="Frequently Asked Questions">Frequently Asked Questions</a></li>
                 </ul>
             </li>
-            <li>
-                <a href="/?q=node/34">Facilities</a>
-              </li>
-              <li>
-                <a href="/?q=node/1">Research</a>
-              </li>
-              <li>
-                <a href="/?q=node/44">Quality Work</a>
-              </li>
-              <li>
-                <a href="/?q=node/31">T&P</a>
-              </li>
-              <li>
-                <a href="https://teqip.gndec.ac.in" >TEQIP-III</a>
-              </li>
-              <li>
-                <a href="https://gndec.ac.in/gallery/index.php?/category/34">Gallery</a>
-              </li>
-            <li>
-              <a href="?q=node/53">Contact us</a>
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Academics
+              </a>
+              <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
+                <li><a class="dropdown-item" href="/?q=node/371" title="Officers &amp; Staff">Officers &amp; Staff</a></li>
+                    <li><a class="dropdown-item" href="https://gndec.ac.in/?q=node/454" title="">Ph.D under QIP</a></li>
+                    <li><a class="dropdown-item" href="/?q=node/25" title="Post Graduation">Post Graduation</a></li>
+                    <li><a class="dropdown-item" href="/?q=node/23" title="Academic Calender">Academic Calender</a></li>
+                    <li><a class="dropdown-item" href="https://gndec.ac.in/?q=holidays" title="">List of Holidays</a></li>
+                    <li><a class="dropdown-item" href="/?q=node/26" title="Equivalence Certificate">Equivalence Certificate</a></li>
+                    <li"><a class="dropdown-item" href="https://gndec.ac.in/?q=node/398" title="">Conversion of CGPA to Percentage </a></li>
+                 </ul>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Examination
+              </a>
+              <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
+                <li ><a class="dropdown-item" href="https://gndec.ac.in/?q=node/475" title="">COE Office</a></li>
+                    <li ><a class="dropdown-item" href="https://exam.gndec.ac.in/" title="">Examination Portal for Staff</a></li>
+                    <li><a class="dropdown-item" href="https://academics.gndec.ac.in/" title="">Examination Portal for Students</a></li>
+                    <li ><a class="dropdown-item" href="/?q=results" title="Results">Results</a></li>
+                    <li ><a class="dropdown-item" href="/?q=node/28" title="Roll of Honour">Roll of Honour</a></li>
+                 </ul>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Departments
+              </a>
+              <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
+                <li>   <a class="dropdown-item" href="https://ce.gndec.ac.in/" title="Civil Engineering">Civil Engineering</a></li>
+                 <li>  <a class="dropdown-item" href="https://ee.gndec.ac.in/" title="Electrical Engineering">Electrical Engineering</a></li>
+                 <li>  <a class="dropdown-item" href="https://me.gndec.ac.in/" title="Mechanical Engineering">Mechanical Engineering</a></li>
+                 <li>  <a class="dropdown-item" href="https://ece.gndec.ac.in/" title="Electronics &amp; Communication Engineering">Electronics &amp; Communication Engineering</a></li>
+                 <li>  <a class="dropdown-item" href="https://cse.gndec.ac.in/" title="Computer Science &amp; Engineering">Computer Science &amp; Engineering</a></li>
+                 <li>  <a class="dropdown-item" href="https://it.gndec.ac.in/" title="Information Technology">Information Technology</a></li>
+                 <li>  <a class="dropdown-item" href="https://pe.gndec.ac.in/" title="Production Engineering">Production Engineering</a></li>
+                 <li>  <a class="dropdown-item" href="https://mba.gndec.ac.in/" title="Master of Buissness Administration">Masters in  Business Administration</a></li>
+                 <li>   <a class="dropdown-item" href="https://mca.gndec.ac.in" title="Master of Computer Application">Masters in Computer Application</a></li>
+                </ul>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Facilities
+              </a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Research
+              </a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Quality work
+              </a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                T&P
+              </a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                TEQIP-III
+              </a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Gallery
+              </a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Contact Us
+              </a>
             </li>
           </ul>
+        </div>
+      </div>
+    </nav>
+      
+    
           <p style='text-align:justify'>
             Guru Nanak Dev Engineering College, one of the prestigious, oldest and minority institution of Northern India,  was established under the aegis of  Nankana Sahib Education Trust (NSET) in 1956. NSET was founded in memory of the most sacred temple of Nankana Sahib, birth place of Guru Nanak Dev Ji. Shiromani Gurudwara Prabandhak Committee, Amritsar, a premier organization of universal brotherhood, which is the main force behind the mission of "Removal of Economic Backwardness through Technology" and NSET with the same mission, established a Polytechnic in 1953 and Guru Nanak Dev Engineering College (GNDEC) in 1956. The Trust deed was registered on 24th February 1953 with a commitment by  Nankana Sahib Education Trust to uplift the vast weaker section of Indian polity comprising Rural India by admitting 70% students every year from Rural Areas. This commitment was made to the nation on 8th April, 1956. The day when foundation stone of the College was laid by Late Dr. Rajendra Prasad Ji, the First President of India.
             <p style='text-align:justify'>
