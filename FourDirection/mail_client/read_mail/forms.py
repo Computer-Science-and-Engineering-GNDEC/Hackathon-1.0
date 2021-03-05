@@ -1,5 +1,6 @@
 from django import forms
+from django.contrib.auth.forms import AuthenticationForm, UserCreationForm, UserChangeForm
 
-class LoginForm(forms.Form):
-    email = forms.EmailField(widget=forms.TextInput(),label='Email: ', label_suffix='')
-    password = forms.CharField(widget=forms.PasswordInput(),label='Password: ', label_suffix='')
+class LoginForm(AuthenticationForm):
+    def __init__(self, *args, **kwargs):
+        super(LoginForm, self).__init__(*args, **kwargs)
