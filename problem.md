@@ -11,19 +11,25 @@ All demonstration shall be on Linux Server provided by college.
 
 ## Suggested Problem Statements
 
-### GNDEC + Departmental Websites and PWAs 
+### GNDEC + Departmental Websites and PWAs(Progressive Web Apps) 
 
 Website of college and Websites of all Departments and PWAs for same.
 
-Expected technologies:
+Expected technologie to be used:
+
 -Drupal
+
 -MEAN Stack 
+
 -MERN Stack
+
 -Django
+
 -RoR
+
 -FastAPI
 
-**Features expected:**
+**Expected Features:**
 1. Responsive(Mobile Friendly)
 2. Admin Interface
 3. Pop up{configurable} on landing page
@@ -47,22 +53,25 @@ Expected technologies:
 
 Features required:
 1. Full-featured mail server
-2. A full-set smtp email server
-3. Secure IMAP and POP3 email server(e.g Dovecot)
-4. Rspamd : anti-spam filter with SPF, DKIM, DMARC, ARC, ratelimit and greylisting capabilities
-5. Clamav : antivirus with automatic updates and third-party signature databases
-6 .Zeyple : automatic GPG encryption of all your emails
-7. Sieve : email filtering (vacation auto-responder, auto-forward, etc...)
-8. Fetchmail : fetch emails from external IMAP/POP3 server into local mailbox
-9. Rainloop : web based email client
-10. Postfixadmin : web-based administration interface
-11. Unbound: recursive caching DNS resolver with DNSSEC support
-12. NSD : authoritative DNS server with DNSSEC support
-13. Træfik : modern HTTP reverse proxy
-14. SSL : let's encrypt with auto-renewal (SAN and wildcard certificates), custom and self-signed certificates support
-15. OpenLDAP : [BETA] ldap support available (only in 1.1-latest for now)
-16. Supporting multiple virtual domains over MySQL/PostgreSQL backend
-17. Integration tests with Travis CI
+2. Single Sign In(SSO) for authentication
+3. Password recovery through sms.
+4. Password recovery through alternative email.
+5. A full-set smtp email server(Postfix)
+6. Secure IMAP and POP3 email server(e.g Dovecot)
+7. Rspamd : anti-spam filter with SPF, DKIM, DMARC, ARC, ratelimit and greylisting capabilities
+8. Clamav : antivirus with automatic updates and third-party signature databases
+9. Zeyple : automatic GPG encryption of all your emails
+10. Sieve : email filtering (vacation auto-responder, auto-forward, etc...)
+11. Fetchmail : fetch emails from external IMAP/POP3 server into local mailbox
+12. Web based email client, best suited to this requirement.
+13. Postfixadmin : web-based administration interface
+14. Unbound: recursive caching DNS resolver with DNSSEC support
+15. NSD : authoritative DNS server with DNSSEC support
+16. Træfik : modern HTTP reverse proxy
+17. SSL : let's encrypt with auto-renewal (SAN and wildcard certificates), custom and self-signed certificates support
+18. OpenLDAP :  ldap support 
+19. Supporting multiple virtual domains over MySQL/PostgreSQL backend
+20. Integration tests with Travis CI
 
 
 
