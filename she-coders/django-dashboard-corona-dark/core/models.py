@@ -51,7 +51,7 @@ class customer(models.Model):
     last_name = models.CharField(max_length=50)
     phone_number = models.PositiveIntegerField(default=0)
     city = models.ForeignKey(city, on_delete=models.CASCADE,blank=True,null=False,default='')
-    location = models.ForeignKey(item, on_delete=models.CASCADE,blank=True,null=False,default='')
+    item = models.ForeignKey(item, on_delete=models.CASCADE,blank=True,null=False,default='')
 
     
     timestamp = models.DateTimeField(auto_now_add= True)
