@@ -9,11 +9,50 @@ Background material is only suggestive, you may search for better or similar FOS
 
 All demonstration shall be on Linux Server provided by college.
 
-Suggested Problem Statements
+## Suggested Problem Statements
+
+### GNDEC + Departmental Websites and PWA 
+
+Website of college and Websites of all Departments and PWA for same.
+
+Expected technologies:
+-Drupal
+-MEAN Stack 
+-MERN Stack
+-Django
+-RoR
+-FastAPI
+
+**Features expected:**
+1. Responsive(Mobile Friendly)
+2. Admin Interface
+3. Pop up{configurable} on landing page
+4. Multiuser
+5. User management 
+6. User Friendly
+7. Slider on first page
+8. News Ticker
+9. Hit Counter
+10. Notice board in NodeBB
+11. Captcha at admin/user login
+12. Background Colour Customizer
+13. Attractive Navigation Bar
+14. Content transfer from previous Website
+15. No. of links in navigation bar from previous website must trasfer to newer website
+16. The project shall be installed on Linux server provided by college
+17. All the features must be customizable
+18. Departmental websites should have same theming as main website and content should be transerfable and customizable.
 
 
 
 
+### Start-up Management:
+ 
+*Software to manage accounts / work of service startup (to be unicorn)*
+
+Background material:
+(https://docs.erpnext.com/docs/user/manual/en/selling/articles/erpnext-for-services-organization)
+(https://docs.erpnext.com/docs/user/videos/learn/services)
 
 
 
