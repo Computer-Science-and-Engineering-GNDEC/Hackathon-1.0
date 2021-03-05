@@ -9,7 +9,7 @@
   - Technical process used to arrive at the solution.
   - Time taken to complete the task.
 4. Decision of the jury shall be final and binding. No claims shall be entertained.
-5. The problem statements, notified by organisers, are suggestive. 
+5. The problem statements, notified by organisers.
 6. In case a group finishes its task of a problem, they can choose other problems also.
 7. Make a file problem_statement.md to mention problem stament.
 8. All teams need to commit their project into branch [projects](https://github.com/Computer-Science-and-Engineering-GNDEC/Hackathon-1.0/tree/projects) into your respective directories.
