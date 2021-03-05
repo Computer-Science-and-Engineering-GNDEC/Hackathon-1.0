@@ -123,7 +123,7 @@
           ctx.save();
         }
       }
-      var transactionhistoryChartCanvas = $("#transaction-history").get(0).getContext("2d");
+      //var transactionhistoryChartCanvas = $("#transaction-history").get(0).getContext("2d");
       var transactionhistoryChart = new Chart(transactionhistoryChartCanvas, {
         type: 'doughnut',
         data: areaData,
@@ -131,17 +131,17 @@
         plugins: transactionhistoryChartPlugins
       });
     }
-    if ($("#transaction-history-arabic").length) {
-      var areaData = {
-        labels: ["Paypal", "Stripe","Cash"],
-        datasets: [{
-            data: [55, 25, 20],
-            backgroundColor: [
-              "#111111","#00d25b","#ffab00"
-            ]
-          }
-        ]
-      };
+    // if ($("#transaction-history-arabic").length) {
+    //   var areaData = {
+    //     labels: ["Paypal", "Stripe","Cash"],
+    //     datasets: [{
+    //         data: [55, 25, 20],
+    //         backgroundColor: [
+    //           "#111111","#00d25b","#ffab00"
+    //         ]
+    //       }
+    //     ]
+    //   };
       var areaOptions = {
         responsive: true,
         maintainAspectRatio: true,

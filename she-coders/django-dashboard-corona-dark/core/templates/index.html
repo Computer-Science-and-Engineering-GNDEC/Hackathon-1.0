@@ -49,7 +49,9 @@
               <div class="row">
                 <div class="col-9">
                   <div class="d-flex align-items-center align-self-start">
-                    <h3 class="mb-0">$12.34</h3>
+                    {% if city1_customers.count > 0 %}
+                    <h3 class="mb-0">{{city1_customers.count }}</h3>
+                    {% endif %}
                     <p class="text-success ml-2 mb-0 font-weight-medium">+3.5%</p>
                   </div>
                 </div>
@@ -81,10 +83,7 @@
                 </div>
               </div>
               <h6 class="text-muted font-weight-normal">Sales increase at Place B</h6>
-              {% for i in data %}
-              <h1>{{i.city}}</h1>
              
-              {% endfor %}
             </div>
           </div>
         </div>
@@ -118,7 +117,7 @@
               <div class="bg-gray-dark d-flex d-md-block d-xl-flex flex-row py-3 px-4 px-md-3 px-xl-4 rounded mt-3">
                 <div class="text-md-center text-xl-left">
                   <h6 class="mb-1">Customers at place A</h6>
-                  <p class="text-muted mb-0">667</p>
+                  <p class="text-muted mb-0">{{ city1_customers.count }}</p>
                 </div>
                 <!-- <div class="align-self-center flex-grow text-right text-md-center text-xl-right py-md-2 py-xl-0">
                   <h6 class="font-weight-bold mb-0">$236</h6>
@@ -127,7 +126,7 @@
               <div class="bg-gray-dark d-flex d-md-block d-xl-flex flex-row py-3 px-4 px-md-3 px-xl-4 rounded mt-3">
                 <div class="text-md-center text-xl-left">
                   <h6 class="mb-1">Customers at place B</h6>
-                  <p class="text-muted mb-0">866</p>
+                  <p class="text-muted mb-0">{{ city2_customers.count }}</p>
                 </div>
                 <!-- <div class="align-self-center flex-grow text-right text-md-center text-xl-right py-md-2 py-xl-0">
                   <h6 class="font-weight-bold mb-0">$593</h6>
@@ -140,32 +139,37 @@
           <div class="card">
             <div class="card-body">
               <div class="d-flex flex-row justify-content-between">
-                <h4 class="card-title mb-1">Trending products</h4>
-                <p class="text-muted mb-1">in month of jan</p>
+                <h4 class="card-title mb-1">Product wise sales</h4>
+                <p class="text-muted mb-1">From most sold to least</p>
               </div>
+              {% for i in trending_items %}
               <div class="row">
                 <div class="col-12">
                   <div class="preview-list">
                     <div class="preview-item border-bottom">
                       <div class="preview-thumbnail">
-                        <div class="preview-icon bg-primary">
-                          <i class="mdi mdi-file-document"></i>
-                        </div>
+                        
                       </div>
                       <div class="preview-item-content d-sm-flex flex-grow">
                         <div class="flex-grow">
-                          <h6 class="preview-subject">Admin dashboard design</h6>
-                          <p class="text-muted mb-0">Broadcast web app mockup</p>
+                          <h6 class="preview-subject">{{ i.city }}</h6>
+                          {% if i.item == 1 %}
+                          <p class="text-muted mb-0">🎒 school bag</p>
+                          {% elif i.item == 2 %}
+                          <p class="text-muted mb-0">👜 hand bag</p>
+                          {% else %}
+                          <p class="text-muted mb-0">🧳 travelling bag</p>
+                          {% endif %}
                         </div>
                         <div class="mr-auto text-sm-right pt-2 pt-sm-0">
-                          <p class="text-muted">15 minutes ago</p>
-                          <p class="text-muted mb-0">30 tasks, 5 issues </p>
+                          <p class="text-muted">sold: {{ i.count }}</p>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
+              {% endfor %}
             </div>
           </div>
         </div>
@@ -417,7 +421,35 @@
 
 <!-- Specific Page JS goes HERE  -->
 {% block javascripts %}
+<script>
+  var pieconfig = {
+    type: 'doughnut',
+    data: {
+      datasets: [{
+        data: {{ data|safe }},
+        borderColor: [
+          '#696969'
+        ],
+        backgroundColor: [
+        '#1f77b4',
+        '#ff7f0e',
+        '#2ca02c',
+        '#d62728'        ],
+        label: 'Sale comparison'
+      }],
+      labels: {{ labels | safe }}
+    },
+    options: {
+      responsive: true
+    }
+  };
+  window.onload = function() {
+    var ctx1 = document.getElementById('transaction-history').getContext('2d');
+    window.myPie = new Chart(ctx1, pieconfig);
+   
+  };
 
+</script>
   <script src="/static/assets/js/dashboard.js"></script>
 
 {% endblock javascripts %}
