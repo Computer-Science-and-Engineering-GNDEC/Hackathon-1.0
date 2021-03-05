@@ -73,24 +73,44 @@
 
   <script src="/static/assets/js/chart.js"></script>
 <script>
-  var lineconfig = {
-    type: 'line',
-    data: {
-        labels: ["Tokyo",	"Mumbai",	"Mexico City",	"Shanghai",	"Sao Paulo",	"New York",	"Karachi","Buenos Aires",	"Delhi","Moscow"],
-        datasets: [{
-            label: 'Series 1', // Name the series
-            data: [500,	50,	2424,	14040,	14141,	4111,	4544,	47,	5555, 6811], // Specify the data values array
-            fill: false,
-            borderColor: '#2196f3', // Add custom color border (Line)
-            backgroundColor: '#2196f3', // Add custom color background (Points and Fill)
-            borderWidth: 1 // Specify bar border width
-        }]},
-    options: {
-      responsive: true, // Instruct chart js to respond nicely.
-      maintainAspectRatio: false, // Add to prevent default behaviour of full-width/height 
-    }
+
+
+var dataFirst = {
+    label: "Location A",
+    data: [0, 59, 75, 20, 20, 55, 40],
+    fill: false,
+    borderColor: '#003366'
   };
-  
+
+var dataSecond = {
+    label: "Location B",
+    data: [20, 15, 60, 60, 65, 30, 70],
+    fill: false,
+  borderColor: '#013220'
+  };
+
+var speedData = {
+  labels: ["0", "10", "20", "30", "40", "50", "60"],
+  datasets: [dataFirst, dataSecond]
+};
+
+var chartOptions = {
+  legend: {
+    display: true,
+    position: 'top',
+    labels: {
+      boxWidth: 80,
+      fontColor: 'black'
+    }
+  }
+};
+
+var lineconfig = {
+  type: 'line',
+  data: speedData,
+  options: chartOptions
+};
+
   var pieconfig1 = {
     type: 'doughnut',
     data: {
