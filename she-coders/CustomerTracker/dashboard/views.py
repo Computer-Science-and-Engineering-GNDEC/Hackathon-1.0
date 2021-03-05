@@ -1,3 +1,10 @@
-from django.shortcuts import render
+from django.shortcuts import render  
+#importing loading from django template  
+from django.template import loader  
+# Create your views here.  
+from django.http import HttpResponse  
 
-# Create your views here.
+
+def index(request):
+
+    return render(request,'src/index.html')
