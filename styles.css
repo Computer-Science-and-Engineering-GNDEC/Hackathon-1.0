@@ -69,8 +69,9 @@ body {
 }
 .news {
   padding: 0 200px;
-  margin: 0 400px 0 400px;
+  margin: 0 40px 0 400px;
   background: #bbdfc8;
+  border-radius: 20px;
 }
 .news-ticker ul:hover {
   animation-play-state: paused;
@@ -81,19 +82,68 @@ body {
 }
 
 .about {
-  margin: 10px 400px 0 400px;
+  margin: 10px 40px 0 400px;
   padding: 0;
   font-family: Arial, Helvetica, sans-serif;
   /* font-weight: bold; */
-  font-size: larger;
+  font-size: medium;
 }
-.notice{
-position: absolute;
-margin: 0 400px 0 40px;
-width: 300px;
-height: 300px;
-text-align: center;
-font-size: xx-large;
-font-weight: bolder;
-background: #bbdfc8;
+.content {
+  position: absolute;
+  left: 20px;
+  margin: 0 0px 0 40px;
+  width: 300px;
+  height: 500px;
+  padding: 0;
+  text-align: center;
+  font-size: xx-large;
+  font-weight: bolder;
+  background: #bbdfc8;
+  text-shadow: 2px 2px rgba(0, 0, 0, 0.421);
+  border-radius: 20px;
+}
+.board {
+  list-style: none;
+  text-shadow: none;
+  font-size: large;
+  padding-top: 10px;
+  text-align: left;
+}
+
+.space {
+  padding: 10px 10px;
+  text-align: left;
+}
+.size {
+  
+  margin: 40px 300px 100px;
+}
+
+#footer {
+  padding:40px 400px ;
+  text-align: center;
+}
+
+.socila-icon {
+  margin: 20px 10px;
+}
+#cta {
+  background: #bbdfc8;
+  color: black;
+  font-weight: bolder;
+  /* padding: 0; */
+  /* text-align: center; */
+}
+.dropdown-item{
+  background: #bbdfc8;
+  margin: 2px;
+  /* border-radius: 30px; */
+  font-weight: bold;
+}
+.dropdown-menu{
+  background: #bbdfc8;
+}
+.foot{
+  padding: 0 10px;
+  color: #f05454;
 }
