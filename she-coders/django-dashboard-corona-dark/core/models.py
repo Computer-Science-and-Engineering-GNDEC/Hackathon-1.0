@@ -13,24 +13,52 @@ ITEM_CHOICES = (
     ('travellingbag','TRAVELLINGBAG'),
 )
 
+class city(models.Model) :
+    id=models.AutoField(primary_key=True,blank=True,null=False)
+
+    
+    city = models.CharField( 
+        max_length = 20, 
+
+        choices = CITY_CHOICES, 
+        default = 'ludhiana'
+        ) 
+        
+  
+    def __str__(self):
+        return  self.city
+
+
+
+
+class item(models.Model) :
+    item = models.CharField( 
+        max_length = 20, 
+
+        choices = ITEM_CHOICES, 
+        default = 'schoolbag'
+        ) 
+    stock = models.CharField(max_length=7,default="10000")
+    def __str__(self):
+        return  self.item
+
+
+
 
 class customer(models.Model):
     id=models.AutoField(primary_key=True,blank=True,null=False)
     first_name = models.CharField(max_length=50)
     last_name = models.CharField(max_length=50)
     phone_number = models.PositiveIntegerField(default=0)
-    city= forms.CharField(label='City', widget=forms.Select(choices=CITY_CHOICES))
+    city = models.ForeignKey(city, on_delete=models.CASCADE,blank=True,null=False,default='')
+    location = models.ForeignKey(item, on_delete=models.CASCADE,blank=True,null=False,default='')
+
+    
     timestamp = models.DateTimeField(auto_now_add= True)
     quantity = models.PositiveIntegerField(default=0)
     price= models.DecimalField(max_digits=10, decimal_places=2)
     description=models.TextField(blank=True,null=False)
     def __str__(self):
-        return "%s" % (self.city)
-
-class location(models.Model) :
-    item= forms.CharField(label='Item', widget=forms.Select(choices=ITEM_CHOICES))
-    stock = models.CharField(max_length=7,default="10000")
-    city = models.ForeignKey(customer, on_delete=models.CASCADE,blank=True,null=False,default='')
-
+        return  self.first_name
 
 
