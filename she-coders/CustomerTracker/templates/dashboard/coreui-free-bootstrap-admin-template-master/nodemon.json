@@ -1,7 +1,0 @@
-{
-  "ignoreRoot": [".git"],
-  "ignore": [
-    "build",
-    "dist"
-  ]
-}
