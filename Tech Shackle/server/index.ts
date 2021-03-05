@@ -20,6 +20,10 @@ app.use((req, res, next) => {
   next(error);
 });
 
+/* Middleware for using routes */
+
+// app.use('/api/v1/users', authRouter);
+
 /* use our error handler middleware */
 app.use(errorHandler);
 
