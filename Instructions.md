@@ -11,6 +11,8 @@
 4. Decision of the jury shall be final and binding. No claims shall be entertained.
 5. The problem statements, notified by organisers, are suggestive. 
 6. In case a group finishes its task of a problem, they can choose other problems also.
-7. All teams need to report their progress every hour by commiting to their repository into their respective directories.
-8. The PR will be send to base repository after every 6 hours. 
+7. Make a file problem_statement.md to mention problem stament.
+8. All teams need to commit their project into branch [projects](https://github.com/Computer-Science-and-Engineering-GNDEC/Hackathon-1.0/tree/projects) into your respective directories.
+9. All teams have to do a commit into their home repository within every hour. 
+10. The PR will be send to base repository after every 6 hours. 
  
