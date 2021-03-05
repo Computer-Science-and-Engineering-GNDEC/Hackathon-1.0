@@ -1,4 +1,4 @@
-## Team Membere Description
+## Team Members Description
 
 ### Member 1
 
@@ -17,3 +17,12 @@
 - College Roll no. : 1715046
 - Area of Interest: Software Engineering
 - Link of Git : https://github.com/lakshaychopra
+
+### Member 3
+
+- Name     : Raghu Gulati
+- email id : gulatiraghu@gmail.com
+- Branch   : Computer Science Department
+- College Roll no. : 1706493
+- Area of Interest: Software Development, App Development(Both Web apps and mobile apps)
+- Link of Git : https://github.com/RaghuGulati/
