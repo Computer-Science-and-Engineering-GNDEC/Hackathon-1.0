@@ -11,9 +11,9 @@ All demonstration shall be on Linux Server provided by college.
 
 ## Suggested Problem Statements
 
-### GNDEC + Departmental Websites and PWA 
+### GNDEC + Departmental Websites and PWAs 
 
-Website of college and Websites of all Departments and PWA for same.
+Website of college and Websites of all Departments and PWAs for same.
 
 Expected technologies:
 -Drupal
@@ -43,6 +43,26 @@ Expected technologies:
 17. All the features must be customizable
 18. Departmental websites should have same theming as main website and content should be transerfable and customizable.
 
+### Mail server and Web based mail client 
+
+Features required:
+1. Full-featured mail server
+2. A full-set smtp email server
+3. Secure IMAP and POP3 email server(e.g Dovecot)
+4. Rspamd : anti-spam filter with SPF, DKIM, DMARC, ARC, ratelimit and greylisting capabilities
+5. Clamav : antivirus with automatic updates and third-party signature databases
+6 .Zeyple : automatic GPG encryption of all your emails
+7. Sieve : email filtering (vacation auto-responder, auto-forward, etc...)
+8. Fetchmail : fetch emails from external IMAP/POP3 server into local mailbox
+9. Rainloop : web based email client
+10. Postfixadmin : web-based administration interface
+11. Unbound: recursive caching DNS resolver with DNSSEC support
+12. NSD : authoritative DNS server with DNSSEC support
+13. Træfik : modern HTTP reverse proxy
+14. SSL : let's encrypt with auto-renewal (SAN and wildcard certificates), custom and self-signed certificates support
+15. OpenLDAP : [BETA] ldap support available (only in 1.1-latest for now)
+16. Supporting multiple virtual domains over MySQL/PostgreSQL backend
+17. Integration tests with Travis CI
 
 
 
