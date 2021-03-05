@@ -18,4 +18,4 @@ mongoose
   .then(() => console.log('connected to mongoose DB'))
   .catch((e: Error) => console.log(e));
 
-// module.exports.User = require('./user');
+module.exports.User = require('./user');

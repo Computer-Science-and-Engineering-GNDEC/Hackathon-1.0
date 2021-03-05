@@ -4,12 +4,20 @@ require('dotenv').config();
 import express from 'express';
 import cors from 'cors';
 import { CustomError } from './Handlers/custom-types';
+const bodyParser = require('body-parser');
 import errorHandler from './Handlers/error';
+const authRouter = require('./Routes/authRoutes.js');
 
 const app = express();
 
+
 app.use(cors());
 app.use(express.json());
+
+/* Middleware for using routes */
+
+app.use('/api/v1/users', authRouter);
+
 
 const PORT = process.env.PORT || 5000;
 
@@ -19,10 +27,6 @@ app.use((req, res, next) => {
   error.status = 404;
   next(error);
 });
-
-/* Middleware for using routes */
-
-// app.use('/api/v1/users', authRouter);
 
 /* use our error handler middleware */
 app.use(errorHandler);
