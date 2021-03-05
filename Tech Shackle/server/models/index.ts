@@ -1,12 +1,11 @@
-// import mongoose from 'mongoose';
-const mongoose = require('mongoose')
+import mongoose from 'mongoose';
+// const mongoose = require('mongoose')
 
 mongoose.set('debug', true);
 
 mongoose.Promise = Promise;
 
-const DB_URI =
-  'mongodb+srv://shivam:shivam@cluster0.04qcq.mongodb.net/myFirstDatabase?retryWrites=true&w=majority';
+const DB_URI = process.env.DB_URI;
 
 mongoose
   .connect(DB_URI, {
