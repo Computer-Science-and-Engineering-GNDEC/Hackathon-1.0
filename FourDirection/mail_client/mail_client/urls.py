@@ -15,13 +15,19 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.conf.urls import url
-from django.contrib.auth.views import LoginView, LogoutView
-from read_mail.views import home
+from django.contrib.auth.views import LoginView, LogoutView, PasswordChangeView, PasswordResetView, PasswordResetConfirmView, PasswordResetDoneView, PasswordResetCompleteView
+from read_mail.views import home, compose
 from django.urls import include
 from read_mail.forms import LoginForm
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', home),
-    url(r'^login/$', LoginView.as_view(authentication_form=LoginForm, template_name='login.html')),
+    url(r'^change-password/$', PasswordChangeView.as_view(success_url='/login')),
+    url(r'^password-reset-complete/$', PasswordResetCompleteView.as_view(),name = 'password_reset_complete'),
+    url(r'^password-reset-confirm/$', PasswordResetConfirmView.as_view(),name = 'password_reset_confirm'),
+    url(r'^password-reset/done/$', PasswordResetDoneView.as_view(),name = 'password_reset_done'),
+    url(r'^password-reset/$', PasswordResetView.as_view(),name = 'password_reset'),
+    url(r'^login/$', LoginView.as_view(authentication_form=LoginForm)),
+    url(r'^compose/$', compose),
 ]
