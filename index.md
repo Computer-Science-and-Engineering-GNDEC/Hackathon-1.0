@@ -1,10 +1,10 @@
-## Welcome to Hackaton 1.0
+## Welcome to Hackathon 1.0
 
 By Computer Centre and Computer Science and Engineering Department 
 
 Fork [this](https://github.com/Computer-Science-and-Engineering-GNDEC/Hackathon-1.0) repository to register yourself.  
 
-The Hackaton will start at March 5, 2021 at 12 noon. It will be a 48 hours Hackaton, which will end at March 7, 2021 at 12 noon. The last date to register is March 5, 2021 upto 10AM.
+The Hackaton will start at March 5, 2021 at 12 noon. It will be a 48 hours Hackathon, which will end at March 7, 2021 at 12 noon. The last date to register is March 5, 2021 upto 10AM.
 
 ## *Team registration is closed now.*
 
