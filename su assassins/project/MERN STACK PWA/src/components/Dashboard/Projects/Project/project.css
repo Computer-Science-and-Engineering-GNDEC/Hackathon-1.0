@@ -1,0 +1,71 @@
+.project-img {
+  max-height: 40vh;
+  max-width: 100%;
+  box-shadow: 1px 1px 30px 1px gray;
+  border-radius: 0.5rem;
+  display: block;
+  margin: auto;
+}
+
+.proj-tit {
+  transform: translateX(4vw);
+}
+
+.members {
+  display: grid;
+  grid-template-columns: auto auto;
+  /* background: red; */
+}
+
+.member {
+  display: flex;
+  align-items: center;
+  /* width: 100%; */
+  background: white;
+  padding: 1rem 1rem;
+  margin-right: 1rem;
+  margin-top: 1rem;
+  font-size: large;
+  box-shadow: 1px 1px 30px 1px rgba(128, 128, 128, 0.411);
+  border-radius: 1.5rem;
+}
+
+.member i {
+  margin: 0 0.5rem;
+  font-size: x-large;
+}
+
+.mem-area {
+  padding: 0rem 1rem;
+}
+
+.proj-nav-btn {
+  color: white;
+  background: #4caf50;
+  margin: 1.25rem auto;
+  width: 300px;
+  font-size: 1.5rem;
+  border-radius: 1.5rem;
+  padding: 0.25rem;
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+  margin: 0 1rem;
+}
+
+.gh {
+  background: black;
+}
+
+.doc {
+  background: rgb(8, 106, 197);
+}
+
+.proj {
+  background: rgb(235, 180, 1);
+}
+
+.edit-btn {
+  margin: auto 2rem;
+  transform: scale(1.5);
+}

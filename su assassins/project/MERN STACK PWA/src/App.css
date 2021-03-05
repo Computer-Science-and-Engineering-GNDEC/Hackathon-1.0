@@ -1,0 +1,63 @@
+/* Error Notice: Its comes when a user login or register anything wrong */
+.error-notice {
+  margin: 1rem 0;
+  padding: 0.5rem;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  border: 1px solid #e07c7c;
+  background-color: #f1c4b6;
+  color: black;
+}
+
+.error-notice-success {
+  border: 1px solid #6aca5d;
+  background-color: #b6f1b9;
+}
+.error-notice-button-success {
+  width: 20px;
+  height: 20px;
+  border: none;
+  border-radius: 50%;
+  text-decoration: none;
+  color: #ffffff;
+  background-color: #43df43;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.error-notice-button {
+  width: 20px;
+  height: 20px;
+  border: none;
+  border-radius: 50%;
+  background-color: #df4343;
+  text-decoration: none;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Form : when user click on form inputs shows active input */
+.form input:focus {
+  border: 1px solid #50a4e9;
+  box-shadow: inset 0px 0px 5px rgba(38, 142, 228, 0.5);
+  outline: none;
+}
+
+/* Show and Hide Password option */
+.password-layover {
+  position: relative;
+}
+.password-icon {
+  position: absolute;
+  top: 35px;
+  right: 10px;
+  font-size: 25px;
+  color: #000000;
+  opacity: 0.8;
+  cursor: pointer;
+}

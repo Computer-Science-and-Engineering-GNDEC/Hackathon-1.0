@@ -1,0 +1,10 @@
+.chat__name {
+  font-weight: 800;
+  position: absolute;
+  font-size: x-small;
+  top: -22px;
+}
+
+.recent-chat-wrap .chat-content .self .self-msg-wrap .msg {
+  display: none !important;
+}
