@@ -5,7 +5,7 @@ mongoose.set('debug', true);
 
 mongoose.Promise = Promise;
 
-const DB_URI = process.env.DB_URI;
+const DB_URI: string = process.env.DB_URI!;
 
 mongoose
   .connect(DB_URI, {

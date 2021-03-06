@@ -7,7 +7,7 @@ interface IUser extends mongoose.Document {
   name?: string;
   password: string;
   profileImageURL?: string;
-  isAdmin?: boolean;
+  role: 'student' | 'teahcer' | 'admin';
 }
 
 const userSchema = new mongoose.Schema<IUser>({
@@ -26,11 +26,11 @@ const userSchema = new mongoose.Schema<IUser>({
   profileImageURL: {
     type: String,
   },
-  isAdmin: {
-    type: Boolean,
+  role: {
+    type: String,
     required: true,
-    default: false,
-  },
+    default: 'student'
+  }
 });
 
 userSchema.pre<IUser>('save', async function (next) {
