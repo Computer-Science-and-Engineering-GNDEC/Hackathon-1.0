@@ -6,12 +6,30 @@ from .forms import LoginForm, ComposeForm
 @login_required
 def home(request):
 
-    form = LoginForm(request.POST or None)
+    user = request.user
+    import imaplib
 
-    if form.is_valid():
-        print('Login Success')
+    pwd = '12345678'
+    mail = imaplib.IMAP4('fd.com')
+    mail.login(user, pwd)
+
+    mail.select('inbox')
+
+    status, data = mail.search(None, 'All')
+
+    mail_ids = []
+
+    for block in data:
+        mail_ids += block.split()
     
-    return render(request, 'home.html', {'form': form})
+    for i in mail_ids:
+        status, data = mail.fetch(i, '(RFC822)')
+
+        print(data)
+    
+
+    
+    return render(request, 'home.html')
 
 @login_required
 def compose(request):
