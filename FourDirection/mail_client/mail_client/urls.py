@@ -16,7 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.conf.urls import url
 from django.contrib.auth.views import LoginView, LogoutView, PasswordChangeView, PasswordResetView, PasswordResetConfirmView, PasswordResetDoneView, PasswordResetCompleteView
-from read_mail.views import home, compose
+from read_mail.views import home, compose, register, logout
 from django.urls import include
 from read_mail.forms import LoginForm
 
@@ -30,4 +30,6 @@ urlpatterns = [
     url(r'^password-reset/$', PasswordResetView.as_view(),name = 'password_reset'),
     url(r'^login/$', LoginView.as_view(authentication_form=LoginForm)),
     url(r'^compose/$', compose),
+    url(r'^register/$', register),
+    url(r'^logout/$', logout),
 ]
