@@ -7,6 +7,11 @@
     <title>Inbox</title>
 </head>
 <body>
+    {% if messages %}
+        {% for msg in messages %}
+            <small>{{ msg }}</small>
+        {% endfor %}
+    {% endif %}
     <table>
         <thead>
             <th>Sender</th>
@@ -14,7 +19,13 @@
             <th>Content</th>
         </thead>
         <tbody>
-
+            {% for row in data %}
+                <tr>
+                    <td>{{row.From}}</td>
+                    <td>{{row.Subject}}</td>
+                    <td>{{row.Content}}</td>
+                </tr>
+            {% endfor %}
         </tbody>
     </table>
     <a href="/compose"><button>Send a mail</button></a>
