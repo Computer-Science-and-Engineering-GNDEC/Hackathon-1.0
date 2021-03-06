@@ -37,7 +37,10 @@ def home(request):
     mail.login(str(user), pwd)
 
     mail.select('inbox')
-    status, data = mail.search(None, 'All')
+    status, data = mail.search(None, 'ALL')
+    _, unseen_ids = mail.search(None, 'UNSEEN')
+
+    unseen_ids = set(map(lambda x: x.decode('utf-8'), unseen_ids))
 
     # mail_ids = []
 
@@ -45,20 +48,51 @@ def home(request):
     #     mail_ids += block.split()
     mails = []
     for i in data[0].split():
-        status, data = mail.fetch(i, '(RFC822)')
+        status, data = mail.fetch(i, '(BODY.PEEK[])')
         msg = email.message_from_bytes(data[0][1])
+        msg['Id'] = i.decode('utf-8')
         sender = msg['From']
         sub = msg['Subject']
-        content = msg.get_payload()
+        content = msg.get_payload()[0].get_payload()
+        
         date_tuple = email.utils.parsedate_tz(msg['Date'])
         if date_tuple:
               local_date = datetime.datetime.fromtimestamp(email.utils.mktime_tz(date_tuple))
               date = local_date.strftime("%a, %d %b %Y %H:%M:%S")
 
         # mails.append({sender, sub, content, date})
-        msg['Content'] = msg.get_payload()
+        msg['Content'] = content
         mails.append(msg)
-    return render(request, 'home.html', {'data':mails})
+    return render(request, 'home.html', {'data':mails, 'unseen':unseen_ids})
+
+
+@login_required
+def show_mail(request, mail_id):
+    user = request.user
+    import imaplib
+    import email
+    import datetime
+
+    pwd = '12345678'
+    mail = imaplib.IMAP4('fd.com')
+    mail.login(str(user), pwd)
+
+    mail.select('inbox')
+    status, data = mail.fetch(bytes(mail_id, 'utf-8'), '(BODY[])')
+    msg = email.message_from_bytes(data[0][1])
+    msg['Id'] = mail_id
+    content = msg.get_payload()[0].get_payload()
+    msg['Content'] = content
+    
+    date_tuple = email.utils.parsedate_tz(msg['Date'])
+    if date_tuple:
+            local_date = datetime.datetime.fromtimestamp(email.utils.mktime_tz(date_tuple))
+            date = local_date.strftime("%a, %d %b %Y %H:%M:%S")
+    
+    return render(request, 'mail.html', {'mail':msg})
+
+
+
 
 @login_required
 def compose(request):
@@ -68,18 +102,22 @@ def compose(request):
         import smtplib
         SERVER = 'fd.com'
         user = str(request.user) + '@fd.com'
-        to = [form.cleaned_data['to']]
+        to = form.cleaned_data['to']
         sub = form.cleaned_data['sub']
         body = form.cleaned_data['body']
-        message = """\
-        From: %s
-        To: %s
-        Subject: %s
-        %s
-        """ % (user, ", ".join(to), sub, body)
+
+        from email.mime.multipart import MIMEMultipart
+        from email.mime.text import MIMEText
+
+        msg = MIMEMultipart('alternative')
+        msg['Subject'] = sub
+        msg['From'] = user
+        msg['To'] = to
+        
+        msg.attach(MIMEText(body))
 
         mail = smtplib.SMTP(SERVER)
-        mail.sendmail(user, to, message)
+        mail.sendmail(user, to, msg.as_string())
 
         mail.quit()
 

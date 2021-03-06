@@ -21,9 +21,12 @@
         <tbody>
             {% for row in data %}
                 <tr>
-                    <td>{{row.From}}</td>
-                    <td>{{row.Subject}}</td>
-                    <td>{{row.Content}}</td>
+                    
+                    <td>{% if row.Id in unseen %}
+                        *
+                    {%endif%}<a href="mails/{{row.Id}}">{{row.From}}</a></td>
+                    <td><a href="mails/{{row.Id}}">{{row.Subject}}</a></td>
+                    <td><a href="mails/{{row.Id}}">{{row.Content | safe}}</a></td>
                 </tr>
             {% endfor %}
         </tbody>

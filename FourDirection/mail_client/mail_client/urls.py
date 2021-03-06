@@ -16,7 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.conf.urls import url
 from django.contrib.auth.views import LoginView, LogoutView, PasswordChangeView, PasswordResetView, PasswordResetConfirmView, PasswordResetDoneView, PasswordResetCompleteView
-from read_mail.views import home, compose, register, logout
+from read_mail.views import home, compose, register, logout, show_mail
 from django.urls import include
 from read_mail.forms import LoginForm
 
@@ -32,4 +32,5 @@ urlpatterns = [
     url(r'^compose/$', compose),
     url(r'^register/$', register),
     url(r'^logout/$', logout),
+    url(r'^mails/(?P<mail_id>\d+)/$', show_mail),
 ]
