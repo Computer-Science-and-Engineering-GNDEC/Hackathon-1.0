@@ -1,6 +1,6 @@
 {% extends "layouts/base.html" %}
 
-{% block title %} Tables {% endblock %} 
+{% block title %} Visitors {% endblock %} 
 
 <!-- Specific Plugin CSS goes HERE -->
 {% block plugin_stylesheets %}{% endblock plugin_stylesheets %}
@@ -9,60 +9,85 @@
 {% block stylesheets %}{% endblock stylesheets %}
 
 {% block content %}
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <div class="content-wrapper">
-      <div class="page-header">
-        <h3 class="page-title"> {{ textin }} </h3>
-        <nav aria-label="breadcrumb">
-          <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="#">Tables</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Basic tables</li>
-          </ol>
-        </nav>
-      </div>
       <div class="row">
-        <div class="col-lg-6 grid-margin stretch-card">
+        <div class="col-lg-10 grid-margin stretch-card">
           <div class="card">
             <div class="card-body">
-              <h4 class="card-title">Tables</h4>
+              <h4 class="card-title">Visitor Visualiser</h4>
               </p>
               <div class="table-responsive">
                 <table class="table">
                   <thead>
                     <tr>
-                      <th>Time </th>
-                      <th>In</th>
-                      <th>Out</th>
-                      <th>Visitors present</th>
+                      <th>Sr. no</th>
+                      <th>Customers entering</th>
+                      <th>Customers leaving</th>
+                      <th>customers staying</th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr>
-                      <td>11:00-12:00</td>
-                      <td>5</td>
                       <td>1</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                    </tr>
+                    <tr>
                       <td>2</td>
+                      <td>1</td>
+                      <td>0</td>
+                      <td>1</td>
                     </tr>
                     <tr>
-                      <td>12:00-1:00</td>
-                      <td>6</td>
-                      <td>7</td>
-                      <td>4</td>
+                      <td>3</td>
+                      <td id="up">-</td>
+                      <td id="down">-</td>
+                      <td id="diff">-</td>
                     </tr>
-                    <tr>
-                      <td>1:00-2:00</td>
-                      <td>0</td>
-                      <td>0</td>
-                      <td>0</td>
-                    </tr>
+                    
                   </tbody>
                 </table>
               </div>
             </div>
           </div>
         </div>
-            </div>
-          </div> 
+       
+        
+      </div>
+    </div>
+
+
+
+    <script>
+      $(document).ready(function(){
+
+        $.ajax({
+          url:"http://127.0.0.1:8000/visitor/visit/",
+          type:'get',
+          
+          success: function(response){
+            $(".page-title").text(response.up)  
+            $("#up").text(response.up)  
+            $("#down").text(response.down)  
+            let con=response.up-response.down
+            if(con>0)
+            $("#diff").text(con)
+            else
+            $("#diff").text(0)
+
+            console.log(response.up)
+            console.log(response.up)
+            console.log(response.up)
+            console.log(response.up)
+            console.log(response.up)
+            console.log(response.up)
+            console.log(response.up)
+          }
+        })
+      });
+    </script>
 {% endblock content %}
 
 <!-- Specific Plugin JS goes HERE  -->
