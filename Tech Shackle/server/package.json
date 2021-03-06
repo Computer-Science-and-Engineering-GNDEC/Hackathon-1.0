@@ -23,6 +23,7 @@
   "devDependencies": {
     "@types/bcrypt": "^3.0.0",
     "@types/express": "^4.17.11",
+    "@types/jsonwebtoken": "^8.5.0",
     "@types/node": "^14.14.31",
     "body-parser": "^1.19.0",
     "nodemon": "^2.0.7",
@@ -32,11 +33,12 @@
   "dependencies": {
     "@types/cors": "^2.8.10",
     "bcrypt": "^5.0.1",
+    "cookie-parser": "^1.4.5",
     "cors": "^2.8.5",
+    "crypto": "^1.0.1",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
-    "mongoose": "^5.11.18",
-    "crypto": "^1.0.1",
-    "jsonwebtoken": "^8.5.1"
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.11.18"
   }
 }

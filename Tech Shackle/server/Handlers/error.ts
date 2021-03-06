@@ -6,10 +6,11 @@ const errorHandler = (
   req: Request,
   res: Response,
   next: NextFunction
-) => {
-  return res.status(error.status || 500).json({
-    message: error.message || 'Oops.. something went wrong!!',
+) =>
+  res.status(error.status || 500).json({
+    error: {
+      message: error.message || 'Oops.. something went wrong!!',
+    },
   });
-};
 
 export default errorHandler;
