@@ -35,5 +35,4 @@ urlpatterns = [
     url(r'^register/$', register),
     url(r'^logout/$', logout),
     url(r'^mails/(?P<mail_id>\d+)/$', show_mail),
-]
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
