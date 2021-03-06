@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import {Card, ListGroup,ListGroupItem,Container,Row,Col,Nav,Navbar,NavDropdown,Button} from 'react-bootstrap'
+import './News.css';
 
 export class News extends Component {
     render() {
@@ -8,8 +9,8 @@ export class News extends Component {
            
            <Container>
   <Row>
-    <Col sm={9}>
-    <div>
+    <Col sm={9} style={{padding:'50px 10px 50px 80px'}}>
+    <div className="newscolor" >
             <h2>NEWS</h2>
         </div>
     <div className="row">
@@ -71,8 +72,8 @@ export class News extends Component {
     </Col>
 
 
-    <Col sm={3}>
-        <div>
+    <Col sm={3} style={{padding:'50px'}}>
+        <div className="newscolor">
             <h2>EVENTS</h2>
         </div>
         <div>
@@ -101,21 +102,21 @@ export class News extends Component {
 <div className="container">
 
             <div>
-                <div>
+                <div className="newscolor" style={{padding:'30px 20px 10px 80px'}} >
                     <h2><b>MESSAGE FROM THE PRINCIPAL</b></h2>
                 </div>
-                <div className="row">
-                    <div className="col-4">
-                    <Card style={{ width: '18rem' }}>
+                <div className="row"style={{padding:'30px 20px 10px 60px'}}>
+                    <div className="col-4" >
+                    <Card style={{ width: '20rem' }}>
   <Card.Img variant="top" src={process.env.PUBLIC_URL+"principal.jpg"}/>
 </Card>
                     </div>
-                    <div className="col-8">
+                    <div className="col-7">
                     <Card>
 
   <Card.Body>
-    <blockquote className="blockquote mb-0">
-      <p>
+    <blockquote className="blockquote mb-1">
+      <p style={{fontSize:'50%'},{padding:'3px'}}>
         {' '}
         Welcome to Guru Nanak Dev Engineering College, Ludhiana(an autonomous college under UGC Act),
          established in 1956, was set up under the aegis of Nankana Sahib Education Trust, devoted to
