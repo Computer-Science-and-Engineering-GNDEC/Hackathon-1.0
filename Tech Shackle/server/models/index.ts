@@ -1,11 +1,13 @@
 import mongoose from 'mongoose';
+require('dotenv').config();
+
 // const mongoose = require('mongoose')
 
 mongoose.set('debug', true);
 
 mongoose.Promise = Promise;
 
-const DB_URI = process.env.DB_URI;
+const DB_URI = 'mongodb+srv://shivam:shivam@cluster0.04qcq.mongodb.net/myFirstDatabase?retryWrites=true&w=majority';
 
 mongoose
   .connect(DB_URI, {

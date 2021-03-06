@@ -1,8 +1,12 @@
 import mongoose from 'mongoose';
 import bcrypt from 'bcrypt';
+import { threadId } from 'node:worker_threads';
+const crypto = require('crypto');
 
 /* Required using mongo hook with TS */
 interface IUser extends mongoose.Document {
+  passwordResetToken: any;
+  passwordResetExpires: number;
   email: string;
   name?: string;
   password: string;
@@ -31,6 +35,9 @@ const userSchema = new mongoose.Schema<IUser>({
     required: true,
     default: false,
   },
+  passwordChangedAt: Date,
+  passwordResetToken : String,
+  passwordResetExpires : Date
 });
 
 userSchema.pre<IUser>('save', async function (next) {
@@ -56,6 +63,16 @@ userSchema.methods.comparePassword = async function (enteredPassword, next) {
   } catch (error) {
     next(error);
   }
+};
+
+userSchema.methods.createPasswordResetToken = function() {
+  const resetToken = crypto.randomBytes(32).toString('hex');
+
+  console.log({ resetToken }, this.passwordResetToken);
+
+  this.passwordResetToken = crypto.createHash('sha256').update(resetToken).digest('hex');
+  this.passwordResetExpires = Date.now() + 10 * 60 * 1000;
+  return resetToken;
 };
 
 const User = mongoose.model('User', userSchema);

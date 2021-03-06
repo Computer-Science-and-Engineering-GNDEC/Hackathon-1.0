@@ -1,6 +1,6 @@
 // Load env variables
 require('dotenv').config();
-
+const cookieParser = require('cookie-parser');
 import express from 'express';
 import cors from 'cors';
 import { CustomError } from './Handlers/custom-types';
@@ -13,7 +13,7 @@ const app = express();
 
 app.use(cors());
 app.use(express.json());
-
+app.use(cookieParser());
 /* Middleware for using routes */
 
 app.use('/api/v1/users', authRouter);
