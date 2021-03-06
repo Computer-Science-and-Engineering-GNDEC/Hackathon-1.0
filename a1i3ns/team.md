@@ -1,3 +1,8 @@
+## Team Mentor
+
+Name: Karanpal Singh  
+Degisnation: Managing Director - Nebero Systems Pvt Ltd
+
 ## Team Leader
 
 Name: Suhel Mehta  
