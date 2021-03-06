@@ -9,3 +9,6 @@ dj-database-url
 python-decouple
 gunicorn
 whitenoise
+datetime
+imutils
+opencv-python

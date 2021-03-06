@@ -31,6 +31,8 @@ INSTALLED_APPS = [
     'crispy_forms',
     'app',  # Enable the inner app 
     'core',
+    'django_extensions',
+    'visitors',
 
 ]
 
@@ -47,7 +49,7 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'core.urls'
 LOGIN_REDIRECT_URL = "home"   # Route defined in app/urls.py
-LOGOUT_REDIRECT_URL = "home"  # Route defined in app/urls.py
+LOGOUT_REDIRECT_URL = "/"  # Route defined in app/urls.py
 TEMPLATE_DIR = os.path.join(CORE_DIR, "core/templates")  # ROOT dir for templates
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
