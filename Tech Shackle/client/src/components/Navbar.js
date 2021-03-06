@@ -107,7 +107,7 @@ export class Navb extends Component {
             </div>
             
             <div className="slider">
-                
+
             <Carousel fade>
   <Carousel.Item>
     <img
@@ -141,6 +141,7 @@ export class Navb extends Component {
 
     <Carousel.Caption>
       <h3>Third slide label</h3>
+      
       <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
     </Carousel.Caption>
   </Carousel.Item>
