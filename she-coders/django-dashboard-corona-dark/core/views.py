@@ -4,32 +4,39 @@ from django.shortcuts import render, redirect
 from django.db.models import Count
 from django.contrib import messages
 from django.db.models.functions import ExtractHour
-
+from django.contrib.auth.decorators import login_required
 from .forms import CustomerForm
-
+from .models import item
+@login_required(login_url="/auth/login/")
 def index(request):
-    all_customers = customer.objects.all()
-    city1_customers = customer.objects.filter(city__city='ludhiana')
-    city2_customers = customer.objects.filter(city__city='chandigarh')
-    trending_items = customer.objects.values('item').annotate(count=Count('item')).order_by('item').reverse()
-    data=[]
-    data.append(city1_customers.count())
-    data.append(city2_customers.count())
-    labels=['city A', 'city B']
-    #data = customer_data.filter(city)
-    #customer_data.filter.filter()
-    context = {
-        'all_customers': all_customers,
-        'city1_customers': city1_customers,
-        'city2_customers': city2_customers,
-        'data':data,
-        'labels':labels,
-        'trending_items':trending_items
-       
-    }
+        if(request.user):
+            all_customers = customer.objects.all()
+            all_items = item.objects.all()
 
-    # Render the HTML template index.html with the data i
-    return render(request, 'index.html', context=context)
+            city1_customers = customer.objects.filter(city__city='ludhiana')
+            city2_customers = customer.objects.filter(city__city='chandigarh')
+            trending_items = customer.objects.values('item').annotate(count=Count('item')).order_by('item').reverse()
+            data=[]
+            data.append(city1_customers.count())
+            data.append(city2_customers.count())
+            labels=['city A', 'city B']
+            #data = customer_data.filter(city)
+            #customer_data.filter.filter()
+            context = {
+                'all_customers': all_customers,
+                'city1_customers': city1_customers,
+                'city2_customers': city2_customers,
+                'data':data,
+                'labels':labels,
+                'trending_items':trending_items,
+                'all_items':all_items
+            
+            }
+
+        # Render the HTML template index.html with the data i
+            return render(request, 'index.html', context=context)
+        else:
+            return redirect( '/auth/login')
 
 def chart(request):
     citywise_customers = customer.objects.all().annotate(cityc=Count('city'))
@@ -54,9 +61,14 @@ def addsale(request):
     if request.method=='POST':
         
         form= CustomerForm(request.POST)
+
         if form.is_valid():
+
             form.save()
-            messages.success(request, 'Form submission successful')
+            itemName=item.objects.get(pk=request.POST.get('item'))
+            itemName.stock=int(itemName.stock)-int(request.POST.get('quantity'))
+            itemName.save()
+            messages.success(request, ' submssion successful')
 
             return redirect('/add')
         else:

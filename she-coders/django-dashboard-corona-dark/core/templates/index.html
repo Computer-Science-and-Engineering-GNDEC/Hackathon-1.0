@@ -43,50 +43,25 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-xl-3 col-sm-6 grid-margin stretch-card">
+        {% for item in all_items %}
+        <div class="col-xl-4 col-sm-6 grid-margin stretch-card">
           <div class="card">
             <div class="card-body">
               <div class="row">
+                <h5 class="text-success ml-5">Stock left</h5>
                 <div class="col-9">
                   <div class="d-flex align-items-center align-self-start">
-                    {% if city1_customers.count > 0 %}
-                    <h3 class="mb-0">{{city1_customers.count }}</h3>
-                    {% endif %}
-                    <p class="text-success ml-2 mb-0 font-weight-medium">+3.5%</p>
+                    <h3 class="mb-0">{{item}}</h3>
+                    <h5 class="text-danger align-right ml-2 mb-0">{{item.stock}}</h5>
                   </div>
                 </div>
-                <div class="col-3">
-                  <div class="icon icon-box-success ">
-                    <span class="mdi mdi-arrow-top-right icon-item"></span>
-                  </div>
-                </div>
+
               </div>
-              <h6 class="text-muted font-weight-normal">Sales increase at Place A </h6>
             </div>
           </div>
         </div>
-        
-        <div class="col-xl-3 col-sm-6 grid-margin stretch-card">
-          <div class="card">
-            <div class="card-body">
-              <div class="row">
-                <div class="col-9">
-                  <div class="d-flex align-items-center align-self-start">
-                    <h3 class="mb-0">$12.34</h3>
-                    <p class="text-danger ml-2 mb-0 font-weight-medium">-2.4%</p>
-                  </div>
-                </div>
-                <div class="col-3">
-                  <div class="icon icon-box-danger">
-                    <span class="mdi mdi-arrow-bottom-left icon-item"></span>
-                  </div>
-                </div>
-              </div>
-              <h6 class="text-muted font-weight-normal">Sales increase at Place B</h6>
-             
-            </div>
-          </div>
-        </div>
+        {% endfor %}
+
         <!-- <div class="col-xl-3 col-sm-6 grid-margin stretch-card">
           <div class="card">
             <div class="card-body">
@@ -109,7 +84,7 @@
         </div> -->
       </div>
       <div class="row">
-        <div class="col-md-4 grid-margin stretch-card">
+        <div class="col-md-6 grid-margin stretch-card">
           <div class="card">
             <div class="card-body">
               <h4 class="card-title">Customers visited</h4>
@@ -135,7 +110,7 @@
             </div>
           </div>
         </div>
-        <div class="col-md-8 grid-margin stretch-card">
+        <div class="col-md-6 grid-margin stretch-card">
           <div class="card">
             <div class="card-body">
               <div class="d-flex flex-row justify-content-between">
@@ -153,9 +128,9 @@
                       <div class="preview-item-content d-sm-flex flex-grow">
                         <div class="flex-grow">
                           <h6 class="preview-subject">{{ i.city }}</h6>
-                          {% if i.item == 5 %}
+                          {% if i.item == 1 %}
                           <p class="text-muted mb-0">🎒 school bag</p>
-                          {% elif i.item == 4 %}
+                          {% elif i.item == 2 %}
                           <p class="text-muted mb-0">👜 hand bag</p>
                           {% else %}
                           <p class="text-muted mb-0">🧳 travelling bag</p>

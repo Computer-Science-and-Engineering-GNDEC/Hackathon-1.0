@@ -42,9 +42,6 @@ class item(models.Model) :
     def __str__(self):
         return  self.item
 
-
-
-
 class customer(models.Model):
     id=models.AutoField(primary_key=True,blank=True,null=False)
     first_name = models.CharField(max_length=50)
@@ -60,5 +57,16 @@ class customer(models.Model):
     description=models.TextField(blank=True,null=False)
     def __str__(self):
         return  self.first_name
+
+class person(models.Model):
+    timestamp = models.DateTimeField(auto_now_add= True)
+    in_persons = models.PositiveIntegerField(default=0)
+    out_persons = models.PositiveIntegerField(default=0)
+    total_persons = models.PositiveIntegerField(default=0)
+
+
+
+
+
 
 
