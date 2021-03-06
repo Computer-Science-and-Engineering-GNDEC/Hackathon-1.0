@@ -8,9 +8,9 @@ CITY_CHOICES = (
 )
 
 ITEM_CHOICES = (
-    ('schoolbag','SCHOOLBAG'),
-    ('handbag', 'HANDBAG'),
-    ('travellingbag','TRAVELLINGBAG'),
+    ('school bag','SCHOOL BAG'),
+    ('hand bag', 'HAND BAG'),
+    ('travelling bag','TRAVELLING BAG'),
 )
 
 class city(models.Model) :
