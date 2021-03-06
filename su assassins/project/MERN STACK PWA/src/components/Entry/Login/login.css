@@ -1,0 +1,32 @@
+.auth-form {
+  padding: 0 1rem;
+}
+.login-svg {
+  width: 90%;
+  display: block;
+  margin: 3rem auto;
+}
+
+.logo {
+  max-height: 40px;
+}
+
+@media screen and (min-width: 600px) {
+  .auth-form {
+    /* background: red; */
+    width: 60%;
+    /* background: red; */
+    border-radius: 1rem;
+    padding: 2rem 3rem;
+    box-shadow: 1px 1px 30px 1px rgba(128, 128, 128, 0.692);
+    background: white;
+  }
+  .login {
+    background: linear-gradient(
+      189deg,
+      rgba(255, 255, 255, 0.8799894957983193) 17%,
+      rgba(210, 244, 233, 1) 50%,
+      rgba(46, 205, 153, 1) 100%
+    ) !important;
+  }
+}

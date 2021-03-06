@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Forgot Password</title>
+  </head>
+  <style>
+    body {
+      text-align: center;
+      overflow: hidden;
+      background: linear-gradient(
+        143deg,
+        rgba(121, 9, 117, 0.8799894957983193) 35%,
+        rgba(0, 232, 255, 1) 100%
+      );
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    div {
+      background: white;
+      height: 80%;
+      width: 80%;
+      border-radius: 0.5rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-evenly;
+    }
+    img {
+      width: 80%;
+    }
+
+    button {
+      font-size: 2rem;
+      color: white;
+      padding: 0.75rem 1.25rem;
+      background: dodgerblue;
+      border-radius: 0.55rem;
+      border: none;
+      cursor: pointer;
+    }
+    button:hover {
+      opacity: 0.75;
+      transform: scale(1.01);
+    }
+
+    @media screen and (min-width: 600px) {
+      img {
+        width: 40%;
+      }
+      div {
+        height: 60%;
+        width: 60%;
+      }
+    }
+  </style>
+  <body>
+    <div>
+      <img
+        src="https://static.wixstatic.com/media/42620c_cb3808b9f52e4c0c837a6877b8a3b07f~mv2.png/v1/fill/w_382,h_135,al_c,q_85,usm_0.66_1.00_0.01/Light%20Green%20Bulb%20Children%20%26%20Kids%20Logo_pn.webp"
+        alt=""
+      />
+      <h1>Please click on the following link to reset the passwod.</h1>
+      <a href="<%= resetUrl %>"><button>Reset my Password</button></a>
+
+      <h2>
+        If you did not request this, please ignore this email and your password
+        will remain unchanged
+      </h2>
+    </div>
+  </body>
+</html>

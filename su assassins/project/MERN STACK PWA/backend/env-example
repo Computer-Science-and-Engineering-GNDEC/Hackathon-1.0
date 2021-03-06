@@ -1,0 +1,5 @@
+MONGODB_CONNECTION_STRING = mongodb+srv://user:qR0QCXwKnmKrWbJR@hackathon.azwod.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
+JWT_SECRET = asdfghjklkjhfsdfghjkjhgf
+SendGridAPI = "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"
+Email = anonymousguy1456@protonmail.com
+Password= Password123
