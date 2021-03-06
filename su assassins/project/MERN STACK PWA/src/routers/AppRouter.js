@@ -12,14 +12,11 @@ import Faq from "../components/Dashboard/Faq";
 
 import { PrivateRoute } from "./PrivateRoute";
 import Projects from "../components/Dashboard/Projects/Projects";
-import Business from "../components/Dashboard/Business/Business";
-import CertReq from "../components/Dashboard/CertReq/CertReq";
 import ResetPass from "../components/Entry/ResetPass";
 import NotFoundPage from "../components/NotFoundPage";
 import Project from "../components/Dashboard/Projects/Project/Project";
 import Chatsidebar from "../components/Dashboard/ChatApp/Chatsidebar";
 import AddProject from "../components/Dashboard/Projects/AddProject/AddProject";
-import AddBusiness from "../components/Dashboard/Business/AddBusiness/AddBusiness";
 import EditProject from "../components/Dashboard/Projects/EditProject/EditProject";
 
 const AppRouter = ({ messages }) => {
@@ -29,7 +26,7 @@ const AppRouter = ({ messages }) => {
       <PrivateRoute exact path="/" component={Profile} />
       <Route path="/login" component={Login} />
       <Route path="/register" component={Register} />
-      <Route exact path="/interns" component={Interns} />
+      <Route exact path="/info" component={Interns} />
       <Route
         path="/chats"
         render={() =>
@@ -45,12 +42,9 @@ const AppRouter = ({ messages }) => {
       <Route exact path="/addproject" component={AddProject} />
       <Route exact path="/edit" component={EditProject} />
       <PrivateRoute path="/projects/:project" component={Project} />
-      <Route path="/certReq" component={CertReq} />
       <Route path="/forgot" component={ForgotPassword} />
       <Route path="/reset/:token" component={ResetPass} />
       <Route path="/notfound" component={NotFoundPage} />
-      <Route path="/addbusiness" component={AddBusiness} />
-      <Route path="/business" component={Business} />
       <PrivateRoute path="/internpage/:id" component={InternPage} />
       <Route component={NotFoundPage} />
     </Switch>

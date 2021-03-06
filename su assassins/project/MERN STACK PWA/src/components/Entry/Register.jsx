@@ -65,7 +65,7 @@ function Register() {
                     <div className="col-sm-12 col-xs-12">
                       <div className="mb-30">
                         <h3 className="text-center txt-dark mb-10">
-                          Register to Dashboard
+                          Register to GNDEC Dashboard
                         </h3>
                         <h6 className="text-center nonecase-font txt-grey">
                           Enter your details below
@@ -112,13 +112,13 @@ function Register() {
                             className="control-label mb-10"
                             htmlFor="exampleInputEmail_2"
                           >
-                            Zoho Mail
+                            Email
                           </label>
                           <input
                             type="email"
                             className="form-control"
                             id="exampleInputEmail_2"
-                            placeholder="username@zohomail.eu"
+                            placeholder="username@gmail.com"
                             value={zoho_mail}
                             onChange={(e) => setZohomail(e.target.value)}
                             required

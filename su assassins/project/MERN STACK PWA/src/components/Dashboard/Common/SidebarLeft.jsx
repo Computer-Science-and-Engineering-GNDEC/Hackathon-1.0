@@ -27,7 +27,7 @@ function SidebarLeft() {
             </a>
             <ul id="dashboard_dr" className="collapse collapse-level-1">
               <li>
-                <Link to="/interns">Interns</Link>
+                <Link to="/info">Info</Link>
               </li>
               <li>
                 <Link to="/">Profile</Link>
@@ -63,27 +63,7 @@ function SidebarLeft() {
               </li>
             </ul>
           </li>
-          <li>
-            <a data-toggle="collapse" data-target="#ui_bus">
-              <div className="pull-left">
-                <i className="zmdi zmdi-folder mr-20"></i>
-                <span className="right-nav-text">Business Details</span>
-              </div>
-              <div className="pull-right">
-                <i className="zmdi zmdi-caret-down"></i>
-              </div>
-              <div className="clearfix"></div>
-            </a>
-            <ul id="ui_bus" className="collapse collapse-level-1">
-              <li>
-                <Link to="/addbusiness">Add Business</Link>
-              </li>
-
-              <li>
-                <Link to="/business">Businesses</Link>
-              </li>
-            </ul>
-          </li>
+          
 
           <li>
             <a data-toggle="collapse" data-target="#app_dr">

@@ -61,10 +61,12 @@ function Intern({
             value={project}
             onChange={(e) => setProject(e.target.value)}
           >
-            <option value="volvo">Chatbot</option>
-            <option value="saab">Transaction Monitoring</option>
-            <option value="mercedes">Fraudify</option>
-            <option value="audi">No Code Low Code</option>
+            <option value="volvo">CSE</option>
+            <option value="saab">IT</option>
+            <option value="mercedes">ECE</option>
+            <option value="audi">EE</option>
+            <option value="au">ME</option>
+            <option value="aud">CE</option>
           </select>
         </td>
         <td>

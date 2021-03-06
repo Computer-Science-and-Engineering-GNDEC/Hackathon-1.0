@@ -35,10 +35,10 @@ router.post(
     const { zoho_mail, fname, lname, contact, gender, password } = req.body;
 
     try {
-      if (!/^([a-z0-9_\.-]+)@(zohomail)\.(eu)$/.test(zoho_mail)) {
+      if (!/^([a-z0-9_\.-]+)@(gmail)\.(com)$/.test(zoho_mail)) {
         return res
           .status(400)
-          .json({ errors: [{ msg: "Enter a valid zoho mail" }] });
+          .json({ errors: [{ msg: "Enter a valid gmail" }] });
       }
 
       let user = await User.findOne({ zoho_mail });

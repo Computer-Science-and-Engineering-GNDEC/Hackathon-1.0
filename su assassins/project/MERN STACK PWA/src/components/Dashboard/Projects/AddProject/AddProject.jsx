@@ -33,10 +33,10 @@ function AddProject() {
 
   const handleAdd = (email) => {
     if (memb.includes(email)) {
-      alert("ZohoMail already exists");
+      alert("Gmail already exists");
       return;
-    } else if (!/^([a-z0-9_\.-]+)@(zohomail)\.(eu)$/.test(email)) {
-      alert("Please enter a valid ZohoMail");
+    } else if (!/^([a-z0-9_\.-]+)@(gmail)\.(com)$/.test(email)) {
+      alert("Please enter a valid Gmail");
     } else {
       setMemb([...memb, email]);
       setNewMemb("");

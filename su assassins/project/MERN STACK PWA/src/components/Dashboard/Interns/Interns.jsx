@@ -18,7 +18,7 @@ function Interns() {
               <div className="panel panel-default card-view">
                 <div className="panel-heading">
                   <div className="pull-left">
-                    <h6 className="panel-title txt-dark">Interns</h6>
+                    <h6 className="panel-title txt-dark">Info</h6>
                   </div>
                   <div className="pull-right">
                     <a
@@ -77,7 +77,7 @@ function Interns() {
                               <th>Start Date</th>
                               <th>End Date</th>
                               <th>Permitted</th>
-                              <th>Project</th>
+                              <th>Department</th>
                               <th>Actions</th>
                             </tr>
                           </thead>

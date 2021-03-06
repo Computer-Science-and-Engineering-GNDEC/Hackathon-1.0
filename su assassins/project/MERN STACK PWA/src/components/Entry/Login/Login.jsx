@@ -67,7 +67,7 @@ function Login() {
                       </div>
                       <div className="col-lg-6">
                         <h3 className="text-center">
-                          Sign in to Dashboard
+                          Sign in to GNDEC Dashboard
                         </h3>
                         <h6 className="text-center nonecase-font txt-grey">
                           Enter your details below
@@ -85,7 +85,7 @@ function Login() {
                               type="email"
                               className="form-control"
                               id="exampleInputEmail_2"
-                              placeholder="Enter e-mail (Zoho Mail)"
+                              placeholder="Enter e-mail"
                               value={zoho_mail}
                               onChange={(e) => setUsername(e.target.value)}
                               required
