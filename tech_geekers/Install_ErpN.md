@@ -148,8 +148,10 @@ Then created the MariaDB user 'hack' with privileges similar to root and then ga
 Then confirm both the user creation and the new user’s privileges:
 
     SELECT host, user, Super_priv FROM mysql.user;
+```
 <pre>
-Output should be this:
+
+    Output should be this:
 +-----------+-------+------------+
 | Host      | User  | Super_priv |
 +-----------+-------+------------+
@@ -157,17 +159,22 @@ Output should be this:
 | localhost | mysql | Y          |
 | %         | hack| Y         |
 +-----------+-------+------------+
-3 rows in set (0.001 sec)
 
-But we are getting this:
+    3 rows in set (0.001 sec)
+
+
+    But we are getting this:
 +-----------+-------+------------+
 | Host      | User  | Super_priv |
 +-----------+-------+------------+
 | localhost | root  | Y          |
 | %         | hack| Y         |
 +-----------+-------+------------+
-2 rows in set (0.001 sec)
-<pre>
+
+    2 rows in set (0.001 sec)
+</pre> 
+```
+</br>
 
 Then flush privileges to apply all changes:
 
@@ -176,8 +183,10 @@ Then flush privileges to apply all changes:
 Then exit the session:
 
     exit
+    
+</br>
 
-## Step 4 — Configuring MariaDB for ERPNext
+# Step 4 — Configuring MariaDB for ERPNext
 
 First, stop mariadb.service:
 
@@ -187,8 +196,9 @@ Now use nano or your favorite text editor to create a MariaDB configuration file
 
     sudo nano /etc/mysql/mariadb.conf.d/mariadb.cnf
 
- 
+``` 
 <pre>
+
 Now add ERPNext’s official configuration template:
 /etc/mysql/mariadb.conf.d/mariadb.cnf
 
@@ -262,9 +272,8 @@ default-character-set = utf8mb4
 
 [mysqldump]
 max_allowed_packet=256M
-
 </pre>
-
+```
 Save and close the file.
 
 Start mariadb.service:
@@ -276,7 +285,8 @@ To test the connection you can use the following command. Remember to replace sa
     mysql --user hack --password 'mariadb_password' --host=localhost --protocol=tcp --port=3306 test
 
 You will see an output showing MariaDB’s basic help content and several parameters. This means your connection was successful:
-<pre>
+
+
 Output
 mysql  Ver 15.1 Distrib 10.4.13-MariaDB, for debian-linux-gnu (x86_64) using readline 5.2
 Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
@@ -285,7 +295,7 @@ Usage: mysql [OPTIONS] [database]
 
 Default options are read from the following files in the given order:
 /etc/my.cnf /etc/mysql/my.cnf ~/.my.cnf
-
+```
 ...
 
   --ssl-verify-server-cert
@@ -310,7 +320,8 @@ plugin-dir                        (No default value)
 default-auth                      (No default value)
 binary-mode                       FALSE
 connect-expired-password          FALSE
-</pre>
+```
+
 
 Remember to reload the service using the following command:
 
