@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';  
-import Navb from './components/Navbar';
+import Navb from './components/Home/Navbar';
 
 
 
