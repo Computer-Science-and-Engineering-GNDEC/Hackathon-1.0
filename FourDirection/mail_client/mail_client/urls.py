@@ -15,6 +15,8 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.conf.urls import url
+from django.conf import settings
+from django.conf.urls.static import static
 from django.contrib.auth.views import LoginView, LogoutView, PasswordChangeView, PasswordResetView, PasswordResetConfirmView, PasswordResetDoneView, PasswordResetCompleteView
 from read_mail.views import home, compose, register, logout
 from django.urls import include
@@ -32,4 +34,4 @@ urlpatterns = [
     url(r'^compose/$', compose),
     url(r'^register/$', register),
     url(r'^logout/$', logout),
-]
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
