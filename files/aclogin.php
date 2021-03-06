@@ -22,8 +22,7 @@ if (!$result) {
 
 $row= mysqli_fetch_array($result);
 if($row['username']==$username && $row['password']== $password){
-    echo "Login success!! Welcome".$row['username'];
-
+    echo "Login success!! Welcome ".$row['username'];
 }else{
     echo "Failed try{
     }
