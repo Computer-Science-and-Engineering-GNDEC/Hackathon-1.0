@@ -31,6 +31,8 @@ INSTALLED_APPS = [
     'crispy_forms',
     'app',  # Enable the inner app 
     'core',
+    'django_extensions',
+    'visitors',
 
 ]
 
