@@ -1,12 +1,12 @@
-import mongoose from 'mongoose';
+import mongoose, { Date } from 'mongoose';
 import bcrypt from 'bcrypt';
 import { threadId } from 'node:worker_threads';
-const crypto = require('crypto');
+import crypto from 'crypto';
 
 /* Required using mongo hook with TS */
 interface IUser extends mongoose.Document {
-  passwordResetToken: any;
-  passwordResetExpires: number;
+  passwordResetToken?: any;
+  passwordResetExpires?: number;
   email: string;
   name?: string;
   password: string;
@@ -33,13 +33,21 @@ const userSchema = new mongoose.Schema<IUser>({
   role: {
     type: String,
     required: true,
-    default: 'student'
+    default: 'student',
   },
-  passwordChangedAt: Date,
-  passwordResetToken : String,
-  passwordResetExpires : Date,
-  }
-);
+  passwordChangedAt: {
+    type: Date,
+    required: false,
+  },
+  passwordResetToken: {
+    type: Date,
+    required: false,
+  },
+  passwordResetExpires: {
+    type: Date,
+    required: false,
+  },
+});
 
 userSchema.pre<IUser>('save', async function (next) {
   try {
@@ -66,12 +74,15 @@ userSchema.methods.comparePassword = async function (enteredPassword, next) {
   }
 };
 
-userSchema.methods.createPasswordResetToken = function() {
+userSchema.methods.createPasswordResetToken = function () {
   const resetToken = crypto.randomBytes(32).toString('hex');
 
   console.log({ resetToken }, this.passwordResetToken);
 
-  this.passwordResetToken = crypto.createHash('sha256').update(resetToken).digest('hex');
+  this.passwordResetToken = crypto
+    .createHash('sha256')
+    .update(resetToken)
+    .digest('hex');
   this.passwordResetExpires = Date.now() + 10 * 60 * 1000;
   return resetToken;
 };

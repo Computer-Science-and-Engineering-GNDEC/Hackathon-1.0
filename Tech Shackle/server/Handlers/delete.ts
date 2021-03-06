@@ -8,7 +8,6 @@ export async function deleteDocument(
 ) {
   try {
     const id = req.params.id;
-    console.log(req.params);
     
     console.log(`id: ${id}`);
     
