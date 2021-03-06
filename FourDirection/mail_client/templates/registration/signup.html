@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
 <title>
@@ -15,6 +16,11 @@
         css.type = 'text/css'; 
         document.getElementsByTagName('head')[0].appendChild(css); 
     })(); 
+<link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700|Lato:400,100,300,700,900' rel='stylesheet' type='text/css'>
+
+<link rel="stylesheet" href={% static "animate.css" %}>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 </script>
 <style>
 
@@ -24,15 +30,33 @@
     box-sizing: border-box;
 }
 body{
+    background: url({% static "photo_bg.jpg" %});
+	background-repeat: no-repeat;
+	background-size: cover;
+	font-size: 16px;
+	font-family: 'Lato', sans-serif;
+	font-weight: 300;
+	margin: 0;
+	color: #666;
     font-family: 'Poppins', sans-serif;
     overflow: hidden;
-    background-color: rgb(230, 223, 223);
+    /* background-color: rgb(230, 223, 223); */
+}
+
+/* a:hover {
+	color: #aeaeae;
+} */
+
+p.small {
+	font-size: 1.5em;
+	margin: 20px 0 0;
 }
 
 /* styling the images dimensions */
 .avatar{
-    height: 100px;
-    width: 100px;
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
 }
 .avt{
     text-align: center;
@@ -139,44 +163,33 @@ form{
 /*From Here*/
 
 .error{
-  background: #c51244 !important;
-  padding: 10px !important;
+  background: #f0376b !important;
+  padding: 0px !important;
   border-radius: 0 !important;
   position: relative; 
-  display: inline-block !important;
+  display: inline-flex !important;
   box-shadow: 1px 1px 1px #aaaaaa;
   margin-top: 10px;
-}
-
-.error:before{
-  content: '';  
-  width: 0;  
-  height: 0;  
-  border-left: 10px solid transparent;
-  border-right: 10px solid transparent;
-  border-bottom: 10px solid #c51244;
-  position: absolute;  
-  top: -10px; 
-}
-
-.error:after{
-  color: #c51244 !important;
+  opacity: 0.9;
+  color: #ebe4e5;
+  background-color: #0a0101;
 }
 
 </style>
 </head>
 <body>
     <div class="container" >
-        <div class="img-container">
-            <!-- <img class="back" src="./img/stand.svg" > -->
-        </div>
+        <!-- <div class="img-container">
+            <img class="back" src= {% static "logo2.png" %} >
+        </div> -->
         <div class="form">
             <form method="POST">
                 {% csrf_token %}
                 
 
                 <!-- {{form.as_p}} -->
-                <!-- <div class="avt"><img class="avatar" src="./img/avatarb.svg"></div> -->
+                
+                <div class="avt"><img class="avatar" src={% static "logo2.png" %}></div>
                 <div class="head"><h2>Get Started!</h2></div>
                 <!-- <div class="form-group">
                     <input class="input" name="email" autocomplete="off" type="email" required>
@@ -190,10 +203,7 @@ form{
                         <span class="label"><i class="fas fa-user"></i> Username</span>
                     </label>
                 </div>
-                <div class = "error">
-                    
-                    {{form.password2.errors}}
-                    {{form.password1.errros}}
+                <div class = "error">  
                     {{form.username.errors}}
                 </div>
                 <div class="form-group">
@@ -202,15 +212,23 @@ form{
                         <span class="label"><i class="fas fa-lock-open"></i> Password</span>
                     </label>
                 </div>
-
+                <div class = "error">  
+                    {{form.password1.errros}}
+                </div>
                 <div class="form-group">
                     <input class="input" name="password2" autocomplete="off" type="password" required>
                     <label for="password1">
                         <span class="label"><i class="fas fa-lock"></i> Confirm Password</span>
                     </label>
                 </div>
-                <input type="submit" class="btn" value="Register">
+                <div class = "error">  
+                    {{form.password2.errors}}
+                </div>
+            </br>
+                <input type="submit" class="btn" value="Register" style="position: relative;">
+                <p></br>Already registered?? &nbsp <a class="btn" href="/login"><small>Login</small></a></p>
             </form>
+           
         </div>
     </div>
 </body>
