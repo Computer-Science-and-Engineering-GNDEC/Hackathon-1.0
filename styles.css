@@ -5,6 +5,9 @@
 body {
   background-color: azure;
 }
+.img {
+  margin: 40px 200px 0 ;
+}
 
 body {
   margin: 0;
@@ -65,7 +68,7 @@ body {
   }
 }
 .news {
-  padding: 0 100px;
+  padding: 0 200px;
   margin: 0 40px 0 400px;
   background: #bbdfc8;
   border-radius: 20px;
