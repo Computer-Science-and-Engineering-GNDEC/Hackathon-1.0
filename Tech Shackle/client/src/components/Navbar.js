@@ -107,6 +107,7 @@ export class Navb extends Component {
             </div>
             
             <div className="slider">
+                
             <Carousel fade>
   <Carousel.Item>
     <img
