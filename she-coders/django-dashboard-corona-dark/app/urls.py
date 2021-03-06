@@ -9,7 +9,7 @@ urlpatterns = [
 
     path('', include('core.urls')),
     # Matches any html file
-    path('home', views.index, name="home"),
+    #path('home', views.index, name="home"),
     re_path(r'^.*\.*', views.pages, name='pages'),
 
 ]
