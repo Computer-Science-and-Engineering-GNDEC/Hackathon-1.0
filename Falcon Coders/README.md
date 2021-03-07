@@ -54,9 +54,14 @@
 ## Sales & Purchase
 ** Maintaining Sales Order And Purchase Orders
 
-- Sales order
+- Purchase order
 
-![Sales order doc](https://user-images.githubusercontent.com/57444962/110230498-65a25b80-7f37-11eb-8cfc-1de8aa8e4bcd.png)
+![Purchase order](https://user-images.githubusercontent.com/57444962/110230498-65a25b80-7f37-11eb-8cfc-1de8aa8e4bcd.png)
+
+-Sales order
+
+![Sales Order](https://user-images.githubusercontent.com/57444962/110230561-d9dcff00-7f37-11eb-9cd7-ef78b5007bbe.png)
+
 
 
 
