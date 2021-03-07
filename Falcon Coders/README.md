@@ -53,19 +53,22 @@
 
 - Sales Invoice
 
-![Sales invoice](https://user-images.githubusercontent.com/57444962/110230429-e876e680-7f36-11eb-84a8-a7083286a70f.png)
+![Sales Invoice](https://user-images.githubusercontent.com/57444962/110230804-8f5c8200-7f39-11eb-88c5-048926f56814.png)
+
 
 ## Sales & Purchase
 
 **Maintaining Sales Order And Purchase Orders**
 
 - Purchase order
+- 
+![Purchase Order](https://user-images.githubusercontent.com/57444962/110230824-aef3aa80-7f39-11eb-8027-75b56eea86a5.png)
 
-![Purchase order](https://user-images.githubusercontent.com/57444962/110230498-65a25b80-7f37-11eb-8cfc-1de8aa8e4bcd.png)
 
 -Sales order
 
-![Sales Order](https://user-images.githubusercontent.com/57444962/110230561-d9dcff00-7f37-11eb-9cd7-ef78b5007bbe.png)
+![Sales Order](https://user-images.githubusercontent.com/57444962/110230847-cd59a600-7f39-11eb-8250-21eca642f61f.png)
+
 
 
 
