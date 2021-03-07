@@ -29,10 +29,14 @@
 
 ## Accounting 
 ** Maintaining data for
+
+- Company Data
+ 
+ ![Planning Pros pvt. ltd](https://user-images.githubusercontent.com/57444962/110230373-7bfbe780-7f36-11eb-8457-cb053b9ba5d1.png)
+
 - Item
 - Clients 
 - Supplier
-- Company Data
 - Chart of Account
 
 ## Selling
