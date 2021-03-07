@@ -1,0 +1,235 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<title>
+    Sign Up Page
+</title>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+<script type="text/javascript"> 
+    (function() { 
+        var css = document.createElement('link'); 
+        css.href = 'https://use.fontawesome.com/releases/v5.4.2/css/all.css'; 
+        css.rel = 'stylesheet'; 
+        css.type = 'text/css'; 
+        document.getElementsByTagName('head')[0].appendChild(css); 
+    })(); 
+<link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700|Lato:400,100,300,700,900' rel='stylesheet' type='text/css'>
+
+<link rel="stylesheet" href={% static "animate.css" %}>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+</script>
+<style>
+
+*{
+    margin : 0;
+    padding : 0;
+    box-sizing: border-box;
+}
+body{
+    background: url({% static "photo_bg.jpg" %});
+	background-repeat: no-repeat;
+	// background-size: cover;
+	font-size: 16px;
+	font-family: 'Lato', sans-serif;
+	font-weight: 300;
+	margin: 0;
+	color: #666;
+    font-family: 'Poppins', sans-serif;
+    overflow-y: scrol;
+    /* background-color: rgb(230, 223, 223); */
+}
+
+/* a:hover {
+	color: #aeaeae;
+} */
+
+p.small {
+	font-size: 1.5em;
+	margin: 20px 0 0;
+}
+
+/* styling the images dimensions */
+.avatar{
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+}
+.avt{
+    text-align: center;
+}
+.head{
+    text-align: center;
+}
+img{
+    width: 100%;
+    height : 100%;
+}
+
+/* styles related to the page layout */
+.container{
+    height : 100vh;
+    width : 100vw;
+    display: flex;
+    justify-content: center;
+}
+.img-container{
+    width : 50%;
+    height : auto;
+}
+.form{
+    width : 35%;
+	display: flex;
+	justify-content: center;
+    align-items: center;
+}
+form{
+    width : 70%;
+}
+
+/* styles related to the form */
+.form h2{
+	margin: 0;
+	color: #333;
+	font-size: 2.9rem;
+}
+.form-group{
+    height : 55px;
+    width : 100%; 
+    position : relative;
+    overflow: hidden;
+}
+.input{
+    width:100%;
+    height:100%;
+    font-size: 18px;
+    padding-top:25px;
+    border : none;
+    outline: none;
+    background-color: rgb(230, 223, 223);
+} 
+.form-group label{
+    position : absolute;
+    bottom : 0;
+    left : 0;
+    width:100%;
+    height:100%;
+    pointer-events: none;
+    /* border-bottom: 1px solid rgb(129, 128, 128); */
+}
+.form-group label::after{
+    content: "";
+    position : absolute;
+    width:100%;
+    height:100%;
+    left : 0;
+    bottom: -1px;
+    border-bottom: 2px solid rgb(240, 67, 67);
+    transform: translateX(-100%);
+    transition: all 0.5s ease;
+}
+.label{
+    position: absolute;
+    font-weight: 500;
+    bottom : 5px;
+    font-size: 17px;
+    transition: all 0.5s ease;
+}
+.form-group input:focus + label .label,
+.form-group input:valid + label .label{
+    transform: translateY(-70%);
+    color : rgb(240, 67, 67);
+    font-size: 18px;
+}
+.form-group input:focus + label::after,
+.form-group input:valid + label::after{
+    transform: translateX(0%);
+}
+
+.btn{
+    background-color: rgb(240, 67, 67);
+    color: white;
+    border : none;
+    padding : 8px 10px;
+    font-size: 18px;
+    border-radius: 5px;
+    margin-top: 15px;
+    outline: none;
+}
+
+/*From Here*/
+
+.error{
+  background: #f0376b !important;
+  padding: 0px !important;
+  border-radius: 0 !important;
+  position: relative; 
+  display: inline-flex !important;
+  box-shadow: 1px 1px 1px #aaaaaa;
+  margin-top: 10px;
+  opacity: 0.9;
+  color: #ebe4e5;
+  background-color: #0a0101;
+}
+
+</style>
+</head>
+<body>
+    <div class="container" >
+        <!-- <div class="img-container">
+            <img class="back" src= {% static "logo2.png" %} >
+        </div> -->
+        <div class="form">
+            <form method="POST">
+                {% csrf_token %}
+                
+
+                <!-- {{form.as_p}} -->
+                
+                <div class="avt"><img class="avatar" src={% static "logo2.png" %}></div>
+                <div class="head"><h2>Get Started!</h2></div>
+                <!-- <div class="form-group">
+                    <input class="input" name="email" autocomplete="off" type="email" required>
+                    <label for="email">
+                        <span class="label"><i class="fas fa-envelope"></i> Email</span>
+                    </label>
+                </div> -->
+                <div class="form-group">
+                    <input class="input" name="username" autocomplete="off" type="text" required>
+                    <label for="username">
+                        <span class="label"><i class="fas fa-user"></i> Username</span>
+                    </label>
+                </div>
+                <div class = "error">  
+                    {{form.username.errors}}
+                </div>
+                <div class="form-group">
+                    <input class="input" name="password1" autocomplete="off" type="password" required>
+                    <label for="password">
+                        <span class="label"><i class="fas fa-lock-open"></i> Password</span>
+                    </label>
+                </div>
+                <div class = "error">  
+                    {{form.password1.errros}}
+                </div>
+                <div class="form-group">
+                    <input class="input" name="password2" autocomplete="off" type="password" required>
+                    <label for="password1">
+                        <span class="label"><i class="fas fa-lock"></i> Confirm Password</span>
+                    </label>
+                </div>
+                <div class = "error">  
+                    {{form.password2.errors}}
+                </div>
+            </br>
+                <input type="submit" class="btn" value="Register" style="position: relative;">
+                <p style="color: #ebe4e5;"></br>Already registered?? &nbsp <a class="btn" href="/login"><small>Login</small></a></p>
+            </form>
+           
+        </div>
+    </div>
+</body>
+</html>
