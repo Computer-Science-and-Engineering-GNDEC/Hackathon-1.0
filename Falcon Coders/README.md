@@ -29,6 +29,8 @@
 - viewing Services
 - Clients
 - Contact Us
+- Subscription
+
 
 ## Accounting 
 
@@ -39,13 +41,15 @@
  ![Planning Pros pvt. ltd](https://user-images.githubusercontent.com/57444962/110230373-7bfbe780-7f36-11eb-8457-cb053b9ba5d1.png)
 
 - Item
+- Maintenance of Items in Stock . Can be customised according to requirements.
 - Clients 
 - Supplier
 - Chart of Account
 
 ## Selling
 
-- Clients
+- Clients 
+ Maintenance of  client data .
 
 - Quotation
 
@@ -68,6 +72,8 @@
 -Sales order
 
 ![Sales Order](https://user-images.githubusercontent.com/57444962/110230847-cd59a600-7f39-11eb-8250-21eca642f61f.png)
+
+All these Documents are created using our software (created using ERPNext) at an ease. Just enter the data and after all the tax calculation,Document will be generated in few seconds.
 
 
 
