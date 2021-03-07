@@ -19,7 +19,14 @@
 ## Features of our software :
 -"The idea is that We have a startup of Event management Company running online through a website.Our software using ERPNext helps us to maintain Accounting and backend as a unicorn."
 
-##Website hosting
+## Website hosting
+**with functionality of
+
+- book appointment
+- viewing Services
+- Clients
+- Contact Us
+- 
 ## Accounting 
 ** Maintaining data for
 - Item
@@ -28,12 +35,14 @@
 - Company Data
 - Chart of Account
 
-##Selling
+## Selling
 
 -Clients
 -Quotation
+![Quotation](https://user-images.githubusercontent.com/57444962/110230197-53272280-7f35-11eb-914d-0ca3c8950a5f.png)
 
-![thumbnail](https://user-images.githubusercontent.com/57444962/110230010-a7310780-7f33-11eb-889b-c551493b7307.jpg#thumbnail)
+
+
 
 
 
