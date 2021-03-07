@@ -16,7 +16,8 @@
 - it is an open source software 
 - time efficient. 
 
-[Click here](https://46867a9007f2.ngrok.io/planning-pros) to see our software
+[Click here](https://46867a9007f2.ngrok.io/planning-pros) to see **our software
+**Software is hosted at this server. To Enter in server Login credentials are required,which are emailed to cc@gndec.ac.in
 
 ## Features of our software :
 - "The idea is that We have a startup of Event management Company running online through a website.Our software using ERPNext helps us to maintain Accounting and backend as a unicorn."
