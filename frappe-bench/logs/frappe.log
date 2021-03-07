@@ -1,0 +1,294 @@
+[ERROR] 2021-03-07 11:06:39,717 | /home/hp/frappe-bench/apps/frappe/frappe/utils/error.py:
+New Exception collected with id: 2021-03-07 11:06:39.713609-132.154.155.53-232
+[ERROR] 2021-03-07 11:09:34,385 | /home/hp/frappe-bench/apps/frappe/frappe/app.py:
+Site: gne3.gndec.ac.in
+Form Dict: {
+ "action": "Save",
+ "cmd": "frappe.desk.form.save.savedocs",
+ "doc": "{\"owner\":\"Administrator\",\"idx\":0,\"docstatus\":0,\"naming_series\":\"ACC-SINV-.YYYY.-\",\"customer\":\"Customer Company\",\"irn_cancelled\":0,\"eway_bill_cancelled\":0,\"customer_name\":\"Customer Company\",\"is_pos\":0,\"is_return\":0,\"company\":\"LSR Enterprise\",\"posting_date\":\"2021-03-07\",\"posting_time\":\"11:04:38.897781\",\"set_posting_time\":0,\"due_date\":\"2021-03-07\",\"update_billed_amount_in_sales_order\":0,\"po_no\":\"\",\"customer_address\":\"Customer Company-Billing\",\"address_display\":\"house no 1<br>gill road<br>ludhiana<br>\\nIndia<br>\\n\",\"territory\":\"All Territories\",\"shipping_address_name\":\"Customer Company-Billing\",\"shipping_address\":\"house no 1<br>gill road<br>ludhiana<br>\\nIndia<br>\\n\",\"currency\":\"INR\",\"conversion_rate\":1,\"selling_price_list\":\"IT Solutions Price List\",\"price_list_currency\":\"INR\",\"plc_conversion_rate\":1,\"ignore_pricing_rule\":0,\"set_warehouse\":\"Work In Progress - LSRE\",\"update_stock\":0,\"total_billing_amount\":0,\"total_qty\":5,\"base_total\":2500,\"base_net_total\":2500,\"total_net_weight\":0,\"total\":2500,\"net_total\":2500,\"tax_category\":\"GSTTAX\",\"other_charges_calculation\":\"<div class=\\\"tax-break-up\\\" style=\\\"overflow-x: auto;\\\">\\n\\t<table class=\\\"table table-bordered table-hover\\\">\\n\\t\\t<thead>\\n\\t\\t\\t<tr>\\n\\t\\t\\t\\t\\n\\t\\t\\t\\t\\t\\n\\t\\t\\t\\t\\t\\t<th class=\\\"text-left\\\">HSN/SAC</th>\\n\\t\\t\\t\\t\\t\\n\\t\\t\\t\\t\\n\\t\\t\\t\\t\\t\\n\\t\\t\\t\\t\\t\\t<th class=\\\"text-right\\\">Taxable Amount</th>\\n\\t\\t\\t\\t\\t\\n\\t\\t\\t\\t\\n\\t\\t\\t\\t\\t\\n\\t\\t\\t\\t\\t\\t<th class=\\\"text-right\\\">CGST</th>\\n\\t\\t\\t\\t\\t\\n\\t\\t\\t\\t\\n\\t\\t\\t</tr>\\n\\t\\t</thead>\\n\\t\\t<tbody>\\n\\t\\t\\t\\n\\t\\t\\t\\t<tr>\\n\\t\\t\\t\\t\\t<td>None</td>\\n\\t\\t\\t\\t\\t<td class='text-right'>\\n\\t\\t\\t\\t\\t\\t\\n\\t\\t\\t\\t\\t\\t\\t\u20b9 2,500.00\\n\\t\\t\\t\\t\\t\\t\\n\\t\\t\\t\\t\\t</td>\\n\\t\\t\\t\\t\\t\\n\\t\\t\\t\\t\\t\\t\\n\\t\\t\\t\\t\\t\\t\\n\\t\\t\\t\\t\\t\\t\\t<td class='text-right'>\\n\\t\\t\\t\\t\\t\\t\\t\\t\\n\\t\\t\\t\\t\\t\\t\\t\\t\\t(9.0%)\\n\\t\\t\\t\\t\\t\\t\\t\\t\\n\\t\\t\\t\\t\\t\\t\\t\\t\\n\\t\\t\\t\\t\\t\\t\\t\\t\\t\u20b9 45.00\\n\\t\\t\\t\\t\\t\\t\\t\\t\\n\\t\\t\\t\\t\\t\\t\\t</td>\\n\\t\\t\\t\\t\\t\\t\\n\\t\\t\\t\\t\\t\\n\\t\\t\\t\\t</tr>\\n\\t\\t\\t\\n\\t\\t</tbody>\\n\\t</table>\\n</div>\",\"base_total_taxes_and_charges\":45,\"total_taxes_and_charges\":45,\"loyalty_points\":0,\"loyalty_amount\":0,\"redeem_loyalty_points\":0,\"apply_discount_on\":\"Grand Total\",\"base_discount_amount\":0,\"additional_discount_percentage\":0,\"discount_amount\":0,\"base_grand_total\":2545,\"base_rounding_adjustment\":0,\"base_rounded_total\":2545,\"base_in_words\":\"\",\"grand_total\":2545,\"rounding_adjustment\":0,\"rounded_total\":2545,\"in_words\":\"\",\"total_advance\":0,\"outstanding_amount\":2545,\"allocate_advances_automatically\":0,\"base_paid_amount\":0,\"paid_amount\":0,\"base_change_amount\":0,\"change_amount\":0,\"write_off_amount\":0,\"base_write_off_amount\":0,\"write_off_outstanding_amount_automatically\":0,\"distance\":0,\"mode_of_transport\":\"Road\",\"lr_date\":\"2021-03-07\",\"gst_vehicle_type\":\"Regular\",\"group_same_items\":0,\"language\":\"en\",\"gst_category\":\"\",\"export_type\":\"\",\"invoice_copy\":\"Original for Recipient\",\"reverse_charge\":\"N\",\"reason_for_issuing_document\":\"\",\"customer_group\":\"All Customer Groups\",\"is_discounted\":0,\"status\":\"Draft\",\"debit_to\":\"Debtors - LSRE\",\"party_account_currency\":\"INR\",\"is_opening\":\"No\",\"c_form_applicable\":\"No\",\"commission_rate\":0,\"total_commission\":0,\"pos_total_qty\":0,\"doctype\":\"Sales Invoice\",\"items\":[{\"owner\":\"Administrator\",\"parentfield\":\"items\",\"parenttype\":\"Sales Invoice\",\"idx\":1,\"docstatus\":0,\"item_code\":\"IM-00003\",\"item_name\":\"IT Consultancy\",\"description\":\"IT Consultancy\",\"is_nil_exempt\":0,\"is_non_gst\":0,\"item_group\":\"Services\",\"image\":\"\",\"qty\":5,\"stock_uom\":\"Hour\",\"uom\":\"Hour\",\"conversion_factor\":1,\"stock_qty\":5,\"price_list_rate\":0,\"base_price_list_rate\":0,\"margin_type\":\"\",\"margin_rate_or_amount\":0,\"rate_with_margin\":0,\"discount_percentage\":0,\"discount_amount\":0,\"base_rate_with_margin\":0,\"rate\":500,\"amount\":2500,\"base_rate\":500,\"base_amount\":2500,\"is_free_item\":0,\"net_rate\":500,\"net_amount\":2500,\"base_net_rate\":500,\"base_net_amount\":2500,\"delivered_by_supplier\":0,\"income_account\":\"Sales - LSRE\",\"is_fixed_asset\":0,\"enable_deferred_revenue\":0,\"weight_per_unit\":0,\"total_weight\":0,\"warehouse\":\"Work In Progress - LSRE\",\"allow_zero_valuation_rate\":0,\"item_tax_rate\":\"{}\",\"actual_batch_qty\":0,\"actual_qty\":0,\"sales_order\":\"SAL-ORD-2021-00002\",\"so_detail\":\"b5c011576d\",\"delivery_note\":\"MAT-DN-2021-00001\",\"dn_detail\":\"231b1ba5ed\",\"delivered_qty\":0,\"cost_center\":\"Main - LSRE\",\"page_break\":0,\"doctype\":\"Sales Invoice Item\",\"__islocal\":1,\"parent\":\"New Sales Invoice 1\",\"name\":\"New Sales Invoice Item 1\",\"child_docname\":\"New Sales Invoice Item 1\",\"discount_percentage_on_rate\":[],\"discount_amount_on_rate\":[],\"serial_no\":null}],\"pricing_rules\":[],\"packed_items\":[],\"timesheets\":[],\"taxes\":[{\"owner\":\"Administrator\",\"parentfield\":\"taxes\",\"parenttype\":\"Sales Invoice\",\"idx\":1,\"docstatus\":0,\"charge_type\":\"On Item Quantity\",\"account_head\":\"CGST - LSRE\",\"description\":\"CGST\",\"included_in_print_rate\":0,\"cost_center\":\"Main - LSRE\",\"rate\":9,\"tax_amount\":45,\"total\":2545,\"tax_amount_after_discount_amount\":45,\"base_tax_amount\":45,\"base_total\":2545,\"base_tax_amount_after_discount_amount\":45,\"item_wise_tax_detail\":\"{\\\"IM-00003\\\":[9,45]}\",\"doctype\":\"Sales Taxes and Charges\",\"__islocal\":1,\"parent\":\"New Sales Invoice 1\",\"name\":\"New Sales Taxes and Charges 1\"}],\"advances\":[],\"payment_schedule\":[],\"payments\":[],\"sales_team\":[],\"__islocal\":1,\"__onload\":{\"load_after_mapping\":true},\"name\":\"New Sales Invoice 1\",\"__last_sync_on\":\"2021-03-07T05:34:39.415Z\",\"company_address\":\"\",\"scan_barcode\":\"\",\"taxes_and_charges\":\"\",\"place_of_supply\":null,\"company_address_display\":\"\",\"__unsaved\":1}"
+}
+Request Error
+Traceback (most recent call last):
+  File "/home/hp/frappe-bench/apps/frappe/frappe/app.py", line 67, in application
+    response = frappe.api.handle()
+  File "/home/hp/frappe-bench/apps/frappe/frappe/api.py", line 59, in handle
+    return frappe.handler.handle()
+  File "/home/hp/frappe-bench/apps/frappe/frappe/handler.py", line 24, in handle
+    data = execute_cmd(cmd)
+  File "/home/hp/frappe-bench/apps/frappe/frappe/handler.py", line 64, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+  File "/home/hp/frappe-bench/apps/frappe/frappe/__init__.py", line 1071, in call
+    return fn(*args, **newargs)
+  File "/home/hp/frappe-bench/apps/frappe/frappe/desk/form/save.py", line 21, in savedocs
+    doc.save()
+  File "/home/hp/frappe-bench/apps/frappe/frappe/model/document.py", line 273, in save
+    return self._save(*args, **kwargs)
+  File "/home/hp/frappe-bench/apps/frappe/frappe/model/document.py", line 296, in _save
+    self.insert()
+  File "/home/hp/frappe-bench/apps/frappe/frappe/model/document.py", line 224, in insert
+    self._validate_links()
+  File "/home/hp/frappe-bench/apps/frappe/frappe/model/document.py", line 756, in _validate_links
+    invalid_links, cancelled_links = self.get_invalid_links()
+  File "/home/hp/frappe-bench/apps/frappe/frappe/model/base_document.py", line 486, in get_invalid_links
+    values_to_fetch, as_dict=True)
+  File "/home/hp/frappe-bench/apps/frappe/frappe/database/database.py", line 401, in get_value
+    order_by, cache=cache)
+  File "/home/hp/frappe-bench/apps/frappe/frappe/database/database.py", line 445, in get_values
+    out = self._get_values_from_table(fields, filters, doctype, as_dict, debug, order_by, update)
+  File "/home/hp/frappe-bench/apps/frappe/frappe/database/database.py", line 592, in _get_values_from_table
+    as_dict=as_dict, debug=debug, update=update)
+  File "/home/hp/frappe-bench/apps/frappe/frappe/database/database.py", line 156, in sql
+    self._cursor.execute(query, values)
+  File "/home/hp/frappe-bench/env/lib/python3.6/site-packages/pymysql/cursors.py", line 170, in execute
+    result = self._query(query)
+  File "/home/hp/frappe-bench/env/lib/python3.6/site-packages/pymysql/cursors.py", line 328, in _query
+    conn.query(q)
+  File "/home/hp/frappe-bench/env/lib/python3.6/site-packages/pymysql/connections.py", line 517, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/hp/frappe-bench/env/lib/python3.6/site-packages/pymysql/connections.py", line 732, in _read_query_result
+    result.read()
+  File "/home/hp/frappe-bench/env/lib/python3.6/site-packages/pymysql/connections.py", line 1075, in read
+    first_packet = self.connection._read_packet()
+  File "/home/hp/frappe-bench/env/lib/python3.6/site-packages/pymysql/connections.py", line 684, in _read_packet
+    packet.check_error()
+  File "/home/hp/frappe-bench/env/lib/python3.6/site-packages/pymysql/protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/home/hp/frappe-bench/env/lib/python3.6/site-packages/pymysql/err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.InternalError: (1054, "Unknown column 'gst_category' in 'field list'")
+[ERROR] 2021-03-07 11:09:34,466 | /home/hp/frappe-bench/apps/frappe/frappe/utils/error.py:
+New Exception collected with id: 2021-03-07 11:09:34.385771-132.154.155.53-ddb
+[ERROR] 2021-03-07 11:11:02,661 | /home/hp/frappe-bench/apps/frappe/frappe/app.py:
+Site: gne3.gndec.ac.in
+Form Dict: {
+ "action": "Save",
+ "cmd": "frappe.desk.form.save.savedocs",
+ "doc": "{\"owner\":\"Administrator\",\"idx\":0,\"docstatus\":0,\"naming_series\":\"ACC-SINV-.YYYY.-\",\"customer\":\"Customer Company\",\"irn_cancelled\":0,\"eway_bill_cancelled\":0,\"customer_name\":\"Customer Company\",\"is_pos\":0,\"is_return\":0,\"company\":\"LSR Enterprise\",\"posting_date\":\"2021-03-07\",\"posting_time\":\"11:04:38.897781\",\"set_posting_time\":0,\"due_date\":\"2021-03-07\",\"update_billed_amount_in_sales_order\":0,\"po_no\":\"\",\"customer_address\":\"Customer Company-Billing\",\"address_display\":\"house no 1<br>gill road<br>ludhiana<br>\\nIndia<br>\\n\",\"territory\":\"All Territories\",\"shipping_address_name\":\"Customer Company-Billing\",\"shipping_address\":\"house no 1<br>gill road<br>ludhiana<br>\\nIndia<br>\\n\",\"currency\":\"INR\",\"conversion_rate\":1,\"selling_price_list\":\"IT Solutions Price List\",\"price_list_currency\":\"INR\",\"plc_conversion_rate\":1,\"ignore_pricing_rule\":0,\"set_warehouse\":\"Work In Progress - LSRE\",\"update_stock\":0,\"total_billing_amount\":0,\"total_qty\":5,\"base_total\":2500,\"base_net_total\":2500,\"total_net_weight\":0,\"total\":2500,\"net_total\":2500,\"tax_category\":\"GSTTAX\",\"other_charges_calculation\":\"<div class=\\\"tax-break-up\\\" style=\\\"overflow-x: auto;\\\">\\n\\t<table class=\\\"table table-bordered table-hover\\\">\\n\\t\\t<thead>\\n\\t\\t\\t<tr>\\n\\t\\t\\t\\t\\n\\t\\t\\t\\t\\t\\n\\t\\t\\t\\t\\t\\t<th class=\\\"text-left\\\">HSN/SAC</th>\\n\\t\\t\\t\\t\\t\\n\\t\\t\\t\\t\\n\\t\\t\\t\\t\\t\\n\\t\\t\\t\\t\\t\\t<th class=\\\"text-right\\\">Taxable Amount</th>\\n\\t\\t\\t\\t\\t\\n\\t\\t\\t\\t\\n\\t\\t\\t\\t\\t\\n\\t\\t\\t\\t\\t\\t<th class=\\\"text-right\\\">CGST</th>\\n\\t\\t\\t\\t\\t\\n\\t\\t\\t\\t\\n\\t\\t\\t</tr>\\n\\t\\t</thead>\\n\\t\\t<tbody>\\n\\t\\t\\t\\n\\t\\t\\t\\t<tr>\\n\\t\\t\\t\\t\\t<td>None</td>\\n\\t\\t\\t\\t\\t<td class='text-right'>\\n\\t\\t\\t\\t\\t\\t\\n\\t\\t\\t\\t\\t\\t\\t\u20b9 2,500.00\\n\\t\\t\\t\\t\\t\\t\\n\\t\\t\\t\\t\\t</td>\\n\\t\\t\\t\\t\\t\\n\\t\\t\\t\\t\\t\\t\\n\\t\\t\\t\\t\\t\\t\\n\\t\\t\\t\\t\\t\\t\\t<td class='text-right'>\\n\\t\\t\\t\\t\\t\\t\\t\\t\\n\\t\\t\\t\\t\\t\\t\\t\\t\\t(9.0%)\\n\\t\\t\\t\\t\\t\\t\\t\\t\\n\\t\\t\\t\\t\\t\\t\\t\\t\\n\\t\\t\\t\\t\\t\\t\\t\\t\\t\u20b9 45.00\\n\\t\\t\\t\\t\\t\\t\\t\\t\\n\\t\\t\\t\\t\\t\\t\\t</td>\\n\\t\\t\\t\\t\\t\\t\\n\\t\\t\\t\\t\\t\\n\\t\\t\\t\\t</tr>\\n\\t\\t\\t\\n\\t\\t</tbody>\\n\\t</table>\\n</div>\",\"base_total_taxes_and_charges\":45,\"total_taxes_and_charges\":45,\"loyalty_points\":0,\"loyalty_amount\":0,\"redeem_loyalty_points\":0,\"apply_discount_on\":\"Grand Total\",\"base_discount_amount\":0,\"additional_discount_percentage\":0,\"discount_amount\":0,\"base_grand_total\":2545,\"base_rounding_adjustment\":0,\"base_rounded_total\":2545,\"base_in_words\":\"\",\"grand_total\":2545,\"rounding_adjustment\":0,\"rounded_total\":2545,\"in_words\":\"\",\"total_advance\":0,\"outstanding_amount\":2545,\"allocate_advances_automatically\":0,\"base_paid_amount\":0,\"paid_amount\":0,\"base_change_amount\":0,\"change_amount\":0,\"write_off_amount\":0,\"base_write_off_amount\":0,\"write_off_outstanding_amount_automatically\":0,\"distance\":0,\"mode_of_transport\":\"Road\",\"lr_date\":\"2021-03-07\",\"gst_vehicle_type\":\"Regular\",\"group_same_items\":0,\"language\":\"en\",\"gst_category\":\"Registered Regular\",\"export_type\":\"\",\"invoice_copy\":\"Original for Recipient\",\"reverse_charge\":\"N\",\"reason_for_issuing_document\":\"\",\"customer_group\":\"All Customer Groups\",\"is_discounted\":0,\"status\":\"Draft\",\"debit_to\":\"Debtors - LSRE\",\"party_account_currency\":\"INR\",\"is_opening\":\"No\",\"c_form_applicable\":\"No\",\"commission_rate\":0,\"total_commission\":0,\"pos_total_qty\":0,\"doctype\":\"Sales Invoice\",\"items\":[{\"owner\":\"Administrator\",\"parentfield\":\"items\",\"parenttype\":\"Sales Invoice\",\"idx\":1,\"docstatus\":0,\"item_code\":\"IM-00003\",\"item_name\":\"IT Consultancy\",\"description\":\"IT Consultancy\",\"is_nil_exempt\":0,\"is_non_gst\":0,\"item_group\":\"Services\",\"image\":\"\",\"qty\":5,\"stock_uom\":\"Hour\",\"uom\":\"Hour\",\"conversion_factor\":1,\"stock_qty\":5,\"price_list_rate\":0,\"base_price_list_rate\":0,\"margin_type\":\"\",\"margin_rate_or_amount\":0,\"rate_with_margin\":0,\"discount_percentage\":0,\"discount_amount\":0,\"base_rate_with_margin\":0,\"rate\":500,\"amount\":2500,\"base_rate\":500,\"base_amount\":2500,\"is_free_item\":0,\"net_rate\":500,\"net_amount\":2500,\"base_net_rate\":500,\"base_net_amount\":2500,\"delivered_by_supplier\":0,\"income_account\":\"Sales - LSRE\",\"is_fixed_asset\":0,\"enable_deferred_revenue\":0,\"weight_per_unit\":0,\"total_weight\":0,\"warehouse\":\"Work In Progress - LSRE\",\"allow_zero_valuation_rate\":0,\"item_tax_rate\":\"{}\",\"actual_batch_qty\":0,\"actual_qty\":0,\"sales_order\":\"SAL-ORD-2021-00002\",\"so_detail\":\"b5c011576d\",\"delivery_note\":\"MAT-DN-2021-00001\",\"dn_detail\":\"231b1ba5ed\",\"delivered_qty\":0,\"cost_center\":\"Main - LSRE\",\"page_break\":0,\"doctype\":\"Sales Invoice Item\",\"__islocal\":1,\"parent\":\"New Sales Invoice 1\",\"name\":\"New Sales Invoice Item 1\"}],\"pricing_rules\":[],\"packed_items\":[],\"timesheets\":[],\"taxes\":[{\"owner\":\"Administrator\",\"parentfield\":\"taxes\",\"parenttype\":\"Sales Invoice\",\"idx\":1,\"docstatus\":0,\"charge_type\":\"On Item Quantity\",\"account_head\":\"CGST - LSRE\",\"description\":\"CGST\",\"included_in_print_rate\":0,\"cost_center\":\"Main - LSRE\",\"rate\":9,\"tax_amount\":45,\"total\":2545,\"tax_amount_after_discount_amount\":45,\"base_tax_amount\":45,\"base_total\":2545,\"base_tax_amount_after_discount_amount\":45,\"item_wise_tax_detail\":\"{\\\"IM-00003\\\":[9,45]}\",\"doctype\":\"Sales Taxes and Charges\",\"__islocal\":1,\"parent\":\"New Sales Invoice 1\",\"name\":\"New Sales Taxes and Charges 1\"}],\"advances\":[],\"payment_schedule\":[],\"payments\":[],\"sales_team\":[],\"__islocal\":1,\"__onload\":{\"load_after_mapping\":true},\"name\":\"New Sales Invoice 1\",\"company_address\":\"\",\"scan_barcode\":\"\",\"taxes_and_charges\":\"\",\"company_address_display\":\"\",\"__unsaved\":1}"
+}
+Request Error
+Traceback (most recent call last):
+  File "/home/hp/frappe-bench/apps/frappe/frappe/app.py", line 67, in application
+    response = frappe.api.handle()
+  File "/home/hp/frappe-bench/apps/frappe/frappe/api.py", line 59, in handle
+    return frappe.handler.handle()
+  File "/home/hp/frappe-bench/apps/frappe/frappe/handler.py", line 24, in handle
+    data = execute_cmd(cmd)
+  File "/home/hp/frappe-bench/apps/frappe/frappe/handler.py", line 64, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+  File "/home/hp/frappe-bench/apps/frappe/frappe/__init__.py", line 1071, in call
+    return fn(*args, **newargs)
+  File "/home/hp/frappe-bench/apps/frappe/frappe/desk/form/save.py", line 21, in savedocs
+    doc.save()
+  File "/home/hp/frappe-bench/apps/frappe/frappe/model/document.py", line 273, in save
+    return self._save(*args, **kwargs)
+  File "/home/hp/frappe-bench/apps/frappe/frappe/model/document.py", line 296, in _save
+    self.insert()
+  File "/home/hp/frappe-bench/apps/frappe/frappe/model/document.py", line 224, in insert
+    self._validate_links()
+  File "/home/hp/frappe-bench/apps/frappe/frappe/model/document.py", line 756, in _validate_links
+    invalid_links, cancelled_links = self.get_invalid_links()
+  File "/home/hp/frappe-bench/apps/frappe/frappe/model/base_document.py", line 486, in get_invalid_links
+    values_to_fetch, as_dict=True)
+  File "/home/hp/frappe-bench/apps/frappe/frappe/database/database.py", line 401, in get_value
+    order_by, cache=cache)
+  File "/home/hp/frappe-bench/apps/frappe/frappe/database/database.py", line 445, in get_values
+    out = self._get_values_from_table(fields, filters, doctype, as_dict, debug, order_by, update)
+  File "/home/hp/frappe-bench/apps/frappe/frappe/database/database.py", line 592, in _get_values_from_table
+    as_dict=as_dict, debug=debug, update=update)
+  File "/home/hp/frappe-bench/apps/frappe/frappe/database/database.py", line 156, in sql
+    self._cursor.execute(query, values)
+  File "/home/hp/frappe-bench/env/lib/python3.6/site-packages/pymysql/cursors.py", line 170, in execute
+    result = self._query(query)
+  File "/home/hp/frappe-bench/env/lib/python3.6/site-packages/pymysql/cursors.py", line 328, in _query
+    conn.query(q)
+  File "/home/hp/frappe-bench/env/lib/python3.6/site-packages/pymysql/connections.py", line 517, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/hp/frappe-bench/env/lib/python3.6/site-packages/pymysql/connections.py", line 732, in _read_query_result
+    result.read()
+  File "/home/hp/frappe-bench/env/lib/python3.6/site-packages/pymysql/connections.py", line 1075, in read
+    first_packet = self.connection._read_packet()
+  File "/home/hp/frappe-bench/env/lib/python3.6/site-packages/pymysql/connections.py", line 684, in _read_packet
+    packet.check_error()
+  File "/home/hp/frappe-bench/env/lib/python3.6/site-packages/pymysql/protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/home/hp/frappe-bench/env/lib/python3.6/site-packages/pymysql/err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.InternalError: (1054, "Unknown column 'export_type' in 'field list'")
+[ERROR] 2021-03-07 11:11:02,665 | /home/hp/frappe-bench/apps/frappe/frappe/utils/error.py:
+New Exception collected with id: 2021-03-07 11:11:02.661539-132.154.155.53-9b3
+[ERROR] 2021-03-07 11:12:58,600 | /home/hp/frappe-bench/apps/frappe/frappe/utils/error.py:
+New Exception collected with id: 2021-03-07 11:12:58.596846-132.154.155.53-6e8
+[ERROR] 2021-03-07 11:30:55,365 | /home/hp/frappe-bench/apps/frappe/frappe/app.py:
+Site: gne3.gndec.ac.in
+Form Dict: {
+ "action": "Save",
+ "cmd": "frappe.desk.form.save.savedocs",
+ "doc": "{\"owner\":\"Administrator\",\"idx\":0,\"docstatus\":0,\"naming_series\":\"ACC-SINV-.YYYY.-\",\"customer\":\"Lakshay Chopra\",\"irn_cancelled\":0,\"eway_bill_cancelled\":0,\"customer_name\":\"Lakshay Chopra\",\"is_pos\":0,\"is_return\":0,\"company\":\"LSR Enterprise\",\"posting_date\":\"2021-03-07\",\"posting_time\":\"11:30:17.782698\",\"set_posting_time\":0,\"due_date\":\"2021-03-07\",\"update_billed_amount_in_sales_order\":0,\"po_no\":\"\",\"contact_person\":\"Lakshay Chopra-Lakshay Chopra\",\"contact_display\":\"Lakshay Chopra\",\"contact_mobile\":\"998817241\",\"contact_email\":\"lakshaychopra21@gmail.com\",\"territory\":\"All Territories\",\"shipping_address_name\":\"\",\"currency\":\"INR\",\"conversion_rate\":1,\"selling_price_list\":\"IT Solutions Price List\",\"price_list_currency\":\"INR\",\"plc_conversion_rate\":1,\"ignore_pricing_rule\":1,\"update_stock\":0,\"total_billing_amount\":0,\"total_qty\":1,\"base_total\":600,\"base_net_total\":600,\"total_net_weight\":0,\"total\":600,\"net_total\":600,\"taxes_and_charges\":\"tax template 1 - LSRE\",\"tax_category\":\"GSTTAX\",\"other_charges_calculation\":\"<div class=\\\"tax-break-up\\\" style=\\\"overflow-x: auto;\\\">\\n\\t<table class=\\\"table table-bordered table-hover\\\">\\n\\t\\t<thead>\\n\\t\\t\\t<tr>\\n\\t\\t\\t\\t\\n\\t\\t\\t\\t\\t\\n\\t\\t\\t\\t\\t\\t<th class=\\\"text-left\\\">HSN/SAC</th>\\n\\t\\t\\t\\t\\t\\n\\t\\t\\t\\t\\n\\t\\t\\t\\t\\t\\n\\t\\t\\t\\t\\t\\t<th class=\\\"text-right\\\">Taxable Amount</th>\\n\\t\\t\\t\\t\\t\\n\\t\\t\\t\\t\\n\\t\\t\\t\\t\\t\\n\\t\\t\\t\\t\\t\\t<th class=\\\"text-right\\\">CGST</th>\\n\\t\\t\\t\\t\\t\\n\\t\\t\\t\\t\\n\\t\\t\\t</tr>\\n\\t\\t</thead>\\n\\t\\t<tbody>\\n\\t\\t\\t\\n\\t\\t\\t\\t<tr>\\n\\t\\t\\t\\t\\t<td>None</td>\\n\\t\\t\\t\\t\\t<td class='text-right'>\\n\\t\\t\\t\\t\\t\\t\\n\\t\\t\\t\\t\\t\\t\\t\u20b9 600.00\\n\\t\\t\\t\\t\\t\\t\\n\\t\\t\\t\\t\\t</td>\\n\\t\\t\\t\\t\\t\\n\\t\\t\\t\\t\\t\\t\\n\\t\\t\\t\\t\\t\\t\\n\\t\\t\\t\\t\\t\\t\\t<td class='text-right'>\\n\\t\\t\\t\\t\\t\\t\\t\\t\\n\\t\\t\\t\\t\\t\\t\\t\\t\\t(9.0%)\\n\\t\\t\\t\\t\\t\\t\\t\\t\\n\\t\\t\\t\\t\\t\\t\\t\\t\\n\\t\\t\\t\\t\\t\\t\\t\\t\\t\u20b9 9.00\\n\\t\\t\\t\\t\\t\\t\\t\\t\\n\\t\\t\\t\\t\\t\\t\\t</td>\\n\\t\\t\\t\\t\\t\\t\\n\\t\\t\\t\\t\\t\\n\\t\\t\\t\\t</tr>\\n\\t\\t\\t\\n\\t\\t</tbody>\\n\\t</table>\\n</div>\",\"base_total_taxes_and_charges\":9,\"total_taxes_and_charges\":9,\"loyalty_points\":0,\"loyalty_amount\":0,\"redeem_loyalty_points\":0,\"apply_discount_on\":\"Grand Total\",\"base_discount_amount\":0,\"additional_discount_percentage\":0,\"discount_amount\":0,\"base_grand_total\":609,\"base_rounding_adjustment\":0,\"base_rounded_total\":609,\"base_in_words\":\"\",\"grand_total\":609,\"rounding_adjustment\":0,\"rounded_total\":609,\"in_words\":\"\",\"total_advance\":0,\"outstanding_amount\":609,\"allocate_advances_automatically\":0,\"base_paid_amount\":0,\"paid_amount\":0,\"base_change_amount\":0,\"change_amount\":0,\"write_off_amount\":0,\"base_write_off_amount\":0,\"write_off_outstanding_amount_automatically\":0,\"distance\":0,\"mode_of_transport\":\"Road\",\"lr_date\":\"2021-03-07\",\"gst_vehicle_type\":\"Regular\",\"group_same_items\":0,\"language\":\"en\",\"gst_category\":\"\",\"export_type\":\"\",\"invoice_copy\":\"Original for Recipient\",\"reverse_charge\":\"N\",\"reason_for_issuing_document\":\"\",\"customer_group\":\"All Customer Groups\",\"is_discounted\":0,\"status\":\"Draft\",\"debit_to\":\"Debtors - LSRE\",\"party_account_currency\":\"INR\",\"is_opening\":\"No\",\"c_form_applicable\":\"No\",\"commission_rate\":0,\"total_commission\":0,\"pos_total_qty\":0,\"doctype\":\"Sales Invoice\",\"items\":[{\"owner\":\"Administrator\",\"parentfield\":\"items\",\"parenttype\":\"Sales Invoice\",\"idx\":1,\"docstatus\":0,\"item_code\":\"IT Solutions\",\"item_name\":\"IT Solutions\",\"description\":\"IT Solutions\",\"is_nil_exempt\":0,\"is_non_gst\":0,\"item_group\":\"Services\",\"image\":\"\",\"qty\":1,\"stock_uom\":\"Hour\",\"uom\":\"Hour\",\"conversion_factor\":1,\"stock_qty\":1,\"price_list_rate\":0,\"base_price_list_rate\":0,\"margin_type\":\"\",\"margin_rate_or_amount\":0,\"rate_with_margin\":0,\"discount_percentage\":0,\"discount_amount\":0,\"base_rate_with_margin\":0,\"rate\":600,\"amount\":600,\"base_rate\":600,\"base_amount\":600,\"is_free_item\":0,\"net_rate\":600,\"net_amount\":600,\"base_net_rate\":600,\"base_net_amount\":600,\"delivered_by_supplier\":0,\"income_account\":\"Sales - LSRE\",\"is_fixed_asset\":0,\"enable_deferred_revenue\":0,\"weight_per_unit\":0,\"total_weight\":0,\"allow_zero_valuation_rate\":0,\"item_tax_rate\":\"{}\",\"actual_batch_qty\":0,\"actual_qty\":0,\"sales_order\":\"SAL-ORD-2021-00004\",\"so_detail\":\"82f01a2d73\",\"delivery_note\":\"MAT-DN-2021-00002\",\"dn_detail\":\"b5f0c10e4b\",\"delivered_qty\":0,\"cost_center\":\"Main - LSRE\",\"page_break\":0,\"doctype\":\"Sales Invoice Item\",\"__islocal\":1,\"parent\":\"New Sales Invoice 1\",\"name\":\"New Sales Invoice Item 1\",\"child_docname\":\"New Sales Invoice Item 1\",\"discount_percentage_on_rate\":[],\"discount_amount_on_rate\":[],\"serial_no\":null}],\"pricing_rules\":[],\"packed_items\":[],\"timesheets\":[],\"taxes\":[{\"docstatus\":0,\"doctype\":\"Sales Taxes and Charges\",\"name\":\"New Sales Taxes and Charges 2\",\"__islocal\":1,\"__unsaved\":1,\"owner\":\"Administrator\",\"charge_type\":\"On Item Quantity\",\"included_in_print_rate\":0,\"cost_center\":null,\"parent\":\"New Sales Invoice 1\",\"parentfield\":\"taxes\",\"parenttype\":\"Sales Invoice\",\"idx\":1,\"row_id\":null,\"account_head\":\"CGST - LSRE\",\"description\":\"CGST\",\"rate\":9,\"tax_amount\":9,\"total\":609,\"tax_amount_after_discount_amount\":9,\"base_tax_amount\":9,\"base_total\":609,\"base_tax_amount_after_discount_amount\":9,\"item_wise_tax_detail\":\"{\\\"IT Solutions\\\":[9,9]}\"}],\"advances\":[],\"payment_schedule\":[],\"payments\":[],\"sales_team\":[],\"__islocal\":1,\"__onload\":{\"load_after_mapping\":true},\"name\":\"New Sales Invoice 1\",\"__last_sync_on\":\"2021-03-07T06:00:17.899Z\",\"company_address\":\"\",\"scan_barcode\":\"\",\"place_of_supply\":null,\"company_address_display\":\"\",\"__unsaved\":1}"
+}
+Request Error
+Traceback (most recent call last):
+  File "/home/hp/frappe-bench/apps/frappe/frappe/app.py", line 67, in application
+    response = frappe.api.handle()
+  File "/home/hp/frappe-bench/apps/frappe/frappe/api.py", line 59, in handle
+    return frappe.handler.handle()
+  File "/home/hp/frappe-bench/apps/frappe/frappe/handler.py", line 24, in handle
+    data = execute_cmd(cmd)
+  File "/home/hp/frappe-bench/apps/frappe/frappe/handler.py", line 64, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+  File "/home/hp/frappe-bench/apps/frappe/frappe/__init__.py", line 1071, in call
+    return fn(*args, **newargs)
+  File "/home/hp/frappe-bench/apps/frappe/frappe/desk/form/save.py", line 21, in savedocs
+    doc.save()
+  File "/home/hp/frappe-bench/apps/frappe/frappe/model/document.py", line 273, in save
+    return self._save(*args, **kwargs)
+  File "/home/hp/frappe-bench/apps/frappe/frappe/model/document.py", line 296, in _save
+    self.insert()
+  File "/home/hp/frappe-bench/apps/frappe/frappe/model/document.py", line 224, in insert
+    self._validate_links()
+  File "/home/hp/frappe-bench/apps/frappe/frappe/model/document.py", line 756, in _validate_links
+    invalid_links, cancelled_links = self.get_invalid_links()
+  File "/home/hp/frappe-bench/apps/frappe/frappe/model/base_document.py", line 486, in get_invalid_links
+    values_to_fetch, as_dict=True)
+  File "/home/hp/frappe-bench/apps/frappe/frappe/database/database.py", line 401, in get_value
+    order_by, cache=cache)
+  File "/home/hp/frappe-bench/apps/frappe/frappe/database/database.py", line 445, in get_values
+    out = self._get_values_from_table(fields, filters, doctype, as_dict, debug, order_by, update)
+  File "/home/hp/frappe-bench/apps/frappe/frappe/database/database.py", line 592, in _get_values_from_table
+    as_dict=as_dict, debug=debug, update=update)
+  File "/home/hp/frappe-bench/apps/frappe/frappe/database/database.py", line 156, in sql
+    self._cursor.execute(query, values)
+  File "/home/hp/frappe-bench/env/lib/python3.6/site-packages/pymysql/cursors.py", line 170, in execute
+    result = self._query(query)
+  File "/home/hp/frappe-bench/env/lib/python3.6/site-packages/pymysql/cursors.py", line 328, in _query
+    conn.query(q)
+  File "/home/hp/frappe-bench/env/lib/python3.6/site-packages/pymysql/connections.py", line 517, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/hp/frappe-bench/env/lib/python3.6/site-packages/pymysql/connections.py", line 732, in _read_query_result
+    result.read()
+  File "/home/hp/frappe-bench/env/lib/python3.6/site-packages/pymysql/connections.py", line 1075, in read
+    first_packet = self.connection._read_packet()
+  File "/home/hp/frappe-bench/env/lib/python3.6/site-packages/pymysql/connections.py", line 684, in _read_packet
+    packet.check_error()
+  File "/home/hp/frappe-bench/env/lib/python3.6/site-packages/pymysql/protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/home/hp/frappe-bench/env/lib/python3.6/site-packages/pymysql/err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.InternalError: (1054, "Unknown column 'gst_category' in 'field list'")
+[ERROR] 2021-03-07 11:30:55,429 | /home/hp/frappe-bench/apps/frappe/frappe/utils/error.py:
+New Exception collected with id: 2021-03-07 11:30:55.365570-132.154.155.53-07c
+[ERROR] 2021-03-07 11:32:21,155 | /home/hp/frappe-bench/apps/frappe/frappe/app.py:
+Site: gne3.gndec.ac.in
+Form Dict: {
+ "action": "Save",
+ "cmd": "frappe.desk.form.save.savedocs",
+ "doc": "{\"owner\":\"Administrator\",\"idx\":0,\"docstatus\":0,\"naming_series\":\"ACC-SINV-.YYYY.-\",\"customer\":\"Lakshay Chopra\",\"irn_cancelled\":0,\"eway_bill_cancelled\":0,\"customer_name\":\"Lakshay Chopra\",\"is_pos\":0,\"is_return\":0,\"company\":\"LSR Enterprise\",\"posting_date\":\"2021-03-07\",\"posting_time\":\"11:30:17.782698\",\"set_posting_time\":0,\"due_date\":\"2021-03-07\",\"update_billed_amount_in_sales_order\":0,\"po_no\":\"\",\"contact_person\":\"Lakshay Chopra-Lakshay Chopra\",\"contact_display\":\"Lakshay Chopra\",\"contact_mobile\":\"998817241\",\"contact_email\":\"lakshaychopra21@gmail.com\",\"territory\":\"All Territories\",\"shipping_address_name\":\"\",\"currency\":\"INR\",\"conversion_rate\":1,\"selling_price_list\":\"IT Solutions Price List\",\"price_list_currency\":\"INR\",\"plc_conversion_rate\":1,\"ignore_pricing_rule\":1,\"update_stock\":0,\"total_billing_amount\":0,\"total_qty\":1,\"base_total\":600,\"base_net_total\":600,\"total_net_weight\":0,\"total\":600,\"net_total\":600,\"taxes_and_charges\":\"tax template 1 - LSRE\",\"tax_category\":\"GSTTAX\",\"other_charges_calculation\":\"<div class=\\\"tax-break-up\\\" style=\\\"overflow-x: auto;\\\">\\n\\t<table class=\\\"table table-bordered table-hover\\\">\\n\\t\\t<thead>\\n\\t\\t\\t<tr>\\n\\t\\t\\t\\t\\n\\t\\t\\t\\t\\t\\n\\t\\t\\t\\t\\t\\t<th class=\\\"text-left\\\">HSN/SAC</th>\\n\\t\\t\\t\\t\\t\\n\\t\\t\\t\\t\\n\\t\\t\\t\\t\\t\\n\\t\\t\\t\\t\\t\\t<th class=\\\"text-right\\\">Taxable Amount</th>\\n\\t\\t\\t\\t\\t\\n\\t\\t\\t\\t\\n\\t\\t\\t\\t\\t\\n\\t\\t\\t\\t\\t\\t<th class=\\\"text-right\\\">CGST</th>\\n\\t\\t\\t\\t\\t\\n\\t\\t\\t\\t\\n\\t\\t\\t</tr>\\n\\t\\t</thead>\\n\\t\\t<tbody>\\n\\t\\t\\t\\n\\t\\t\\t\\t<tr>\\n\\t\\t\\t\\t\\t<td>None</td>\\n\\t\\t\\t\\t\\t<td class='text-right'>\\n\\t\\t\\t\\t\\t\\t\\n\\t\\t\\t\\t\\t\\t\\t\u20b9 600.00\\n\\t\\t\\t\\t\\t\\t\\n\\t\\t\\t\\t\\t</td>\\n\\t\\t\\t\\t\\t\\n\\t\\t\\t\\t\\t\\t\\n\\t\\t\\t\\t\\t\\t\\n\\t\\t\\t\\t\\t\\t\\t<td class='text-right'>\\n\\t\\t\\t\\t\\t\\t\\t\\t\\n\\t\\t\\t\\t\\t\\t\\t\\t\\t(9.0%)\\n\\t\\t\\t\\t\\t\\t\\t\\t\\n\\t\\t\\t\\t\\t\\t\\t\\t\\n\\t\\t\\t\\t\\t\\t\\t\\t\\t\u20b9 9.00\\n\\t\\t\\t\\t\\t\\t\\t\\t\\n\\t\\t\\t\\t\\t\\t\\t</td>\\n\\t\\t\\t\\t\\t\\t\\n\\t\\t\\t\\t\\t\\n\\t\\t\\t\\t</tr>\\n\\t\\t\\t\\n\\t\\t</tbody>\\n\\t</table>\\n</div>\",\"base_total_taxes_and_charges\":9,\"total_taxes_and_charges\":9,\"loyalty_points\":0,\"loyalty_amount\":0,\"redeem_loyalty_points\":0,\"apply_discount_on\":\"Grand Total\",\"base_discount_amount\":0,\"additional_discount_percentage\":0,\"discount_amount\":0,\"base_grand_total\":609,\"base_rounding_adjustment\":0,\"base_rounded_total\":609,\"base_in_words\":\"\",\"grand_total\":609,\"rounding_adjustment\":0,\"rounded_total\":609,\"in_words\":\"\",\"total_advance\":0,\"outstanding_amount\":609,\"allocate_advances_automatically\":0,\"base_paid_amount\":0,\"paid_amount\":0,\"base_change_amount\":0,\"change_amount\":0,\"write_off_amount\":0,\"base_write_off_amount\":0,\"write_off_outstanding_amount_automatically\":0,\"distance\":0,\"mode_of_transport\":\"Road\",\"lr_date\":\"2021-03-07\",\"gst_vehicle_type\":\"Regular\",\"group_same_items\":0,\"language\":\"en\",\"gst_category\":\"Registered Regular\",\"export_type\":\"\",\"invoice_copy\":\"Original for Recipient\",\"reverse_charge\":\"N\",\"reason_for_issuing_document\":\"\",\"customer_group\":\"All Customer Groups\",\"is_discounted\":0,\"status\":\"Draft\",\"debit_to\":\"Debtors - LSRE\",\"party_account_currency\":\"INR\",\"is_opening\":\"No\",\"c_form_applicable\":\"No\",\"commission_rate\":0,\"total_commission\":0,\"pos_total_qty\":0,\"doctype\":\"Sales Invoice\",\"items\":[{\"owner\":\"Administrator\",\"parentfield\":\"items\",\"parenttype\":\"Sales Invoice\",\"idx\":1,\"docstatus\":0,\"item_code\":\"IT Solutions\",\"item_name\":\"IT Solutions\",\"description\":\"IT Solutions\",\"is_nil_exempt\":0,\"is_non_gst\":0,\"item_group\":\"Services\",\"image\":\"\",\"qty\":1,\"stock_uom\":\"Hour\",\"uom\":\"Hour\",\"conversion_factor\":1,\"stock_qty\":1,\"price_list_rate\":0,\"base_price_list_rate\":0,\"margin_type\":\"\",\"margin_rate_or_amount\":0,\"rate_with_margin\":0,\"discount_percentage\":0,\"discount_amount\":0,\"base_rate_with_margin\":0,\"rate\":600,\"amount\":600,\"base_rate\":600,\"base_amount\":600,\"is_free_item\":0,\"net_rate\":600,\"net_amount\":600,\"base_net_rate\":600,\"base_net_amount\":600,\"delivered_by_supplier\":0,\"income_account\":\"Sales - LSRE\",\"is_fixed_asset\":0,\"enable_deferred_revenue\":0,\"weight_per_unit\":0,\"total_weight\":0,\"allow_zero_valuation_rate\":0,\"item_tax_rate\":\"{}\",\"actual_batch_qty\":0,\"actual_qty\":0,\"sales_order\":\"SAL-ORD-2021-00004\",\"so_detail\":\"82f01a2d73\",\"delivery_note\":\"MAT-DN-2021-00002\",\"dn_detail\":\"b5f0c10e4b\",\"delivered_qty\":0,\"cost_center\":\"Main - LSRE\",\"page_break\":0,\"doctype\":\"Sales Invoice Item\",\"__islocal\":1,\"parent\":\"New Sales Invoice 1\",\"name\":\"New Sales Invoice Item 1\",\"child_docname\":\"New Sales Invoice Item 1\",\"discount_percentage_on_rate\":[],\"discount_amount_on_rate\":[],\"serial_no\":null}],\"pricing_rules\":[],\"packed_items\":[],\"timesheets\":[],\"taxes\":[{\"docstatus\":0,\"doctype\":\"Sales Taxes and Charges\",\"name\":\"New Sales Taxes and Charges 2\",\"__islocal\":1,\"__unsaved\":1,\"owner\":\"Administrator\",\"charge_type\":\"On Item Quantity\",\"included_in_print_rate\":0,\"cost_center\":null,\"parent\":\"New Sales Invoice 1\",\"parentfield\":\"taxes\",\"parenttype\":\"Sales Invoice\",\"idx\":1,\"row_id\":null,\"account_head\":\"CGST - LSRE\",\"description\":\"CGST\",\"rate\":9,\"tax_amount\":9,\"total\":609,\"tax_amount_after_discount_amount\":9,\"base_tax_amount\":9,\"base_total\":609,\"base_tax_amount_after_discount_amount\":9,\"item_wise_tax_detail\":\"{\\\"IT Solutions\\\":[9,9]}\"}],\"advances\":[],\"payment_schedule\":[],\"payments\":[],\"sales_team\":[],\"__islocal\":1,\"__onload\":{\"load_after_mapping\":true},\"name\":\"New Sales Invoice 1\",\"__last_sync_on\":\"2021-03-07T06:00:17.899Z\",\"company_address\":\"\",\"scan_barcode\":\"\",\"place_of_supply\":null,\"company_address_display\":\"\",\"__unsaved\":1,\"customer_gstin\":\"031234567891234\"}"
+}
+Request Error
+Traceback (most recent call last):
+  File "/home/hp/frappe-bench/apps/frappe/frappe/app.py", line 67, in application
+    response = frappe.api.handle()
+  File "/home/hp/frappe-bench/apps/frappe/frappe/api.py", line 59, in handle
+    return frappe.handler.handle()
+  File "/home/hp/frappe-bench/apps/frappe/frappe/handler.py", line 24, in handle
+    data = execute_cmd(cmd)
+  File "/home/hp/frappe-bench/apps/frappe/frappe/handler.py", line 64, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+  File "/home/hp/frappe-bench/apps/frappe/frappe/__init__.py", line 1071, in call
+    return fn(*args, **newargs)
+  File "/home/hp/frappe-bench/apps/frappe/frappe/desk/form/save.py", line 21, in savedocs
+    doc.save()
+  File "/home/hp/frappe-bench/apps/frappe/frappe/model/document.py", line 273, in save
+    return self._save(*args, **kwargs)
+  File "/home/hp/frappe-bench/apps/frappe/frappe/model/document.py", line 296, in _save
+    self.insert()
+  File "/home/hp/frappe-bench/apps/frappe/frappe/model/document.py", line 224, in insert
+    self._validate_links()
+  File "/home/hp/frappe-bench/apps/frappe/frappe/model/document.py", line 756, in _validate_links
+    invalid_links, cancelled_links = self.get_invalid_links()
+  File "/home/hp/frappe-bench/apps/frappe/frappe/model/base_document.py", line 486, in get_invalid_links
+    values_to_fetch, as_dict=True)
+  File "/home/hp/frappe-bench/apps/frappe/frappe/database/database.py", line 401, in get_value
+    order_by, cache=cache)
+  File "/home/hp/frappe-bench/apps/frappe/frappe/database/database.py", line 445, in get_values
+    out = self._get_values_from_table(fields, filters, doctype, as_dict, debug, order_by, update)
+  File "/home/hp/frappe-bench/apps/frappe/frappe/database/database.py", line 592, in _get_values_from_table
+    as_dict=as_dict, debug=debug, update=update)
+  File "/home/hp/frappe-bench/apps/frappe/frappe/database/database.py", line 156, in sql
+    self._cursor.execute(query, values)
+  File "/home/hp/frappe-bench/env/lib/python3.6/site-packages/pymysql/cursors.py", line 170, in execute
+    result = self._query(query)
+  File "/home/hp/frappe-bench/env/lib/python3.6/site-packages/pymysql/cursors.py", line 328, in _query
+    conn.query(q)
+  File "/home/hp/frappe-bench/env/lib/python3.6/site-packages/pymysql/connections.py", line 517, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/hp/frappe-bench/env/lib/python3.6/site-packages/pymysql/connections.py", line 732, in _read_query_result
+    result.read()
+  File "/home/hp/frappe-bench/env/lib/python3.6/site-packages/pymysql/connections.py", line 1075, in read
+    first_packet = self.connection._read_packet()
+  File "/home/hp/frappe-bench/env/lib/python3.6/site-packages/pymysql/connections.py", line 684, in _read_packet
+    packet.check_error()
+  File "/home/hp/frappe-bench/env/lib/python3.6/site-packages/pymysql/protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/home/hp/frappe-bench/env/lib/python3.6/site-packages/pymysql/err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.InternalError: (1054, "Unknown column 'export_type' in 'field list'")
+[ERROR] 2021-03-07 11:32:21,158 | /home/hp/frappe-bench/apps/frappe/frappe/utils/error.py:
+New Exception collected with id: 2021-03-07 11:32:21.155320-132.154.155.53-4c0
+[ERROR] 2021-03-07 11:33:23,892 | /home/hp/frappe-bench/apps/frappe/frappe/app.py:
+Site: gne3.gndec.ac.in
+Form Dict: {
+ "action": "Save",
+ "cmd": "frappe.desk.form.save.savedocs",
+ "doc": "{\"owner\":\"Administrator\",\"idx\":0,\"docstatus\":0,\"naming_series\":\"ACC-SINV-.YYYY.-\",\"customer\":\"Lakshay Chopra\",\"irn_cancelled\":0,\"eway_bill_cancelled\":0,\"customer_name\":\"Lakshay Chopra\",\"is_pos\":0,\"is_return\":0,\"company\":\"LSR Enterprise\",\"posting_date\":\"2021-03-07\",\"posting_time\":\"11:33:19.820876\",\"set_posting_time\":0,\"due_date\":\"2021-03-07\",\"update_billed_amount_in_sales_order\":0,\"po_no\":\"\",\"contact_person\":\"Lakshay Chopra-Lakshay Chopra\",\"contact_display\":\"Lakshay Chopra\",\"contact_mobile\":\"998817241\",\"contact_email\":\"lakshaychopra21@gmail.com\",\"territory\":\"All Territories\",\"shipping_address_name\":\"\",\"currency\":\"INR\",\"conversion_rate\":1,\"selling_price_list\":\"IT Solutions Price List\",\"price_list_currency\":\"INR\",\"plc_conversion_rate\":1,\"ignore_pricing_rule\":1,\"update_stock\":0,\"total_billing_amount\":0,\"total_qty\":1,\"base_total\":600,\"base_net_total\":600,\"total_net_weight\":0,\"total\":600,\"net_total\":600,\"taxes_and_charges\":\"\",\"tax_category\":\"GSTTAX\",\"other_charges_calculation\":\"<div class=\\\"tax-break-up\\\" style=\\\"overflow-x: auto;\\\">\\n\\t<table class=\\\"table table-bordered table-hover\\\">\\n\\t\\t<thead>\\n\\t\\t\\t<tr>\\n\\t\\t\\t\\t\\n\\t\\t\\t\\t\\t\\n\\t\\t\\t\\t\\t\\t<th class=\\\"text-left\\\">HSN/SAC</th>\\n\\t\\t\\t\\t\\t\\n\\t\\t\\t\\t\\n\\t\\t\\t\\t\\t\\n\\t\\t\\t\\t\\t\\t<th class=\\\"text-right\\\">Taxable Amount</th>\\n\\t\\t\\t\\t\\t\\n\\t\\t\\t\\t\\n\\t\\t\\t\\t\\t\\n\\t\\t\\t\\t\\t\\t<th class=\\\"text-right\\\">CGST</th>\\n\\t\\t\\t\\t\\t\\n\\t\\t\\t\\t\\n\\t\\t\\t</tr>\\n\\t\\t</thead>\\n\\t\\t<tbody>\\n\\t\\t\\t\\n\\t\\t\\t\\t<tr>\\n\\t\\t\\t\\t\\t<td>None</td>\\n\\t\\t\\t\\t\\t<td class='text-right'>\\n\\t\\t\\t\\t\\t\\t\\n\\t\\t\\t\\t\\t\\t\\t\u20b9 600.00\\n\\t\\t\\t\\t\\t\\t\\n\\t\\t\\t\\t\\t</td>\\n\\t\\t\\t\\t\\t\\n\\t\\t\\t\\t\\t\\t\\n\\t\\t\\t\\t\\t\\t\\n\\t\\t\\t\\t\\t\\t\\t<td class='text-right'>\\n\\t\\t\\t\\t\\t\\t\\t\\t\\n\\t\\t\\t\\t\\t\\t\\t\\t\\t(9.0%)\\n\\t\\t\\t\\t\\t\\t\\t\\t\\n\\t\\t\\t\\t\\t\\t\\t\\t\\n\\t\\t\\t\\t\\t\\t\\t\\t\\t\u20b9 9.00\\n\\t\\t\\t\\t\\t\\t\\t\\t\\n\\t\\t\\t\\t\\t\\t\\t</td>\\n\\t\\t\\t\\t\\t\\t\\n\\t\\t\\t\\t\\t\\n\\t\\t\\t\\t</tr>\\n\\t\\t\\t\\n\\t\\t</tbody>\\n\\t</table>\\n</div>\",\"base_total_taxes_and_charges\":9,\"total_taxes_and_charges\":9,\"loyalty_points\":0,\"loyalty_amount\":0,\"redeem_loyalty_points\":0,\"apply_discount_on\":\"Grand Total\",\"base_discount_amount\":0,\"additional_discount_percentage\":0,\"discount_amount\":0,\"base_grand_total\":609,\"base_rounding_adjustment\":0,\"base_rounded_total\":609,\"base_in_words\":\"\",\"grand_total\":609,\"rounding_adjustment\":0,\"rounded_total\":609,\"in_words\":\"\",\"total_advance\":0,\"outstanding_amount\":609,\"allocate_advances_automatically\":0,\"base_paid_amount\":0,\"paid_amount\":0,\"base_change_amount\":0,\"change_amount\":0,\"write_off_amount\":0,\"base_write_off_amount\":0,\"write_off_outstanding_amount_automatically\":0,\"distance\":0,\"mode_of_transport\":\"Road\",\"lr_date\":\"2021-03-07\",\"gst_vehicle_type\":\"Regular\",\"group_same_items\":0,\"language\":\"en\",\"gst_category\":\"\",\"export_type\":\"\",\"invoice_copy\":\"Original for Recipient\",\"reverse_charge\":\"N\",\"reason_for_issuing_document\":\"\",\"customer_group\":\"All Customer Groups\",\"is_discounted\":0,\"status\":\"Draft\",\"debit_to\":\"Debtors - LSRE\",\"party_account_currency\":\"INR\",\"is_opening\":\"No\",\"c_form_applicable\":\"No\",\"commission_rate\":0,\"total_commission\":0,\"pos_total_qty\":0,\"doctype\":\"Sales Invoice\",\"items\":[{\"owner\":\"Administrator\",\"parentfield\":\"items\",\"parenttype\":\"Sales Invoice\",\"idx\":1,\"docstatus\":0,\"item_code\":\"IT Solutions\",\"item_name\":\"IT Solutions\",\"description\":\"IT Solutions\",\"is_nil_exempt\":0,\"is_non_gst\":0,\"item_group\":\"Services\",\"image\":\"\",\"qty\":1,\"stock_uom\":\"Hour\",\"uom\":\"Hour\",\"conversion_factor\":1,\"stock_qty\":1,\"price_list_rate\":0,\"base_price_list_rate\":0,\"margin_type\":\"\",\"margin_rate_or_amount\":0,\"rate_with_margin\":0,\"discount_percentage\":0,\"discount_amount\":0,\"base_rate_with_margin\":0,\"rate\":600,\"amount\":600,\"base_rate\":600,\"base_amount\":600,\"is_free_item\":0,\"net_rate\":600,\"net_amount\":600,\"base_net_rate\":600,\"base_net_amount\":600,\"delivered_by_supplier\":0,\"income_account\":\"Sales - LSRE\",\"is_fixed_asset\":0,\"enable_deferred_revenue\":0,\"weight_per_unit\":0,\"total_weight\":0,\"allow_zero_valuation_rate\":0,\"item_tax_rate\":\"{}\",\"actual_batch_qty\":0,\"actual_qty\":0,\"sales_order\":\"SAL-ORD-2021-00004\",\"so_detail\":\"82f01a2d73\",\"delivery_note\":\"MAT-DN-2021-00002\",\"dn_detail\":\"b5f0c10e4b\",\"delivered_qty\":0,\"cost_center\":\"Main - LSRE\",\"page_break\":0,\"doctype\":\"Sales Invoice Item\",\"__islocal\":1,\"parent\":\"New Sales Invoice 1\",\"name\":\"New Sales Invoice Item 1\",\"child_docname\":\"New Sales Invoice Item 1\",\"discount_percentage_on_rate\":[],\"discount_amount_on_rate\":[],\"serial_no\":null}],\"pricing_rules\":[],\"packed_items\":[],\"timesheets\":[],\"taxes\":[{\"owner\":\"Administrator\",\"parentfield\":\"taxes\",\"parenttype\":\"Sales Invoice\",\"idx\":1,\"docstatus\":0,\"charge_type\":\"On Item Quantity\",\"account_head\":\"CGST - LSRE\",\"description\":\"CGST\",\"included_in_print_rate\":0,\"cost_center\":\"Main - LSRE\",\"rate\":9,\"tax_amount\":9,\"total\":609,\"tax_amount_after_discount_amount\":9,\"base_tax_amount\":9,\"base_total\":609,\"base_tax_amount_after_discount_amount\":9,\"item_wise_tax_detail\":\"{\\\"IT Solutions\\\":[9,9]}\",\"doctype\":\"Sales Taxes and Charges\",\"__islocal\":1,\"parent\":\"New Sales Invoice 1\",\"name\":\"New Sales Taxes and Charges 1\"}],\"advances\":[],\"payment_schedule\":[],\"payments\":[],\"sales_team\":[],\"__islocal\":1,\"__onload\":{\"load_after_mapping\":true},\"name\":\"New Sales Invoice 1\",\"__last_sync_on\":\"2021-03-07T06:03:10.641Z\",\"company_address\":\"\",\"scan_barcode\":\"\",\"place_of_supply\":null,\"company_address_display\":\"\",\"__unsaved\":1}"
+}
+Request Error
+Traceback (most recent call last):
+  File "/home/hp/frappe-bench/apps/frappe/frappe/app.py", line 67, in application
+    response = frappe.api.handle()
+  File "/home/hp/frappe-bench/apps/frappe/frappe/api.py", line 59, in handle
+    return frappe.handler.handle()
+  File "/home/hp/frappe-bench/apps/frappe/frappe/handler.py", line 24, in handle
+    data = execute_cmd(cmd)
+  File "/home/hp/frappe-bench/apps/frappe/frappe/handler.py", line 64, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+  File "/home/hp/frappe-bench/apps/frappe/frappe/__init__.py", line 1071, in call
+    return fn(*args, **newargs)
+  File "/home/hp/frappe-bench/apps/frappe/frappe/desk/form/save.py", line 21, in savedocs
+    doc.save()
+  File "/home/hp/frappe-bench/apps/frappe/frappe/model/document.py", line 273, in save
+    return self._save(*args, **kwargs)
+  File "/home/hp/frappe-bench/apps/frappe/frappe/model/document.py", line 296, in _save
+    self.insert()
+  File "/home/hp/frappe-bench/apps/frappe/frappe/model/document.py", line 224, in insert
+    self._validate_links()
+  File "/home/hp/frappe-bench/apps/frappe/frappe/model/document.py", line 756, in _validate_links
+    invalid_links, cancelled_links = self.get_invalid_links()
+  File "/home/hp/frappe-bench/apps/frappe/frappe/model/base_document.py", line 486, in get_invalid_links
+    values_to_fetch, as_dict=True)
+  File "/home/hp/frappe-bench/apps/frappe/frappe/database/database.py", line 401, in get_value
+    order_by, cache=cache)
+  File "/home/hp/frappe-bench/apps/frappe/frappe/database/database.py", line 445, in get_values
+    out = self._get_values_from_table(fields, filters, doctype, as_dict, debug, order_by, update)
+  File "/home/hp/frappe-bench/apps/frappe/frappe/database/database.py", line 592, in _get_values_from_table
+    as_dict=as_dict, debug=debug, update=update)
+  File "/home/hp/frappe-bench/apps/frappe/frappe/database/database.py", line 156, in sql
+    self._cursor.execute(query, values)
+  File "/home/hp/frappe-bench/env/lib/python3.6/site-packages/pymysql/cursors.py", line 170, in execute
+    result = self._query(query)
+  File "/home/hp/frappe-bench/env/lib/python3.6/site-packages/pymysql/cursors.py", line 328, in _query
+    conn.query(q)
+  File "/home/hp/frappe-bench/env/lib/python3.6/site-packages/pymysql/connections.py", line 517, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/hp/frappe-bench/env/lib/python3.6/site-packages/pymysql/connections.py", line 732, in _read_query_result
+    result.read()
+  File "/home/hp/frappe-bench/env/lib/python3.6/site-packages/pymysql/connections.py", line 1075, in read
+    first_packet = self.connection._read_packet()
+  File "/home/hp/frappe-bench/env/lib/python3.6/site-packages/pymysql/connections.py", line 684, in _read_packet
+    packet.check_error()
+  File "/home/hp/frappe-bench/env/lib/python3.6/site-packages/pymysql/protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/home/hp/frappe-bench/env/lib/python3.6/site-packages/pymysql/err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.InternalError: (1054, "Unknown column 'gst_category' in 'field list'")
+[ERROR] 2021-03-07 11:33:23,896 | /home/hp/frappe-bench/apps/frappe/frappe/utils/error.py:
+New Exception collected with id: 2021-03-07 11:33:23.893122-180.188.241.174-84b

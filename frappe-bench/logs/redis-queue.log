@@ -1,0 +1,9 @@
+4903:C 05 Mar 13:47:18.190 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+4903:C 05 Mar 13:47:18.190 # Redis version=4.0.9, bits=64, commit=00000000, modified=0, pid=4903, just started
+4903:C 05 Mar 13:47:18.190 # Configuration loaded
+4903:M 05 Mar 13:47:18.191 * Increased maximum number of open files to 10032 (it was originally set to 1024).
+4903:M 05 Mar 13:47:18.191 * Running mode=standalone, port=11000.
+4903:M 05 Mar 13:47:18.191 # WARNING: The TCP backlog setting of 511 cannot be enforced because /proc/sys/net/core/somaxconn is set to the lower value of 128.
+4903:M 05 Mar 13:47:18.191 # Server initialized
+4903:M 05 Mar 13:47:18.191 # WARNING overcommit_memory is set to 0! Background save may fail under low memory condition. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+4903:M 05 Mar 13:47:18.191 * Ready to accept connections

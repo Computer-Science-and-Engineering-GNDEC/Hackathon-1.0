@@ -1,0 +1,1855 @@
+[DEBUG] 2021-03-05 22:47:16,643 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-05 22:48:16,850 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-05 22:49:17,056 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-05 22:50:17,265 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-05 22:51:17,476 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-05 22:52:17,774 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[ERROR] 2021-03-05 22:53:01,864 | /home/hp/frappe-bench/apps/frappe/frappe/app.py:
+Site: gne3.gndec.ac.in
+Form Dict: {
+ "action": "Save",
+ "cmd": "frappe.desk.form.save.savedocs",
+ "doc": "{\"docstatus\":0,\"doctype\":\"Address\",\"name\":\"New Address 4\",\"__islocal\":1,\"__unsaved\":1,\"owner\":\"Administrator\",\"address_type\":\"Billing\",\"country\":\"India\",\"gst_state\":\"Punjab\",\"is_primary_address\":1,\"is_shipping_address\":1,\"disabled\":0,\"is_your_company_address\":0,\"links\":[{\"docstatus\":0,\"doctype\":\"Dynamic Link\",\"name\":\"New Dynamic Link 3\",\"__islocal\":1,\"__unsaved\":1,\"owner\":\"Administrator\",\"parent\":\"New Address 4\",\"parentfield\":\"links\",\"parenttype\":\"Address\",\"idx\":1,\"link_doctype\":\"Customer\",\"link_name\":\"Lakshay Chopra\"}],\"address_title\":\"Company Home Office\",\"email_id\":\"lakshay@gmail.com\",\"phone\":\"9000000009\",\"address_line1\":\"Hno 53 ABC Road\",\"address_line2\":\"XYZ Nagar\",\"city\":\"Ludhiana\",\"county\":\"\",\"state\":\"Punjab\",\"fax\":\"9000000009\",\"gstin\":\"27AAA021451BH\",\"tax_category\":\"GSTTAX\"}"
+}
+Request Error
+Traceback (most recent call last):
+  File "/home/hp/frappe-bench/apps/frappe/frappe/app.py", line 67, in application
+    response = frappe.api.handle()
+  File "/home/hp/frappe-bench/apps/frappe/frappe/api.py", line 59, in handle
+    return frappe.handler.handle()
+  File "/home/hp/frappe-bench/apps/frappe/frappe/handler.py", line 24, in handle
+    data = execute_cmd(cmd)
+  File "/home/hp/frappe-bench/apps/frappe/frappe/handler.py", line 64, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+  File "/home/hp/frappe-bench/apps/frappe/frappe/__init__.py", line 1071, in call
+    return fn(*args, **newargs)
+  File "/home/hp/frappe-bench/apps/frappe/frappe/desk/form/save.py", line 21, in savedocs
+    doc.save()
+  File "/home/hp/frappe-bench/apps/frappe/frappe/model/document.py", line 273, in save
+    return self._save(*args, **kwargs)
+  File "/home/hp/frappe-bench/apps/frappe/frappe/model/document.py", line 296, in _save
+    self.insert()
+  File "/home/hp/frappe-bench/apps/frappe/frappe/model/document.py", line 230, in insert
+    self.run_before_save_methods()
+  File "/home/hp/frappe-bench/apps/frappe/frappe/model/document.py", line 896, in run_before_save_methods
+    self.run_method("validate")
+  File "/home/hp/frappe-bench/apps/frappe/frappe/model/document.py", line 797, in run_method
+    out = Document.hook(fn)(self, *args, **kwargs)
+  File "/home/hp/frappe-bench/apps/frappe/frappe/model/document.py", line 1073, in composer
+    return composed(self, method, *args, **kwargs)
+  File "/home/hp/frappe-bench/apps/frappe/frappe/model/document.py", line 1058, in runner
+    add_to_return_value(self, f(self, method, *args, **kwargs))
+  File "/home/hp/frappe-bench/apps/erpnext/erpnext/regional/india/utils.py", line 31, in validate_gstin_for_india
+    gst_category = frappe.db.get_value(link_doctype, {'name': link_name}, ['gst_category'])
+  File "/home/hp/frappe-bench/apps/frappe/frappe/database/database.py", line 401, in get_value
+    order_by, cache=cache)
+  File "/home/hp/frappe-bench/apps/frappe/frappe/database/database.py", line 445, in get_values
+    out = self._get_values_from_table(fields, filters, doctype, as_dict, debug, order_by, update)
+  File "/home/hp/frappe-bench/apps/frappe/frappe/database/database.py", line 592, in _get_values_from_table
+    as_dict=as_dict, debug=debug, update=update)
+  File "/home/hp/frappe-bench/apps/frappe/frappe/database/database.py", line 156, in sql
+    self._cursor.execute(query, values)
+  File "/home/hp/frappe-bench/env/lib/python3.6/site-packages/pymysql/cursors.py", line 170, in execute
+    result = self._query(query)
+  File "/home/hp/frappe-bench/env/lib/python3.6/site-packages/pymysql/cursors.py", line 328, in _query
+    conn.query(q)
+  File "/home/hp/frappe-bench/env/lib/python3.6/site-packages/pymysql/connections.py", line 517, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/hp/frappe-bench/env/lib/python3.6/site-packages/pymysql/connections.py", line 732, in _read_query_result
+    result.read()
+  File "/home/hp/frappe-bench/env/lib/python3.6/site-packages/pymysql/connections.py", line 1075, in read
+    first_packet = self.connection._read_packet()
+  File "/home/hp/frappe-bench/env/lib/python3.6/site-packages/pymysql/connections.py", line 684, in _read_packet
+    packet.check_error()
+  File "/home/hp/frappe-bench/env/lib/python3.6/site-packages/pymysql/protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/home/hp/frappe-bench/env/lib/python3.6/site-packages/pymysql/err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.InternalError: (1054, "Unknown column 'gst_category' in 'field list'")
+[ERROR] 2021-03-05 22:53:01,934 | /home/hp/frappe-bench/apps/frappe/frappe/utils/error.py:
+New Exception collected with id: 2021-03-05 22:53:01.864438-106.192.22.30-4bf
+[DEBUG] 2021-03-05 22:53:17,980 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-05 22:54:18,191 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-05 22:55:18,400 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-05 22:56:18,601 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-05 22:57:18,866 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-05 22:58:19,071 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-05 22:59:19,326 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-05 23:00:19,632 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[ERROR] 2021-03-05 23:00:20,442 | /home/hp/frappe-bench/apps/frappe/frappe/utils/error.py:
+Could not take error snapshot: characters_written
+Traceback (most recent call last):
+  File "/home/hp/frappe-bench/apps/frappe/frappe/utils/error.py", line 167, in collect_error_snapshots
+    os.remove(fullpath)
+PermissionError: [Errno 13] Permission denied: './gne3.gndec.ac.in/error-snapshots/2021-03-05 22:44:16.999596-106.192.22.30-3af.json'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/hp/frappe-bench/apps/frappe/frappe/utils/error.py", line 36, in make_error_snapshot
+    snapshot = get_snapshot(exception)
+  File "/home/hp/frappe-bench/apps/frappe/frappe/utils/error.py", line 127, in get_snapshot
+    value = pydoc.text.repr(getattr(evalue, name))
+AttributeError: characters_written
+[DEBUG] 2021-03-05 23:01:19,838 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-05 23:02:20,039 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-05 23:03:20,242 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-05 23:04:20,464 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-05 23:05:20,667 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-05 23:06:20,900 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-05 23:07:21,101 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-05 23:08:21,324 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-05 23:09:21,532 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-05 23:10:21,741 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-05 23:11:21,952 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-05 23:12:22,224 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-05 23:13:22,431 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-05 23:14:22,639 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-05 23:15:22,842 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-05 23:16:23,065 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-05 23:17:23,401 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-05 23:18:23,617 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-05 23:19:23,826 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-05 23:20:24,056 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-05 23:21:24,264 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-05 23:22:24,481 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-05 23:23:24,707 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-05 23:24:24,931 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-05 23:25:25,145 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-05 23:26:25,363 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-05 23:27:25,557 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-05 23:28:25,763 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-05 23:29:25,972 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-05 23:30:26,183 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-05 23:31:26,455 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-05 23:32:26,718 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-05 23:33:26,915 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-05 23:34:27,134 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-05 23:35:27,352 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-05 23:36:27,610 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-05 23:37:27,827 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-05 23:38:28,019 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-05 23:39:28,309 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-05 23:40:28,580 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-05 23:41:28,795 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-05 23:42:28,996 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-05 23:43:29,198 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-05 23:44:29,431 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-05 23:45:29,627 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-05 23:46:29,830 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-05 23:47:30,024 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-05 23:48:30,230 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-05 23:49:30,424 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-05 23:50:30,626 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-05 23:51:30,877 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-05 23:52:31,084 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-05 23:53:31,283 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-05 23:54:31,485 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-05 23:55:31,687 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-05 23:56:31,901 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-05 23:57:32,100 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-05 23:58:32,307 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-05 23:59:32,496 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 00:00:32,744 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[ERROR] 2021-03-06 00:00:33,636 | /home/hp/frappe-bench/apps/frappe/frappe/utils/error.py:
+Could not take error snapshot: characters_written
+Traceback (most recent call last):
+  File "/home/hp/frappe-bench/apps/frappe/frappe/utils/error.py", line 167, in collect_error_snapshots
+    os.remove(fullpath)
+PermissionError: [Errno 13] Permission denied: './gne3.gndec.ac.in/error-snapshots/2021-03-05 22:44:16.999596-106.192.22.30-3af.json'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/hp/frappe-bench/apps/frappe/frappe/utils/error.py", line 36, in make_error_snapshot
+    snapshot = get_snapshot(exception)
+  File "/home/hp/frappe-bench/apps/frappe/frappe/utils/error.py", line 127, in get_snapshot
+    value = pydoc.text.repr(getattr(evalue, name))
+AttributeError: characters_written
+[DEBUG] 2021-03-06 00:01:32,934 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 00:02:33,145 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 00:03:33,344 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 00:04:33,567 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 00:05:33,781 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 00:06:33,981 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 00:07:34,261 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 00:08:34,538 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 00:09:34,746 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 00:10:34,955 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 00:11:35,155 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 00:12:35,385 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 00:13:35,592 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 00:14:35,851 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 00:15:36,068 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 00:16:36,275 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 00:17:36,483 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 00:18:36,693 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 00:19:36,884 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 00:20:37,100 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 00:21:37,300 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 00:22:37,509 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 00:23:37,727 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 00:24:37,950 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 00:25:38,157 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 00:26:38,356 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 00:27:38,617 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 00:28:38,841 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 00:29:39,047 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 00:30:39,256 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 00:31:39,466 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 00:32:39,696 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 00:33:39,886 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 00:34:40,096 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 00:35:40,322 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 00:36:40,552 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 00:37:40,769 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 00:38:40,981 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 00:39:41,199 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 00:40:41,491 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 00:41:41,698 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 00:42:41,908 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 00:43:42,126 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 00:44:42,350 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 00:45:42,547 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 00:46:42,758 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 00:47:43,021 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 00:48:43,260 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 00:49:43,477 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 00:50:43,704 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 00:51:43,921 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 00:52:44,144 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 00:53:44,368 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 00:54:44,578 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 00:55:44,849 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 00:56:45,145 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 00:57:45,343 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 00:58:45,535 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 00:59:45,738 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 01:00:45,965 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[ERROR] 2021-03-06 01:00:46,967 | /home/hp/frappe-bench/apps/frappe/frappe/utils/error.py:
+Could not take error snapshot: characters_written
+Traceback (most recent call last):
+  File "/home/hp/frappe-bench/apps/frappe/frappe/utils/error.py", line 167, in collect_error_snapshots
+    os.remove(fullpath)
+PermissionError: [Errno 13] Permission denied: './gne3.gndec.ac.in/error-snapshots/2021-03-05 22:44:16.999596-106.192.22.30-3af.json'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/hp/frappe-bench/apps/frappe/frappe/utils/error.py", line 36, in make_error_snapshot
+    snapshot = get_snapshot(exception)
+  File "/home/hp/frappe-bench/apps/frappe/frappe/utils/error.py", line 127, in get_snapshot
+    value = pydoc.text.repr(getattr(evalue, name))
+AttributeError: characters_written
+[DEBUG] 2021-03-06 01:01:46,162 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 01:02:46,363 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 01:03:46,616 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 01:04:46,921 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 01:05:47,120 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 01:06:47,314 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 01:07:47,515 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 01:08:47,731 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 01:09:47,928 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 01:10:48,132 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 01:11:48,485 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 01:12:48,694 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 01:13:48,886 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 01:14:49,099 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 01:15:49,321 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 01:16:49,533 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 01:17:49,728 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 01:18:49,922 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 01:19:50,125 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 01:20:50,331 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 01:21:50,516 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 01:22:50,762 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 01:23:50,986 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 01:24:51,287 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 01:25:51,479 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 01:26:51,715 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 01:27:51,925 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 01:28:52,197 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 01:29:52,466 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 01:30:52,659 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 01:31:52,873 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 01:32:53,138 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 01:33:53,338 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 01:34:53,543 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 01:35:53,733 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 01:36:53,946 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 01:37:54,159 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 01:38:54,358 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 01:39:54,580 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 01:40:54,787 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 01:41:55,007 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 01:42:55,224 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 01:43:55,425 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 01:44:55,639 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 01:45:55,835 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 01:46:56,242 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 01:47:56,440 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 01:48:56,691 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 01:49:56,899 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 01:50:57,106 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 01:51:57,314 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 01:52:57,541 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 01:53:57,755 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 01:54:57,980 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 01:55:58,168 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 01:56:58,393 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 01:57:58,617 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 01:58:58,822 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 01:59:59,037 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 02:00:59,250 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[ERROR] 2021-03-06 02:01:00,404 | /home/hp/frappe-bench/apps/frappe/frappe/utils/error.py:
+Could not take error snapshot: characters_written
+Traceback (most recent call last):
+  File "/home/hp/frappe-bench/apps/frappe/frappe/utils/error.py", line 167, in collect_error_snapshots
+    os.remove(fullpath)
+PermissionError: [Errno 13] Permission denied: './gne3.gndec.ac.in/error-snapshots/2021-03-05 22:44:16.999596-106.192.22.30-3af.json'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/hp/frappe-bench/apps/frappe/frappe/utils/error.py", line 36, in make_error_snapshot
+    snapshot = get_snapshot(exception)
+  File "/home/hp/frappe-bench/apps/frappe/frappe/utils/error.py", line 127, in get_snapshot
+    value = pydoc.text.repr(getattr(evalue, name))
+AttributeError: characters_written
+[DEBUG] 2021-03-06 02:01:59,442 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 02:02:59,681 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 02:03:59,946 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 02:05:00,150 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 02:06:00,368 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 02:07:00,567 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 02:08:00,776 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 02:09:01,055 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 02:10:01,248 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 02:11:01,445 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 02:12:01,683 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 02:13:01,880 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 02:14:02,039 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 02:15:02,231 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 02:16:02,441 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 02:17:02,644 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 02:18:02,854 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 02:19:03,053 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 02:20:03,261 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 02:21:03,455 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 02:22:03,677 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 02:23:03,906 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 02:24:04,125 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 02:25:04,329 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 02:26:04,522 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 02:27:04,717 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 02:28:04,947 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 02:29:05,170 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 02:30:05,364 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 02:31:05,565 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 02:32:05,793 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 02:33:05,980 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 02:34:06,186 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 02:35:06,400 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 02:36:06,669 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 02:37:06,920 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 02:38:07,140 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 02:39:07,336 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 02:40:07,563 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 02:41:07,789 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 02:42:07,987 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 02:43:08,181 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 02:44:08,406 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 02:45:08,614 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 02:46:08,800 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 02:47:09,002 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 02:48:09,222 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 02:49:09,448 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 02:50:09,659 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 02:51:09,886 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 02:52:10,119 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 02:53:10,336 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 02:54:10,597 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 02:55:10,808 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 02:56:11,040 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 02:57:11,240 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 02:58:11,443 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 02:59:11,656 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 03:00:11,999 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[ERROR] 2021-03-06 03:00:13,016 | /home/hp/frappe-bench/apps/frappe/frappe/utils/error.py:
+Could not take error snapshot: characters_written
+Traceback (most recent call last):
+  File "/home/hp/frappe-bench/apps/frappe/frappe/utils/error.py", line 167, in collect_error_snapshots
+    os.remove(fullpath)
+PermissionError: [Errno 13] Permission denied: './gne3.gndec.ac.in/error-snapshots/2021-03-05 22:44:16.999596-106.192.22.30-3af.json'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/hp/frappe-bench/apps/frappe/frappe/utils/error.py", line 36, in make_error_snapshot
+    snapshot = get_snapshot(exception)
+  File "/home/hp/frappe-bench/apps/frappe/frappe/utils/error.py", line 127, in get_snapshot
+    value = pydoc.text.repr(getattr(evalue, name))
+AttributeError: characters_written
+[DEBUG] 2021-03-06 03:01:12,199 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 03:02:12,403 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 03:03:12,622 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 03:04:12,846 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 03:05:13,071 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 03:06:13,265 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 03:07:13,468 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 03:08:13,683 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 03:09:13,887 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 03:10:14,094 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 03:11:14,301 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 03:12:14,588 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 03:13:14,791 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 03:14:14,973 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 03:15:15,170 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 03:16:15,379 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 03:17:15,564 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 03:18:15,803 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 03:19:16,074 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 03:20:16,309 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 03:21:16,528 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 03:22:16,741 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 03:23:16,954 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 03:24:17,162 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 03:25:17,355 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 03:26:17,613 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 03:27:17,883 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 03:28:18,081 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 03:29:18,289 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 03:30:18,518 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 03:31:18,712 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 03:32:18,931 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 03:33:19,140 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 03:34:19,352 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 03:35:19,564 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 03:36:19,789 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 03:37:19,998 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 03:38:20,178 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 03:39:20,407 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 03:40:20,615 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 03:41:20,789 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 03:42:20,997 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 03:43:21,194 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 03:44:21,378 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 03:45:21,668 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 03:46:21,877 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 03:47:22,153 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 03:48:22,400 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 03:49:22,626 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 03:50:22,815 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 03:51:23,035 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 03:52:23,245 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 03:53:23,537 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 03:54:23,750 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 03:55:23,965 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 03:56:24,173 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 03:57:24,358 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 03:58:24,586 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 03:59:24,790 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 04:00:25,030 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[ERROR] 2021-03-06 04:00:26,074 | /home/hp/frappe-bench/apps/frappe/frappe/utils/error.py:
+Could not take error snapshot: characters_written
+Traceback (most recent call last):
+  File "/home/hp/frappe-bench/apps/frappe/frappe/utils/error.py", line 167, in collect_error_snapshots
+    os.remove(fullpath)
+PermissionError: [Errno 13] Permission denied: './gne3.gndec.ac.in/error-snapshots/2021-03-05 22:44:16.999596-106.192.22.30-3af.json'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/hp/frappe-bench/apps/frappe/frappe/utils/error.py", line 36, in make_error_snapshot
+    snapshot = get_snapshot(exception)
+  File "/home/hp/frappe-bench/apps/frappe/frappe/utils/error.py", line 127, in get_snapshot
+    value = pydoc.text.repr(getattr(evalue, name))
+AttributeError: characters_written
+[DEBUG] 2021-03-06 04:01:25,252 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 04:02:25,465 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 04:03:25,676 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 04:04:25,952 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 04:05:26,162 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 04:06:26,373 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 04:07:26,569 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 04:08:26,785 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 04:09:26,978 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 04:10:27,192 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 04:11:27,374 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 04:12:27,573 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 04:13:27,802 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 04:14:28,114 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 04:15:28,334 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 04:16:28,537 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 04:17:28,725 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 04:18:28,929 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 04:19:29,124 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 04:20:29,341 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 04:21:29,552 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 04:22:29,764 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 04:23:29,961 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 04:24:30,177 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 04:25:30,405 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 04:26:30,618 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 04:27:30,821 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 04:28:31,030 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 04:29:31,264 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 04:30:31,486 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 04:31:31,691 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 04:32:31,956 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 04:33:32,166 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 04:34:32,353 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 04:35:32,581 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 04:36:32,798 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 04:37:33,000 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 04:38:33,210 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 04:39:33,416 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 04:40:33,625 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 04:41:33,833 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 04:42:34,106 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 04:43:34,377 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 04:44:34,627 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 04:45:34,818 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 04:46:35,029 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 04:47:35,224 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 04:48:35,448 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 04:49:35,708 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 04:50:35,904 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 04:51:36,100 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 04:52:36,327 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 04:53:36,530 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 04:54:36,742 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 04:55:36,947 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 04:56:37,155 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 04:57:37,361 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 04:58:37,560 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 04:59:37,757 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 05:00:37,987 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[ERROR] 2021-03-06 05:00:39,057 | /home/hp/frappe-bench/apps/frappe/frappe/utils/error.py:
+Could not take error snapshot: characters_written
+Traceback (most recent call last):
+  File "/home/hp/frappe-bench/apps/frappe/frappe/utils/error.py", line 167, in collect_error_snapshots
+    os.remove(fullpath)
+PermissionError: [Errno 13] Permission denied: './gne3.gndec.ac.in/error-snapshots/2021-03-05 22:44:16.999596-106.192.22.30-3af.json'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/hp/frappe-bench/apps/frappe/frappe/utils/error.py", line 36, in make_error_snapshot
+    snapshot = get_snapshot(exception)
+  File "/home/hp/frappe-bench/apps/frappe/frappe/utils/error.py", line 127, in get_snapshot
+    value = pydoc.text.repr(getattr(evalue, name))
+AttributeError: characters_written
+[DEBUG] 2021-03-06 05:01:38,199 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 05:02:38,399 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 05:03:38,611 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 05:04:38,836 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 05:05:39,030 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 05:06:39,233 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 05:07:39,437 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 05:08:39,662 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 05:09:39,881 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 05:10:40,102 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 05:11:40,330 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 05:12:40,565 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 05:13:40,790 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 05:14:40,979 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 05:15:41,207 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 05:16:41,443 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 05:17:41,643 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 05:18:41,855 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 05:19:42,051 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 05:20:42,267 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 05:21:42,467 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 05:22:42,665 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 05:23:42,880 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 05:24:43,162 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 05:25:43,369 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 05:26:43,565 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 05:27:43,793 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 05:28:43,994 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 05:29:44,204 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 05:30:44,406 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 05:31:44,610 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 05:32:44,820 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 05:33:45,038 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 05:34:45,341 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 05:35:45,553 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 05:36:45,795 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 05:37:46,004 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 05:38:46,226 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 05:39:46,496 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 05:40:46,754 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 05:41:46,948 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 05:42:47,160 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 05:43:47,364 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 05:44:47,569 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 05:45:47,808 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 05:46:48,028 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 05:47:48,216 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 05:48:48,483 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 05:49:48,691 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 05:50:48,862 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 05:51:49,073 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 05:52:49,310 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 05:53:49,509 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 05:54:49,721 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 05:55:49,967 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 05:56:50,200 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 05:57:50,425 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 05:58:50,703 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 05:59:50,886 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 06:00:51,164 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[ERROR] 2021-03-06 06:00:52,247 | /home/hp/frappe-bench/apps/frappe/frappe/utils/error.py:
+Could not take error snapshot: characters_written
+Traceback (most recent call last):
+  File "/home/hp/frappe-bench/apps/frappe/frappe/utils/error.py", line 167, in collect_error_snapshots
+    os.remove(fullpath)
+PermissionError: [Errno 13] Permission denied: './gne3.gndec.ac.in/error-snapshots/2021-03-05 22:44:16.999596-106.192.22.30-3af.json'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/hp/frappe-bench/apps/frappe/frappe/utils/error.py", line 36, in make_error_snapshot
+    snapshot = get_snapshot(exception)
+  File "/home/hp/frappe-bench/apps/frappe/frappe/utils/error.py", line 127, in get_snapshot
+    value = pydoc.text.repr(getattr(evalue, name))
+AttributeError: characters_written
+[DEBUG] 2021-03-06 06:01:51,360 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 06:02:51,589 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 06:03:51,802 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 06:04:52,019 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 06:05:52,330 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 06:06:52,550 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 06:07:52,764 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 06:08:52,978 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 06:09:53,165 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 06:10:53,370 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 06:11:53,573 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 06:12:53,792 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 06:13:54,009 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 06:14:54,204 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 06:15:54,392 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 06:16:54,609 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 06:17:54,821 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 06:18:55,009 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 06:19:55,229 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 06:20:55,448 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 06:21:55,639 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 06:22:55,827 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 06:23:56,022 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 06:24:56,240 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 06:25:56,451 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 06:26:56,640 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 06:27:56,831 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 06:28:57,039 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 06:29:57,231 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 06:30:57,435 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 06:31:57,631 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 06:32:57,839 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 06:33:58,026 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 06:34:58,254 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 06:35:58,418 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 06:36:58,635 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 06:37:58,840 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 06:38:59,051 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 06:39:59,257 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 06:40:59,549 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 06:41:59,741 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 06:42:59,955 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 06:44:00,155 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 06:45:00,381 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 06:46:00,593 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 06:47:00,765 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 06:48:00,981 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 06:49:01,175 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 06:50:01,421 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 06:51:01,628 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 06:52:01,861 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 06:53:02,062 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 06:54:02,273 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 06:55:02,487 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 06:56:02,703 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 06:57:02,889 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 06:58:03,077 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 06:59:03,287 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 07:00:03,511 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[ERROR] 2021-03-06 07:00:04,721 | /home/hp/frappe-bench/apps/frappe/frappe/utils/error.py:
+Could not take error snapshot: characters_written
+Traceback (most recent call last):
+  File "/home/hp/frappe-bench/apps/frappe/frappe/utils/error.py", line 167, in collect_error_snapshots
+    os.remove(fullpath)
+PermissionError: [Errno 13] Permission denied: './gne3.gndec.ac.in/error-snapshots/2021-03-05 22:44:16.999596-106.192.22.30-3af.json'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/hp/frappe-bench/apps/frappe/frappe/utils/error.py", line 36, in make_error_snapshot
+    snapshot = get_snapshot(exception)
+  File "/home/hp/frappe-bench/apps/frappe/frappe/utils/error.py", line 127, in get_snapshot
+    value = pydoc.text.repr(getattr(evalue, name))
+AttributeError: characters_written
+[DEBUG] 2021-03-06 07:01:03,727 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 07:02:03,939 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 07:03:04,151 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 07:04:04,360 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 07:05:04,569 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 07:06:04,833 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 07:07:05,029 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 07:08:05,263 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 07:09:05,457 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 07:10:05,669 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 07:11:05,873 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 07:12:06,105 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 07:13:06,291 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 07:14:06,532 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 07:15:06,734 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 07:16:06,976 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 07:17:07,161 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 07:18:07,357 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 07:19:07,567 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 07:20:07,760 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 07:21:07,945 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 07:22:08,156 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 07:23:08,345 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 07:24:08,561 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 07:25:08,763 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 07:26:08,952 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 07:27:09,164 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 07:28:09,398 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 07:29:09,618 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 07:30:09,811 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 07:31:10,025 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 07:32:10,237 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 07:33:10,426 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 07:34:10,688 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 07:35:10,901 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 07:36:11,142 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 07:37:11,362 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 07:38:11,584 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 07:39:11,788 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 07:40:12,013 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 07:41:12,220 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 07:42:12,401 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 07:43:12,607 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 07:44:12,848 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 07:45:13,051 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 07:46:13,247 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 07:47:13,458 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 07:48:13,684 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 07:49:13,877 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 07:50:14,072 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 07:51:14,285 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 07:52:14,493 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 07:53:14,688 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 07:54:14,900 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 07:55:15,096 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 07:56:15,280 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 07:57:15,496 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 07:58:15,701 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 07:59:15,929 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
+[DEBUG] 2021-03-06 08:00:16,234 | /home/hp/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: gne3.gndec.ac.in
+Queued events for site gne3.gndec.ac.in
