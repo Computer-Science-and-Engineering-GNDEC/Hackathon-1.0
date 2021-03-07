@@ -1,2 +1,0 @@
-from braintree.dispute_details.evidence import DisputeEvidence
-from braintree.dispute_details.status_history import DisputeStatusHistory

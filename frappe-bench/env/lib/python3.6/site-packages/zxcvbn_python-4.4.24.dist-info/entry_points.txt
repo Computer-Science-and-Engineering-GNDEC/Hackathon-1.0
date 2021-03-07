@@ -1,3 +1,0 @@
-[console_scripts]
-zxcvbn = zxcvbn.__main__:cli
-
