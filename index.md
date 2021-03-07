@@ -40,6 +40,8 @@ It's a 48 hours event starting on March 5, 2021 at 12 noon and ending on March 7
 
 ## [Problem Statement](https://computer-science-and-engineering-gndec.github.io/Hackathon-1.0/problem.html)
 
+## [Hackathon finishing instructions](https://computer-science-and-engineering-gndec.github.io/Hackathon-1.0/end.html)
+
 ### Join inaugural fuction at [google meet](https://meet.google.com/jou-swso-aak) on March 5, 2021 at 12 Noon.
 
 Join [Discussion forum](https://github.com/Computer-Science-and-Engineering-GNDEC/Hackathon-1.0/discussions/3) to discuss and ask questions regarding the registration process and anything related to Hackathon at discussion forum.
