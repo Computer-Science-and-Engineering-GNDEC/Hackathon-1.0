@@ -27,8 +27,19 @@
  - Created Payment Request.
  - Generated Payment Entry for customer side.
  - Created General Ledger Report
- - Created payment templated
+ - Created payment template
  - Created Balance Sheet
  - Created Cash Flow Statements
+ - Generated Sales Order
+ - Generated pdfs for 
+   - balance sheet
+   - cash flow statements
+   - delivery note
+   - sales order
+   - customer details
+   - payment entry
+   - payment request
+
+   
  
 
