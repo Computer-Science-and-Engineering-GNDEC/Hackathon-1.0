@@ -21,11 +21,12 @@
 
 ## Website hosting
 **with functionality of
+
 - book appointment
 - viewing Services
 - Clients
 - Contact Us
-- 
+
 ## Accounting 
 ** Maintaining data for
 - Item
@@ -37,7 +38,9 @@
 ## Selling
 
 -Clients
+
 -Quotation
+
 ![Quotation](https://user-images.githubusercontent.com/57444962/110230197-53272280-7f35-11eb-914d-0ca3c8950a5f.png)
 
 
