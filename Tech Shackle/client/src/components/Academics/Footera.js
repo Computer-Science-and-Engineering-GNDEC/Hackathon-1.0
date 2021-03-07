@@ -1,0 +1,39 @@
+import React from 'react'
+import {Nav} from 'react-bootstrap'
+
+function Footer() {
+    return (
+        <div style={{background:'#ece2e1'}}>
+            <>
+  <Nav className="justify-content-center"  activeKey="/home">
+    <Nav.Item>
+      <Nav.Link href="/home">Active</Nav.Link>
+    </Nav.Item>
+    <Nav.Item>
+      <Nav.Link eventKey="link-1">Link</Nav.Link>
+    </Nav.Item>
+    <Nav.Item>
+      <Nav.Link eventKey="link-2">Link</Nav.Link>
+    </Nav.Item>
+    <Nav.Item>
+    </Nav.Item>
+  </Nav>
+  <p className="text-center mt-2 mb-2"  >Or right-aligned</p>
+  {/* <Nav className="justify-content-end" activeKey="/home">
+    <Nav.Item>
+      <Nav.Link href="/home">Active</Nav.Link>
+    </Nav.Item>
+    <Nav.Item>
+      <Nav.Link eventKey="link-1">Link</Nav.Link>
+    </Nav.Item>
+    <Nav.Item>
+      <Nav.Link eventKey="link-2">Link</Nav.Link>
+    </Nav.Item>
+   
+  </Nav> */}
+</>
+        </div>
+    )
+}
+
+export default Footer
