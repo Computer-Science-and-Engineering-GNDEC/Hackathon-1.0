@@ -19,16 +19,16 @@
 [Click here](https://46867a9007f2.ngrok.io/planning-pros) to see our software
 
 ## Features of our software :
--"The idea is that We have a startup of Event management Company running online through a website.Our software using ERPNext helps us to maintain Accounting and backend as a unicorn."
+- "The idea is that We have a startup of Event management Company running online through a website.Our software using ERPNext helps us to maintain Accounting and backend as a unicorn."
 
 ## Website hosting
-**with functionality of
+** with functionality of
 
 - book appointment
 - viewing Services
 - Clients
 - Contact Us
-
+**
 ## Accounting 
 ** Maintaining data for
 
@@ -40,7 +40,7 @@
 - Clients 
 - Supplier
 - Chart of Account
-
+**
 ## Selling
 
 - Clients
@@ -63,6 +63,8 @@
 -Sales order
 
 ![Sales Order](https://user-images.githubusercontent.com/57444962/110230561-d9dcff00-7f37-11eb-9cd7-ef78b5007bbe.png)
+
+**
 
 
 
