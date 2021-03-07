@@ -1,4 +1,5 @@
-![Logo]()
+![Logo](https://github.com/Falcon-Coders/Hackathon-1.0/blob/projects/Falcon%20Coders/planpros.jpeg)
+
 # [Planning Pros](https://46867a9007f2.ngrok.io/planning-pros)
 ## An Event Management Company
 ### Events like:
