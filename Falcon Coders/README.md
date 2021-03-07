@@ -33,11 +33,9 @@
 -Clients
 -Quotation
 
-![Quotation](https://user-images.githubusercontent.com/57444962/110230010-a7310780-7f33-11eb-889b-c551493b7307.jpg#thumbnail)
+![thumbnail](https://user-images.githubusercontent.com/57444962/110230010-a7310780-7f33-11eb-889b-c551493b7307.jpg#thumbnail)
 
-<div style="width:150px; height:100px">
-![Kitten](https://user-images.githubusercontent.com/57444962/110230010-a7310780-7f33-11eb-889b-c551493b7307.jpg#thumbnail)
-</div>
+
 
 
 
