@@ -23,7 +23,7 @@
 
 ## Website hosting
 
-**with functionality of**
+**with the functionality of**
 
 - book appointment
 - viewing Services
