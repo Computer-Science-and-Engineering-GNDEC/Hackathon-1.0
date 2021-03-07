@@ -28,7 +28,7 @@
  - Generated Payment Entry for customer side.
  - Created General Ledger Report
  - Created payment templated
- -
- 
+ - Created Balance Sheet
+ - Created Cash Flow Statements
  
 
