@@ -11,7 +11,9 @@ import cv2
 from . import Person
 import time
 from django.http import JsonResponse
+from django.contrib.auth.decorators import login_required
 
+@login_required(login_url="/auth/login/")
 def visitor(request):
     
     if request.is_ajax():
