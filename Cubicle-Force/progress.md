@@ -1,13 +1,13 @@
 ### Installation Steps for ERP next
 
-Step 1 — Configuring the Firewall
-Step 2 — Configuring Locales
-Step 3 — Installing MariaDB 10.4 (Creating a MariaDB Super Admin User)
-Step 4 — Configuring MariaDB for ERPNext
-Step 5 — Setting Up ERPNext 12
-Step 6 — Installing Frappe Bench CLI
-Step 7 — Installing the ERPNext 12 Web Application
-Step 8 — Setting Up ERPNext 12 For Production
+- Step 1 — Configuring the Firewall
+- Step 2 — Configuring Locales
+- Step 3 — Installing MariaDB 10.4 (Creating a MariaDB Super Admin User)
+- Step 4 — Configuring MariaDB for ERPNext
+- Step 5 — Setting Up ERPNext 12
+- Step 6 — Installing Frappe Bench CLI
+- Step 7 — Installing the ERPNext 12 Web Application
+- Step 8 — Setting Up ERPNext 12 For Production
 
 
 ### Features implemented and tested:
