@@ -21,7 +21,6 @@
 
 ## Website hosting
 **with functionality of
-
 - book appointment
 - viewing Services
 - Clients
