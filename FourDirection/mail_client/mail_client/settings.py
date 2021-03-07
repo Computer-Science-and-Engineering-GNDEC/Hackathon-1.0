@@ -25,7 +25,7 @@ SECRET_KEY = '1ss@-f1^cz5@5@(cd1_^spd3augk8dw+w0n9f=6zchkvlhku$p'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -126,3 +126,8 @@ STATICFILES_DIRS = (
 LOGIN_REDIRECT_URL = '/'
 
 LOGIN_URL = '/login'
+
+EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
+EMAIL_HOST = "fd.com"
+EMAIL_HOST_USER = "jaspreet@fd.com"
+EMAIL_HOST_PASSWORD = "12345678"

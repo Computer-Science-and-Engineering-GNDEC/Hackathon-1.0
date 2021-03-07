@@ -1,14 +1,347 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{mail.Subject}}</title>
+    <title>mail.fd.com</title>
+    <style>
+        * {box-sizing: border-box;}
+
+/* Set a style for all buttons */
+button {
+  background-color: #af4c4c;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+button:hover {
+  opacity:1;
+}
+.button1{
+  background-color: #eb0d0d;
+  color: white;
+  float: center;
+  /* padding: 14px 20px; */
+  margin-left: 180px;
+  border: none;
+  cursor: pointer;
+  width: 20%;
+  opacity: 0.9;
+}
+
+.button1:hover {
+  opacity:1;
+}
+/* Float cancel and delete buttons and add an equal width */
+.cancelbtn, .deletebtn {
+  float: left;
+  width: 50%;
+}
+
+/* Add a color to the cancel button */
+.cancelbtn {
+  background-color: #ccc;
+  color: black;
+}
+
+/* Add a color to the delete button */
+.deletebtn {
+  background-color: #f44336;
+}
+
+/* Add padding and center-align text to the container */
+.container {
+  padding: 16px;
+  text-align: center;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: #474e5d;
+  padding-top: 100px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 40%; /* Could be more or less, depending on screen size */
+}
+
+/* Style the horizontal ruler */
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+ 
+/* The Modal Close Button (x) */
+.close {
+  position: absolute;
+  right: 35px;
+  top: 15px;
+  font-size: 40px;
+  font-weight: bold;
+  color: #f1f1f1;
+}
+
+.close:hover,
+.close:focus {
+  color: #f44336;
+  cursor: pointer;
+}
+
+/* Clear floats */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Change styles for cancel button and delete button on extra small screens */
+@media screen and (max-width: 300px) {
+  .cancelbtn, .deletebtn {
+     width: 100%;
+  }
+}
+        *{
+        margin : 0;
+        padding : 0;
+        box-sizing: border-box;
+        }
+        body{
+            background: url({% static "photo_bg.jpg" %});
+            background-repeat: no-repeat;
+            /* background-size: cover; */
+            font-size: 16px;
+            font-family: 'Lato', sans-serif;
+            font-weight: 300;
+            color: rgb(170, 187, 125);
+            font-family: 'Poppins', sans-serif;
+            overflow-y:scroll;
+            background-color: rgb(122, 191, 223);
+        }
+        .styled-table {
+            margin-left: 160px;
+            border-collapse: collapse;
+            /* margin: 25px 0; */
+            font-size: 0.9em;
+            font-family: sans-serif;
+            min-width: 400px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+        }
+        .styled-table thead tr {
+            background-color: #009879;
+            color: #ffffff;
+            text-align: left;
+        }
+        .styled-table th,
+        .styled-table td {
+            padding: 12px 15px;
+        }
+        .styled-table tbody tr {
+            border-bottom: 1px solid #dddddd;
+        }
+
+        .styled-table tbody tr:nth-of-type(even) {
+            background-color: #777;
+        }
+
+        .styled-table tbody tr:nth-of-type(odd) {
+            background-color: #999;
+        }
+        .styled-table tbody tr.active-row {
+            font-weight: bold;
+            color: #009879;
+        }
+        .round-button {
+            margin-left: 160px;
+            display:block;
+            width:80px;
+            height:80px;
+            line-height:80px;
+            border: 2px solid #f5f5f5;
+            border-radius: 50%;
+            color:#0011ff;
+            text-align:center;
+            text-decoration:none;
+            background: #e92a2a;
+            box-shadow: 0 0 3px gray;
+            font-size:20px;
+            font-weight:bold;
+}
+        .round-button:hover {
+            background: #777555;
+}
+
+        
+        ul {
+        margin-left: 160px;
+        list-style-type: none;
+        padding: 0;
+        overflow: hidden;
+        background-color: #333;
+        }
+
+        li {
+        float: right;
+        }
+
+        li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        }
+
+        li a:hover {
+        background-color: #111;
+        }
+
+        .sidenav {
+        height: 100%;
+        width: 160px;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: #111;
+        overflow-x: hidden;
+        padding-top: 20px;
+        }
+
+        .sidenav a {
+        padding: 6px 8px 6px 16px;
+        text-decoration: none;
+        font-size: 25px;
+        color: #cec8c8;
+        display: block;
+        }
+
+        .btn{
+            
+            background-color: rgb(240, 67, 67);
+            color: black;
+            border : none;
+            padding : 8px 10px;
+            font-size: 18px;
+            border-radius: 5px;
+            margin-top: 15px;
+            outline: none;
+        }
+
+        .sidenav a:hover {
+        color: #f1f1f1;
+        }
+        @media screen and (max-height: 450px) {
+        .sidenav {padding-top: 15px;}
+        .sidenav a {font-size: 18px;}
+        }
+        td a{
+            font-family: 'Times New Roman', Times, serif;
+            font-size: medium;
+            color: #000;
+            text-decoration: none;
+
+        }
+        td a:hover{
+            text-decoration: none;
+        }
+
+        .content {
+            background-color: #bbb;
+            margin-left:  180px;
+            margin-top: 20px;
+            color: black;
+        }
+
+        .content div {
+            margin: 40px 50px;
+        }
+        .logo {
+    display: inline-block;
+    vertical-align: top;
+    width: 50px;
+    height: 50px;
+    margin-right: 20px;
+    /* margin-top: 15px;   */
+    border-radius: 50px;  /* if you want it vertically middle of the navbar. */
+}
+
+
+
+
+    </style>
 </head>
 <body>
-    <p>From: {{mail.From}}</p>
-    <p>Subject: {{mail.Subject}}</p>
-    <p>{{mail.Content | safe}}</p>
+    <div class="sidenav">
+        <a href="/compose" class="btn">Compose</a>
+        <a href="/">Inbox</a>
+        <a href="/undercon">Sent</a>
+        <a href="/undercon">Drafts</a>
+        <a href="/undercon">Outbox</a>
+      </div>
+        <ul> <li style="float: left;"><img class="logo" src={% static "logo2.png" %}></li>
+            <li style="float: right;"><a href="/logout">Sign Out</a></li>
+            <li style="float: left;"><a href="/">Home</a></li>
+            <li><a href="#contact">Contact</a></li>
+            
+          </ul>
+         
+    <div class="content">
+        <!-- <form method="POST">
+            {%csrf_token%}
+            
+        </form> -->
+        <div></br><b>From:</b> {{mail.From}}</div>
+        <div><b>Subject:</b> {{mail.Subject}}</div>
+        <div><pre>{{mail.Content | safe}}</pre></b></div>
+    </div>
+    <button class="button1" onclick="document.getElementById('id01').style.display='block'">Delete</button>
+<div id="id01" class="modal">
+  <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close">×</span>
+  <div class="modal-content">
+    <div class="container">
+      <h1>Delete Mail</h1>
+      <p>Are you sure you want to delete the mail?</p>
+    
+      <div class="clearfix">
+        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+        <form method="POST" >
+            {%csrf_token%}
+            <button type="submit" class="deletebtn">Delete It</button>
+        </form>
+      </div>
+    </div>
+</div>
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
 </body>
 </html>

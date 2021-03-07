@@ -1,16 +1,208 @@
+
+{%load static%}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Compose</title>
+    <style>
+        *{
+        margin : 0;
+        padding : 0;
+        box-sizing: border-box;
+        }
+        body{
+            background: url({% static "photo_bg.jpg" %});
+            background-repeat: no-repeat;
+            /* background-size: cover; */
+            font-size: 16px;
+            font-family: 'Lato', sans-serif;
+            font-weight: 300;
+            margin: 0;
+            color: rgb(170, 187, 125);
+            font-family: 'Poppins', sans-serif;
+            overflow-y: scroll;
+            background-color: rgb(122, 191, 223);
+        }
+        .styled-table {
+            margin-left: 160px;
+            border-collapse: collapse;
+            /* margin: 25px 0; */
+            font-size: 0.9em;
+            font-family: sans-serif;
+            min-width: 400px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+        }
+        .styled-table thead tr {
+            background-color: #009879;
+            color: #ffffff;
+            text-align: left;
+        }
+        .styled-table th,
+        .styled-table td {
+            padding: 12px 15px;
+        }
+        .styled-table tbody tr {
+            border-bottom: 1px solid #dddddd;
+        }
+
+        .styled-table tbody tr:nth-of-type(even) {
+            background-color: #777;
+        }
+
+        .styled-table tbody tr:nth-of-type(odd) {
+            background-color: #999;
+        }
+        .styled-table tbody tr.active-row {
+            font-weight: bold;
+            color: #009879;
+        }
+
+        
+        ul {
+        margin-left: 160px;
+        list-style-type: none;
+        padding: 0;
+        overflow: hidden;
+        background-color: #333;
+        }
+
+        li {
+        float: right;
+        }
+
+        li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        }
+
+        li a:hover {
+        background-color: #111;
+        }
+
+        .sidenav {
+        height: 100%;
+        width: 160px;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: #111;
+        overflow-x: hidden;
+        padding-top: 20px;
+        }
+
+        .sidenav a {
+        padding: 6px 8px 6px 16px;
+        text-decoration: none;
+        font-size: 25px;
+        color: #cec8c8;
+        display: block;
+        }
+
+        .btn{
+            
+            background-color: rgb(240, 67, 67);
+            color: black;
+            border : none;
+            padding : 8px 10px;
+            font-size: 18px;
+            border-radius: 5px;
+            margin: 0px 160px;
+            outline: none;
+        }
+
+        .sidenav a:hover {
+        color: #f1f1f1;
+        }
+        @media screen and (max-height: 450px) {
+        .sidenav {padding-top: 15px;}
+        .sidenav a {font-size: 18px;}
+        }
+       .form-label{
+           display: table;
+           font-family: sans-serif;
+           background-color: black;
+           background-repeat: no-repeat;
+           font-size: 20px;
+           padding: 10px 10px ;
+           color:white;
+       }
+       .main {
+           
+           margin-left: 160px;
+           margin-top: 100px;
+       }
+
+       .main input {
+           margin-left: 50px;
+           font-size: larger;
+           background-color: #999;
+           padding-right: 100px;
+           padding-bottom: 20px;
+       }
+
+       .main textarea {
+           margin-left: 50px;
+           padding-right: 100px;
+           padding-bottom: 100px;
+           background-color: #999;
+       }
+       .logo {
+    display: inline-block;
+    vertical-align: top;
+    width: 50px;
+    height: 50px;
+    margin-right: 20px;
+    /* margin-top: 15px;   */
+    border-radius: 50px;  /* if you want it vertically middle of the navbar. */
+}
+
+    </style>
 </head>
 <body>
-    <form method="post">
+    
+<div class="sidenav">
+    <a href="/">Inbox</a>
+    <a href="/undercon">Sent</a>
+    <a href="/undercon">Drafts</a>
+    <a href="/undercon">Outbox</a>
+  </div>
+    <ul>
+        <li style="float: left;"><img class="logo" src={% static "logo2.png" %}></li>
+        <li style="float: right;"><a href="/logout">Sign Out</a></li>
+        <li style="float: left;"><a href="/">Home</a></li>
+        <li><a href="mailto:ws.com540@gmail.com">Contact</a></li>
+        <li><a href="#"><i class="fa fa-user">&nbsp &nbsp{{request.user}}@fd.com</i></a></li>
+        
+      </ul>
+    <form class = "styled-table" method="post">
         {% csrf_token %}
-        {{form.as_p}}
-        <input type="submit" value="Send Now">
+    
+    <div class="main">
+        <div class="form-label">
+            {{form.to.label}} 
+        </div>
+            {{form.to}}
+        <div class="form-label">
+            {{form.sub.label}} 
+        </div>
+            {{form.sub}} 
+        <div class="form-label">
+            {{form.body.label}} 
+        </div>
+        <div class="form-body">
+            {{form.body}}
+        </div>
+    </div>
+    </br>
+    <input class ="btn" type="submit" value="Send Now">
     </form>
 </body>
 </html>

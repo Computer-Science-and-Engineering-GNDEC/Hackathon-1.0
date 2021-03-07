@@ -1,18 +1,196 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Inbox</title>
+    <style>
+        *{
+        margin : 0;
+        padding : 0;
+        box-sizing: border-box;
+        }
+        body{
+            background: url({% static "photo_bg.jpg" %});
+            background-repeat: no-repeat;
+            /* background-size: cover; */
+            font-size: 16px;
+            font-family: 'Lato', sans-serif;
+            font-weight: 300;
+            margin: 0;
+            color: rgb(170, 187, 125);
+            font-family: 'Poppins', sans-serif;
+            overflow-y: scroll;
+            background-color: rgb(122, 191, 223);
+        }
+        .styled-table {
+            margin-left: 160px;
+            border-collapse: collapse;
+            /* margin: 25px 0; */
+            font-size: 0.9em;
+            font-family: sans-serif;
+            min-width: 400px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+        }
+        .styled-table thead tr {
+            background-color: #009879;
+            color: #ffffff;
+            text-align: left;
+        }
+        .styled-table th,
+        .styled-table td {
+            padding: 12px 15px;
+        }
+        .styled-table tbody tr {
+            border-bottom: 1px solid #dddddd;
+        }
+
+        .styled-table tbody tr:nth-of-type(even) {
+            background-color: #777;
+        }
+
+        .styled-table tbody tr:nth-of-type(odd) {
+            background-color: #999;
+        }
+        .styled-table tbody tr.active-row {
+            font-weight: bold;
+            color: #009879;
+        }
+        .round-button {
+            margin-left: 160px;
+            display:block;
+            width:80px;
+            height:80px;
+            line-height:80px;
+            border: 2px solid #f5f5f5;
+            border-radius: 50%;
+            color:#0011ff;
+            text-align:center;
+            text-decoration:none;
+            background: #e92a2a;
+            box-shadow: 0 0 3px gray;
+            font-size:20px;
+            font-weight:bold;
+}
+        .round-button:hover {
+            background: #777555;
+}
+
+        
+        ul {
+        margin-left: 160px;
+        list-style-type: none;
+        padding: 0;
+        overflow: hidden;
+        background-color: #333;
+        }
+
+        li {
+        float: right;
+        }
+
+        li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        }
+
+        li a:hover {
+        background-color: #111;
+        }
+
+        .sidenav {
+        height: 100%;
+        width: 160px;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: #111;
+        overflow-x: hidden;
+        padding-top: 20px;
+        }
+
+        .sidenav a {
+        padding: 6px 8px 6px 16px;
+        text-decoration: none;
+        font-size: 25px;
+        color: #cec8c8;
+        display: block;
+        }
+
+        .btn{
+            
+            background-color: rgb(240, 67, 67);
+            color: black;
+            border : none;
+            padding : 8px 10px;
+            font-size: 18px;
+            border-radius: 5px;
+            margin-top: 15px;
+            outline: none;
+        }
+
+        .sidenav a:hover {
+        color: #f1f1f1;
+        }
+        @media screen and (max-height: 450px) {
+        .sidenav {padding-top: 15px;}
+        .sidenav a {font-size: 18px;}
+        }
+        td a{
+            font-family: 'Times New Roman', Times, serif;
+            font-size: medium;
+            color: #000;
+            text-decoration: none;
+
+        }
+        td a:hover{
+            text-decoration: none;
+        }
+        .logo {
+    display: inline-block;
+    vertical-align: top;
+    width: 50px;
+    height: 50px;
+    margin-right: 20px;
+    /* margin-top: 15px;   */
+    border-radius: 50px;  /* if you want it vertically middle of the navbar. */
+}
+
+
+    </style>
 </head>
 <body>
+
+<div class="sidenav">
+    <a href="/compose" class="btn">Compose</a>
+    <a href="/">Inbox</a>
+    <a href="/undercon">Sent</a>
+    <a href="/undercon">Drafts</a>
+    <a href="/undercon">Outbox</a>
+  </div>
+    <ul>
+        <li style="float: left;"><img class="logo" src={% static "logo2.png" %}></li>
+        <!-- <li style="float: left;"><a href="#">FD Mail</a></li> -->
+        <li style="float: right;"><a href="/logout">Sign Out</a></li>
+        <li style="float: left;"><a href="/">Home</a></li>
+        <li><a href="mailto:ws.com540@gmail.com">Contact</a></li>
+        <li><a href="#"><i class="fa fa-user-circle">&nbsp &nbsp{{request.user}}@fd.com</i></a></li>
+        
+        
+      </ul>
     {% if messages %}
         {% for msg in messages %}
             <small>{{ msg }}</small>
         {% endfor %}
     {% endif %}
-    <table>
+    <table width ="100%" class = "styled-table">
         <thead>
             <th>Sender</th>
             <th>Subject</th>
@@ -20,19 +198,20 @@
         </thead>
         <tbody>
             {% for row in data %}
-                <tr>
+                <tr class = "td" style="height:10px" >
                     
-                    <td>{% if row.Id in unseen %}
-                        *
-                    {%endif%}<a href="mails/{{row.Id}}">{{row.From}}</a></td>
-                    <td><a href="mails/{{row.Id}}">{{row.Subject}}</a></td>
-                    <td><a href="mails/{{row.Id}}">{{row.Content | safe}}</a></td>
+                    <td width = "15%">
+                    {% if row.Id in unseen %}
+                        <a href="mails/{{row.Id}}"><b>*{{row.From | slice:"20"}}</b></a>
+
+                    {%else%}
+                        <a href="mails/{{row.Id}}">{{row.From | slice:"20"}}</a>
+                    {%endif%}</td>
+                    <td width = "15%"><a href="mails/{{row.Id}}">{{row.Subject}}</a></td>
+                    <td width = "65%"><a href="mails/{{row.Id}}">{{row.Content | safe | slice:"80"}}</a></td>
                 </tr>
             {% endfor %}
         </tbody>
     </table>
-
-    <a href="/compose"><button>Send a mail</button></a>
-    <a href="/logout">Sigh out</a>
 </body>
 </html>

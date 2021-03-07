@@ -40,7 +40,7 @@ def home(request):
     status, data = mail.search(None, 'ALL')
     _, unseen_ids = mail.search(None, 'UNSEEN')
 
-    unseen_ids = set(map(lambda x: x.decode('utf-8'), unseen_ids))
+    unseen_ids = set(map(lambda x: x.decode('utf-8'), unseen_ids[0].split()))
 
     # mail_ids = []
 
@@ -53,7 +53,10 @@ def home(request):
         msg['Id'] = i.decode('utf-8')
         sender = msg['From']
         sub = msg['Subject']
-        content = msg.get_payload()[0].get_payload()
+        try:
+            content = msg.get_payload()[0].get_payload()
+        except:
+            content = msg.get_payload()
         
         date_tuple = email.utils.parsedate_tz(msg['Date'])
         if date_tuple:
@@ -63,7 +66,7 @@ def home(request):
         # mails.append({sender, sub, content, date})
         msg['Content'] = content
         mails.append(msg)
-    return render(request, 'home.html', {'data':mails, 'unseen':unseen_ids})
+    return render(request, 'home.html', {'data':mails[::-1], 'unseen':unseen_ids})
 
 
 @login_required
@@ -73,11 +76,19 @@ def show_mail(request, mail_id):
     import email
     import datetime
 
+        
+
     pwd = '12345678'
     mail = imaplib.IMAP4('fd.com')
     mail.login(str(user), pwd)
 
     mail.select('inbox')
+    if request.POST:
+        mail_id = bytes(mail_id, 'utf-8')
+        mail.store(mail_id, '+FLAGS', '\\Deleted')
+        mail.expunge()
+        messages.success(request, "Mail Deleted")
+        return redirect('/')
     status, data = mail.fetch(bytes(mail_id, 'utf-8'), '(BODY[])')
     msg = email.message_from_bytes(data[0][1])
     msg['Id'] = mail_id
@@ -128,3 +139,8 @@ def compose(request):
 
     
     return render(request, 'compose.html', {'form':form})
+
+
+
+def undercon(request):
+    return render(request, 'underconstruction.html')

@@ -1,7 +1,7 @@
 body {
 	background: url("photo_bg.jpg");
 	background-repeat: no-repeat;
-	background-size: cover;
+	/* background-size: cover; */
 	font-size: 16px;
 	font-family: 'Lato', sans-serif;
 	font-weight: 300;
