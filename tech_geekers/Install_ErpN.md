@@ -148,8 +148,10 @@ Then created the MariaDB user 'hack' with privileges similar to root and then ga
 Then confirm both the user creation and the new user’s privileges:
 
     SELECT host, user, Super_priv FROM mysql.user;
+```
 <pre>
-Output should be this:
+
+    Output should be this:
 +-----------+-------+------------+
 | Host      | User  | Super_priv |
 +-----------+-------+------------+
@@ -157,17 +159,22 @@ Output should be this:
 | localhost | mysql | Y          |
 | %         | hack| Y         |
 +-----------+-------+------------+
-3 rows in set (0.001 sec)
 
-But we are getting this:
+    3 rows in set (0.001 sec)
+
+
+    But we are getting this:
 +-----------+-------+------------+
 | Host      | User  | Super_priv |
 +-----------+-------+------------+
 | localhost | root  | Y          |
 | %         | hack| Y         |
 +-----------+-------+------------+
-2 rows in set (0.001 sec)
-<pre>
+
+    2 rows in set (0.001 sec)
+</pre> 
+```
+</br>
 
 Then flush privileges to apply all changes:
 
@@ -176,8 +183,10 @@ Then flush privileges to apply all changes:
 Then exit the session:
 
     exit
+    
+</br>
 
-## Step 4 — Configuring MariaDB for ERPNext
+# Step 4 — Configuring MariaDB for ERPNext
 
 First, stop mariadb.service:
 
@@ -187,8 +196,9 @@ Now use nano or your favorite text editor to create a MariaDB configuration file
 
     sudo nano /etc/mysql/mariadb.conf.d/mariadb.cnf
 
- 
+``` 
 <pre>
+
 Now add ERPNext’s official configuration template:
 /etc/mysql/mariadb.conf.d/mariadb.cnf
 
@@ -262,9 +272,8 @@ default-character-set = utf8mb4
 
 [mysqldump]
 max_allowed_packet=256M
-
 </pre>
-
+```
 Save and close the file.
 
 Start mariadb.service:
@@ -276,7 +285,8 @@ To test the connection you can use the following command. Remember to replace sa
     mysql --user hack --password 'mariadb_password' --host=localhost --protocol=tcp --port=3306 test
 
 You will see an output showing MariaDB’s basic help content and several parameters. This means your connection was successful:
-<pre>
+
+
 Output
 mysql  Ver 15.1 Distrib 10.4.13-MariaDB, for debian-linux-gnu (x86_64) using readline 5.2
 Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
@@ -285,7 +295,7 @@ Usage: mysql [OPTIONS] [database]
 
 Default options are read from the following files in the given order:
 /etc/my.cnf /etc/mysql/my.cnf ~/.my.cnf
-
+```
 ...
 
   --ssl-verify-server-cert
@@ -310,7 +320,8 @@ plugin-dir                        (No default value)
 default-auth                      (No default value)
 binary-mode                       FALSE
 connect-expired-password          FALSE
-</pre>
+```
+
 
 Remember to reload the service using the following command:
 
@@ -452,5 +463,94 @@ Now clone the frappe/bench repository to your home directory. Remember to replac
 Install the bench CLI:
 
     sudo pip3 install -e /home/hack/.bench
+    
+## Setting Up Frappe Framework Environment
+
+During Frappe’s installation you may exceed Ubuntu’s file watch limit, which by default is set to 8192. To avoid this issue set a higher limit using the following command:
+
+     echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p
+     
+ The tee command will append the contents of your echo command to the called file while also printing the output to your console.
+
+Next, initialize Frappe Framework 12. Replace Sammy with your system username:
+
+      bench init /home/hack/frappe-bench --frappe-path https://github.com/frappe/frappe --frappe-branch version-12 --python python3
+      
+ using this command we get :
+ ```
+ WARN: Command not being executed in bench directory
+LOG: Path /home/hack/frappe-bench already exists!
+```
+## Step 7 — Installing the ERPNext 12 Web Application
+In this section, you will set up a Frappe-based site and then install the ERPNext 12 application on it.
+
+Change to the directory where Frappe was initialized.
+
+    cd /home/hack/frappe-bench
+    
+Before continuing, you will need to install specific versions of Python libraries numpy and pandas into the Frappe virtual environment. Install these packages using the following command:
+  
+    ./env/bin/pip install numpy==1.18.5 && ./env/bin/pip install pandas==0.24.2
+
+Now, you can continue with the installation. Download ERPNext 12 from its repository using the bench CLI:
+
+    bench get-app erpnext https://github.com/frappe/erpnext --branch version-12
+    
+using this command we get:
+```
+ WARN: Command not being executed in bench directory
+INFO:bench.app:Getting app erpnext
+$ git clone https://github.com/frappe/erpnext --branch version-12 --depth 1 --origin upstream
+Traceback (most recent call last):
+  File "/usr/local/bin/bench", line 11, in <module>
+    load_entry_point('bench', 'console_scripts', 'bench')()
+  File "/home/hack/.bench/bench/cli.py", line 41, in cli
+    bench_command()
+  File "/usr/lib/python3/dist-packages/click/core.py", line 764, in __call__
+    return self.main(*args, **kwargs)
+  File "/usr/lib/python3/dist-packages/click/core.py", line 717, in main
+    rv = self.invoke(ctx)
+  File "/usr/lib/python3/dist-packages/click/core.py", line 1137, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+  File "/usr/lib/python3/dist-packages/click/core.py", line 956, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+  File "/usr/lib/python3/dist-packages/click/core.py", line 555, in invoke
+    return callback(*args, **kwargs)
+  File "/home/hack/.bench/bench/commands/make.py", line 62, in get_app
+    get_app(git_url, branch=branch, skip_assets=skip_assets, overwrite=overwrite)
+  File "/home/hack/.bench/bench/app.py", line 136, in get_app
+    exec_cmd("git clone {git_url} {branch} {shallow_clone} --origin upstream".format(
+  File "/home/hack/.bench/bench/utils.py", line 270, in exec_cmd
+    return subprocess.call(cmd, cwd=cwd, universal_newlines=True)
+  File "/usr/lib/python3.8/subprocess.py", line 340, in call
+    with Popen(*popenargs, **kwargs) as p:
+  File "/usr/lib/python3.8/subprocess.py", line 854, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/usr/lib/python3.8/subprocess.py", line 1702, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+FileNotFoundError: [Errno 2] No such file or directory: './apps'
+```
+Next, create the new site, replacing your_domain with the domain that you have associated with this server’s IP:
+
+    bench new-site 127.0.0.53 --admin-password 'erpnext_admin_password' --mariadb-root-username hack --mariadb-root-password 'mariadb_password'
+    
+ using this command we get:
+ ```
+ WARN: Command not being executed in bench directory
+Usage: bench [OPTIONS] COMMAND [ARGS]...
+Try "bench --help" for help.
+
+Error: No such command "new-site".
+``` 
+
+
+
+  
+    
+ 
+
+ 
+
+
 
  
