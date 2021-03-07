@@ -19,8 +19,13 @@
 6 march
 | 10- 1 pm | Wind up basic setup of all files |
 | ------------- | ------------- |
+
 | 1pm onwards | look for solutions to fetch real time data from API |
 
+7 march
+| 5- 10 am | deploy the app on GNE server |
+| ------------- | ------------- |
 
+| 10- 12 pm | make final changes to the webapp and send PR |
 
 
