@@ -1,0 +1,25 @@
+
+.lb{
+    margin-left: 450px;
+    margin-top: 40px;
+    margin-bottom: 40px;;
+    border-style: solid,grey,0.5px;
+    border: radius 2px;
+    height: 250px;
+    width: 450px;
+    background-color: #ccf2f4;
+}
+div.txt{
+    width: 50%;
+}
+.btn{
+    color:#fff;
+    margin-left: auto;
+   
+}
+
+.login{
+    font-size: 15px;
+    text-align:center;
+    margin: 20px auto  25px 63px;
+}

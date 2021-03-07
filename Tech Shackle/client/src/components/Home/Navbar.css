@@ -1,3 +1,35 @@
 .topmenu{
-    height:3em;
+    height:3;
+    font-family: serif;
+    font-weight: bold;
 }
+.newscolor{
+    font-size: 55%;
+    font-family:Georgia,serif;
+    padding: 25%,auto,25%,auto;
+}
+.col-3{
+    background-color:rgb(212, 60, 5);
+}
+div.container{
+    padding: 0px;
+    margin: 0px;
+}
+.col-3{
+    text-align: center;
+    padding: 2.5px; 
+}
+div.col-9{
+    padding: 0px;
+}
+#basic-nav-dropdown{
+    color: black;
+}
+.ml{
+   
+    padding:0px;
+}
+.n{
+    padding: 0px;
+}
+

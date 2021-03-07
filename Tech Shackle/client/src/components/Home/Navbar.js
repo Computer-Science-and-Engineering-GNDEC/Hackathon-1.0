@@ -9,12 +9,12 @@ export class Navb extends Component {
         return (
             <div className="front">
                   <div className="topmenu">
-                <Navbar bg="danger" expand="lg">
+                <Navbar bg="danger" expand="lg" className="n"> 
 
   <Navbar.Toggle aria-controls="basic-navbar-nav" />
-  <Navbar.Collapse id="basic-navbar-nav">
+  <Navbar.Collapse id="basic-navbar-nav" className="ml">
     <Nav className="ml-auto">
-      <Nav.Link href="#home">Alumini</Nav.Link>
+      <Nav.Link href="#home" className="al">Alumini</Nav.Link>
       <Nav.Link href="#link">Contact</Nav.Link>
       <Nav.Link href="#link">Gallery</Nav.Link>
       
@@ -28,15 +28,15 @@ export class Navb extends Component {
             </div>
 
             <div className="middle">
-            <Navbar bg="white" expand="lg">
-<Navbar.Brand href="#home"><img src={process.env.PUBLIC_URL+"logo.png"}></img></Navbar.Brand>
-  <Navbar.Toggle aria-controls="basic-navbar-nav" />
+            <Navbar  bg="white" expand="lg">
+<Navbar.Brand href="#home"><img class="img-fluid" src={process.env.PUBLIC_URL+"logo.png"}></img></Navbar.Brand>
+  
   
 </Navbar>
             </div>
 
             <div className="bottom">
-            <Navbar bg="light" expand="lg">
+            <Navbar bg="blue" expand="lg">
   
   <Navbar.Toggle aria-controls="basic-navbar-nav" />
   <Navbar.Collapse id="basic-navbar-nav">
@@ -60,9 +60,9 @@ export class Navb extends Component {
       </NavDropdown>
 
       <NavDropdown title="ACADEMICS" id="basic-nav-dropdown">
-        <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-        <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
-        <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
+        <NavDropdown.Item href="#action/3.1">Login</NavDropdown.Item>
+        <NavDropdown.Item href="#action/3.2">Academic Calender</NavDropdown.Item>
+        <NavDropdown.Item href="#action/3.3">Academics Curricula</NavDropdown.Item>
       </NavDropdown>
 
       <NavDropdown title="EXAMINATION" id="basic-nav-dropdown">
@@ -72,21 +72,26 @@ export class Navb extends Component {
       </NavDropdown>
 
       <NavDropdown title="DEPARTMENTS" id="basic-nav-dropdown">
-        <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-        <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
-        <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
+        <NavDropdown.Item href="#action/3.1">CSE</NavDropdown.Item>
+        <NavDropdown.Item href="#action/3.2">IT</NavDropdown.Item>
+        <NavDropdown.Item href="#action/3.3">CE</NavDropdown.Item>
+        <NavDropdown.Item href="#action/3.3">ME</NavDropdown.Item>
+        <NavDropdown.Item href="#action/3.3">ECE</NavDropdown.Item>
+
+
+
       </NavDropdown>
 
       <NavDropdown title="FACILITIES" id="basic-nav-dropdown">
-        <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-        <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
-        <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
+        <NavDropdown.Item href="#action/3.1">Computer Centre</NavDropdown.Item>
+        <NavDropdown.Item href="#action/3.2">LIbrary</NavDropdown.Item>
+        <NavDropdown.Item href="#action/3.3">Culture Committe</NavDropdown.Item>
       </NavDropdown>
 
       <NavDropdown title="RESEARCH" id="basic-nav-dropdown">
-        <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-        <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
-        <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
+        <NavDropdown.Item href="#action/3.1">Testing and Consultancy Cell</NavDropdown.Item>
+        <NavDropdown.Item href="#action/3.2">Research and Developement</NavDropdown.Item>
+        <NavDropdown.Item href="#action/3.3">MOU's </NavDropdown.Item>
       </NavDropdown>
     </Nav>
     
@@ -99,7 +104,7 @@ export class Navb extends Component {
                     <div className="col-3">Notice
                     </div>
                     <div className="col-9">
-                        <marquee>Notice Board</marquee>
+                        <marquee>Notice Board   </marquee>
                         
                     </div>
                 </div>
