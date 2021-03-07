@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acccount Login</title>
+    <!-- Google Fonts -->
+	<link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700|Lato:400,100,300,700,900' rel='stylesheet' type='text/css'>
+
+	<link rel="stylesheet" href={% static "style.css" %}>
+	<!-- Custom Stylesheet -->
+	<link rel="stylesheet" href={% static "animate.css" %}>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+</head>
+<body>
+    <div class="container">
+		<div class="top">
+			<h1 id="title" class="hidden"><span id="logo">Four  <span>Direction</span></span></h1>
+		</div>
+		<div class="login-box animated fadeInUp">
+			<div class="box-header">
+				<h2>Log In</h2>		
+    <div class = "login-box">
+    <form action="" method="post">
+        <br>
+        {% csrf_token %}
+        {{form.as_p}}
+        <input type="submit" value="Login">
+    </form>
+    <p>Not registered? <a href="/register"><b>Sign Up</b></a></p>
+    <p><a href="/password-reset">Forgot Password? </a></p>
+</div>
+</div>
+<?php include "./footer.html"?>
+</body>
+</html>
