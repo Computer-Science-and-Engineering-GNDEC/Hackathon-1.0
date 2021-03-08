@@ -4,6 +4,6 @@ All teams are advised to share the urls of their respective projects at [discuss
 
 The presentations regarding the projects will be stated at 9AM in online mode. The time slot given to every team will be 15 mins. Book your slot by entering your details in this [sheet](https://docs.google.com/spreadsheets/d/1l3QxWPWqkOeKFk9CwiJql5c1B-qHqESWCsNo2jew3BA/edit?usp=sharing).
 
-
+[Link for Presentation](https://meet.google.com/jou-swso-aak)
 
 
