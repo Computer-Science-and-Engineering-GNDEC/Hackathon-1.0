@@ -4,7 +4,7 @@ First Position: Cubicle-Forces
 
 Second Position: a1i3ns
 
-Third Position: Falcon coders and She-Coders
+Third Position: Falcon coders and She-Coders <q>The prize money will be distributed equally between third position</q>
 
 
 PS: Teams Leaders are requested to send thier Bank Account Details at cc@gndec.ac.in
