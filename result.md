@@ -8,3 +8,5 @@ Third Position: Falcon coders and She-Coders
 
 
 PS: Teams Leaders are requested to send thier Bank Account Details at cc@gndec.ac.in
+
+In addition to this, all the participants who worked on Hackathon1.0 get chance to be a part of Great Developers Team of GNDEC. Claim your membership by sending link of your git repository to dotorgdotcom@gmail.com 
